@@ -1,0 +1,96 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[francais]{babel}
+\usepackage{grffile}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[some]{background}
+\usepackage{lipsum}
+
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+
+\DeclareFixedFont{\bigsf}{T1}{phv}{b}{n}{1.5cm}
+
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,
+contents={\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor] (-0.5\paperwidth,5) rectangle (0.5\paperwidth,10);  
+\end{tikzpicture}}
+}
+\makeatletter                       
+\def\printauthor{%                  
+    {\large \@author}}              
+\makeatother
+\author{%
+    Tanguy Blochet \
+    Project Manager \
+    \texttt{tanguy.blochet@viacesi.fr}\vspace{40pt} \
+    Baptiste Saclier \
+    Web developer \
+    \texttt{baptiste.saclier@viacesi.fr}\vspace{40pt} \      
+    Romain Junca \     
+    Web developer \       
+    \texttt{romain.junca@viacesi.fr}
+    }
+
+
+
+\begin{document}
+\renewcommand{\abstractname}{Abstract}
+\begin{titlepage}
+	\BgThispage
+	\newgeometry{left=1cm,right=4cm}
+	\vspace*{2cm}
+	\noindent
+	\hspace{1cm}
+	\textcolor{white}{\bigsf Student Union Website}
+	\vspace*{3cm}\par
+	\noindent
+	\begin{minipage}{0.35\linewidth}
+	    \begin{flushright}
+	        \printauthor
+	    \end{flushright}
+	\end{minipage} \hspace{15pt}
+	%
+	\begin{minipage}{0.02\linewidth}
+	    \rule{1pt}{175pt}
+	\end{minipage} \hspace{-10pt}
+	%
+	\begin{minipage}{0.8\linewidth}
+		\begin{center}
+			\hspace{1cm}
+				\includegraphics[scale=0.6]{img/logo_Exia.png}
+				\hspace{20pt}
+				\includegraphics[scale=0.6]{img/logo_EI.png.png}
+				
+				\vspace{1cm}
+				\hspace{1cm}
+				\includegraphics[scale=0.2]{img/logoBDE.jpg}
+			\end{center}
+			
+	\end{minipage} \hspace{-10pt}
+	%
+	\\
+	\vfill
+	
+	\noindent\hspace{0.25\linewidth}\begin{minipage}{0.7\linewidth}
+		\begin{abstract}
+				This document presents the new Website for the student Union of Exia.CESI Lyon. A two weeks project wich aims to ease the creation of events inside the school, and have an increased visibility of all the events.
+
+		\end{abstract}
+	\end{minipage}
+		
+
+\end{titlepage}
+\restoregeometry
+
+
+
