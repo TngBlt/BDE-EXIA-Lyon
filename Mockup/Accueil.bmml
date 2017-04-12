@@ -623,5 +623,25 @@
         <text>5</text>
       </controlProperties>
     </control>
+    <control controlID="180" controlTypeID="com.balsamiq.mockups::iPadPopover" x="789" y="251" w="186" h="102" measuredW="222" measuredH="187" zOrder="137" locked="false" isInGroup="-1">
+      <controlProperties>
+        <popoverArrowSide>left</popoverArrowSide>
+      </controlProperties>
+    </control>
+    <control controlID="181" controlTypeID="com.balsamiq.mockups::DateChooser" x="823" y="287" w="139" h="-1" measuredW="111" measuredH="25" zOrder="138" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>27/4/2017</text>
+      </controlProperties>
+    </control>
+    <control controlID="182" controlTypeID="com.balsamiq.mockups::Button" x="823" y="317" w="139" h="27" measuredW="49" measuredH="27" zOrder="139" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vote</text>
+      </controlProperties>
+    </control>
+    <control controlID="185" controlTypeID="com.balsamiq.mockups::Label" x="823" y="261" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="140" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Preferred%20date</text>
+      </controlProperties>
+    </control>
   </controls>
 </mockup>
