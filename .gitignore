@@ -1,0 +1,47 @@
+# Cache and logs (Symfony2)
+/src/app/cache/*
+/src/app/logs/*
+!src/app/cache/.gitkeep
+!src/app/logs/.gitkeep
+
+# Email spool folder
+/src/app/spool/*
+
+# Cache, session files and logs (Symfony3)
+/src/var/cache/*
+/src/var/logs/*
+/src/var/sessions/*
+!src/var/cache/.gitkeep
+!src/var/logs/.gitkeep
+!src/var/sessions/.gitkeep
+
+# Parameters
+/src/app/config/parameters.yml
+/src/app/config/parameters.ini
+
+# Managed by Composer
+/src/app/bootstrap.php.cache
+/src/var/bootstrap.php.cache
+/src/bin/*
+!src/bin/console
+!src/bin/symfony_requirements
+
+# Assets and user uploads
+/src/web/bundles/
+/src/web/uploads/
+
+# PHPUnit
+/src/app/phpunit.xml
+/src/phpunit.xml
+
+# Build data
+/src/build/
+
+# Composer
+/src/vendor
+
+# Backup entities generated with doctrine:generate:entities command
+**/Entity/*~
+
+#PHPStorm
+.idea

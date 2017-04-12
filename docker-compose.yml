@@ -1,0 +1,19 @@
+apache:
+  build: ./docker/apache
+  volumes:
+    - "./src/:/var/www/html"
+  links:
+    - mysql
+  ports:
+    - "8080:80"
+mysql:
+  image: mysql
+  volumes:
+    - "./docker/mysql:/docker-entrypoint-initdb.d"
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: bde-lyon
+    MYSQL_USER: userBlog
+    MYSQL_PASSWORD: passBlog
