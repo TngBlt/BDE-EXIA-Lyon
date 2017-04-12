@@ -1,0 +1,211 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1334" measuredH="417" mockupW="1324" mockupH="379">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="10" y="38" w="980" h="172" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BDE%20Cesi%20Lyon%0Ahttp%3A//bde.cesi.fr/</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="10" y="137" w="980" h="102" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="25" y="149" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="861" y="149" w="114" h="79" measuredW="100" measuredH="70" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::MenuBar" x="117" y="174" w="730" h="29" measuredW="311" measuredH="29" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <text>Home%2CEvents%2CGallery%2CShop%2CMembers</text>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Canvas" x="1046" y="165" w="288" h="127" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Image" x="1057" y="177" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::Canvas" x="1213" y="177" w="114" h="79" measuredW="100" measuredH="70" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="162" controlTypeID="com.balsamiq.mockups::Icon" x="1178" y="263" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ellipsis-h%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="168" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1046" y="38" w="288" h="197" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BDE%20Cesi%20Lyon%0Ahttp%3A//bde.cesi.fr/</text>
+      </controlProperties>
+    </control>
+    <control controlID="195" controlTypeID="com.balsamiq.mockups::Canvas" x="10" y="108" w="980" h="33" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="196" controlTypeID="com.balsamiq.mockups::Label" x="15" y="112" w="-1" h="-1" measuredW="96" measuredH="24" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Administrator</text>
+      </controlProperties>
+    </control>
+    <control controlID="197" controlTypeID="com.balsamiq.mockups::VRule" x="111" y="108" w="-1" h="30" measuredW="10" measuredH="100" zOrder="12" locked="false" isInGroup="-1"/>
+    <control controlID="198" controlTypeID="com.balsamiq.mockups::Label" x="149" y="114" w="-1" h="-1" measuredW="23" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Add</text>
+      </controlProperties>
+    </control>
+    <control controlID="199" controlTypeID="com.balsamiq.mockups::Icon" x="123" y="112" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>plus%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="201" controlTypeID="com.balsamiq.mockups::VRule" x="196" y="109" w="-1" h="30" measuredW="10" measuredH="100" zOrder="15" locked="false" isInGroup="-1"/>
+    <control controlID="202" controlTypeID="com.balsamiq.mockups::Label" x="232" y="114" w="-1" h="-1" measuredW="32" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Go%20to</text>
+      </controlProperties>
+    </control>
+    <control controlID="203" controlTypeID="com.balsamiq.mockups::Icon" x="206" y="112" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>location-arrow%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="204" controlTypeID="com.balsamiq.mockups::VRule" x="285" y="109" w="-1" h="30" measuredW="10" measuredH="100" zOrder="18" locked="false" isInGroup="-1"/>
+    <control controlID="205" controlTypeID="com.balsamiq.mockups::Label" x="321" y="114" w="-1" h="-1" measuredW="47" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Manage</text>
+      </controlProperties>
+    </control>
+    <control controlID="206" controlTypeID="com.balsamiq.mockups::Icon" x="295" y="112" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>cog%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="211" controlTypeID="com.balsamiq.mockups::Icon" x="177" y="116" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="212" controlTypeID="com.balsamiq.mockups::Icon" x="269" y="116" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="213" controlTypeID="com.balsamiq.mockups::Icon" x="375" y="116" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="214" controlTypeID="com.balsamiq.mockups::VRule" x="391" y="109" w="-1" h="30" measuredW="10" measuredH="100" zOrder="24" locked="false" isInGroup="-1"/>
+    <control controlID="215" controlTypeID="com.balsamiq.mockups::Canvas" x="1046" y="108" w="288" h="33" measuredW="100" measuredH="70" zOrder="25" locked="false" isInGroup="-1"/>
+    <control controlID="218" controlTypeID="com.balsamiq.mockups::Label" x="1083" y="114" w="23" h="-1" measuredW="23" measuredH="21" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Add</text>
+      </controlProperties>
+    </control>
+    <control controlID="219" controlTypeID="com.balsamiq.mockups::Icon" x="1057" y="112" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>plus%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="220" controlTypeID="com.balsamiq.mockups::VRule" x="1130" y="109" w="-1" h="30" measuredW="10" measuredH="100" zOrder="28" locked="false" isInGroup="-1"/>
+    <control controlID="221" controlTypeID="com.balsamiq.mockups::Label" x="1166" y="114" w="32" h="-1" measuredW="32" measuredH="21" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Go%20to</text>
+      </controlProperties>
+    </control>
+    <control controlID="222" controlTypeID="com.balsamiq.mockups::Icon" x="1140" y="112" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>location-arrow%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="223" controlTypeID="com.balsamiq.mockups::VRule" x="1219" y="109" w="-1" h="30" measuredW="10" measuredH="100" zOrder="31" locked="false" isInGroup="-1"/>
+    <control controlID="224" controlTypeID="com.balsamiq.mockups::Label" x="1255" y="114" w="47" h="-1" measuredW="47" measuredH="21" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Manage</text>
+      </controlProperties>
+    </control>
+    <control controlID="225" controlTypeID="com.balsamiq.mockups::Icon" x="1229" y="112" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>cog%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="226" controlTypeID="com.balsamiq.mockups::Icon" x="1111" y="116" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="227" controlTypeID="com.balsamiq.mockups::Icon" x="1203" y="116" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="228" controlTypeID="com.balsamiq.mockups::Icon" x="1309" y="116" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="230" controlTypeID="com.balsamiq.mockups::Arrow" x="40" y="133" w="137" h="167" measuredW="150" measuredH="100" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <curvature>-1</curvature>
+        <direction>top</direction>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="232" controlTypeID="com.balsamiq.mockups::Paragraph" x="192" y="288" w="209" h="129" measuredW="275" measuredH="80" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>When%20connected%20to%20an%20administrator%20account%20%28CESI%20or%20BDE%27s%20staff%29%20the%20tollbar%20appear%20on%20the%20top%20of%20the%20page%20and%20fixed%20to%20it.%20With%20this%20toolbar%2C%20the%20administrator%20can%20add%20an%20object%2C%20manage%20the%20objects%20and%20go%20to%20a%20sp%E9cific%20part%20of%20the%20site%20easly.</text>
+      </controlProperties>
+    </control>
+    <control controlID="233" controlTypeID="com.balsamiq.mockups::Label" x="427" y="114" w="-1" h="-1" measuredW="37" measuredH="21" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Action</text>
+      </controlProperties>
+    </control>
+    <control controlID="234" controlTypeID="com.balsamiq.mockups::Icon" x="401" y="112" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>bolt%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="235" controlTypeID="com.balsamiq.mockups::Icon" x="469" y="116" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="236" controlTypeID="com.balsamiq.mockups::VRule" x="489" y="109" w="-1" h="30" measuredW="10" measuredH="100" zOrder="42" locked="false" isInGroup="-1"/>
+    <control controlID="237" controlTypeID="com.balsamiq.mockups::Label" x="1083" y="143" w="-1" h="-1" measuredW="37" measuredH="21" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>13</size>
+        <text>Action</text>
+      </controlProperties>
+    </control>
+    <control controlID="238" controlTypeID="com.balsamiq.mockups::Icon" x="1057" y="141" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>bolt%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="239" controlTypeID="com.balsamiq.mockups::Icon" x="1127" y="145" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>caret-down%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="240" controlTypeID="com.balsamiq.mockups::VRule" x="1147" y="138" w="-1" h="30" measuredW="10" measuredH="100" zOrder="46" locked="false" isInGroup="-1"/>
+    <control controlID="241" controlTypeID="com.balsamiq.mockups::Arrow" x="416" y="143" w="69" h="167" measuredW="150" measuredH="100" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <curvature>-1</curvature>
+        <direction>top</direction>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="242" controlTypeID="com.balsamiq.mockups::Paragraph" x="492" y="292" w="170" h="52" measuredW="275" measuredH="80" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>The%20*Action*%20menu%20is%20a%20contextual%20menu%20changing%20on%20each%20page%20of%20the%20site.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
