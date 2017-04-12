@@ -1,0 +1,343 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1334" measuredH="1233" mockupW="1324" mockupH="1195">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="10" y="38" w="980" h="827" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BDE%20Cesi%20Lyon%0Ahttp%3A//bde.cesi.fr/</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="10" y="108" w="980" h="102" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="25" y="120" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="861" y="120" w="114" h="79" measuredW="100" measuredH="70" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="888" y="129" w="-1" h="-1" measuredW="59" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Log%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="888" y="161" w="-1" h="-1" measuredW="63" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sign%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::MenuBar" x="117" y="145" w="730" h="29" measuredW="311" measuredH="29" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <text>Home%2CEvents%2CGallery%2CShop%2CMembers</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="189" y="276" w="384" h="215" measuredW="100" measuredH="70" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="204" y="291" w="354" h="-1" measuredW="154" measuredH="36" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Title%20event%201</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::ButtonBar" x="189" y="464" w="384" h="27" measuredW="297" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Comment%2C%20Participate%2C%20More%20informations</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Label" x="330" y="351" w="-1" h="-1" measuredW="103" measuredH="32" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>In%203%20days</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Label" x="277" y="383" w="-1" h="-1" measuredW="209" measuredH="32" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Wensday%2027%20march</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Label" x="516" y="428" w="-1" h="-1" measuredW="41" measuredH="28" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Free</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Canvas" x="189" y="501" w="384" h="215" measuredW="100" measuredH="70" zOrder="15" locked="false" isInGroup="-1"/>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="204" y="516" w="354" h="-1" measuredW="161" measuredH="36" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Title%20event%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::ButtonBar" x="189" y="689" w="384" h="27" measuredW="297" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Comment%2C%20Participate%2C%20More%20informations</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="330" y="576" w="-1" h="-1" measuredW="102" measuredH="32" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>In%205%20days</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="277" y="608" w="-1" h="-1" measuredW="204" measuredH="32" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Wensday%2013%20march</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="493" y="654" w="-1" h="-1" measuredW="72" measuredH="28" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>14%20%u20AC%2050</text>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::Canvas" x="10" y="739" w="980" h="102" measuredW="100" measuredH="70" zOrder="21" locked="false" isInGroup="-1"/>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Image" x="898" y="751" w="77" h="79" measuredW="77" measuredH="79" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20Exia</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::Image" x="811" y="751" w="77" h="79" measuredW="77" measuredH="79" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20EI</text>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Label" x="413" y="755" w="-1" h="-1" measuredW="50" measuredH="26" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Social</text>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Label" x="413" y="784" w="-1" h="-1" measuredW="57" measuredH="21" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Facebook</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Label" x="413" y="805" w="-1" h="-1" measuredW="42" measuredH="21" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Twitter</text>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::Label" x="491" y="784" w="-1" h="-1" measuredW="60" measuredH="21" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Instagram</text>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::Label" x="491" y="805" w="-1" h="-1" measuredW="55" measuredH="21" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Snapchat</text>
+      </controlProperties>
+    </control>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::Label" x="25" y="751" w="-1" h="-1" measuredW="86" measuredH="22" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Legals%20notice</text>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::Label" x="25" y="770" w="-1" h="-1" measuredW="38" measuredH="22" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>About</text>
+      </controlProperties>
+    </control>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::Label" x="25" y="792" w="-1" h="-1" measuredW="52" measuredH="22" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::Label" x="25" y="814" w="-1" h="-1" measuredW="27" measuredH="22" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>FAQ</text>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Canvas" x="1046" y="108" w="288" h="127" measuredW="100" measuredH="70" zOrder="33" locked="false" isInGroup="-1"/>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Image" x="1057" y="120" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::Canvas" x="1213" y="120" w="114" h="79" measuredW="100" measuredH="70" zOrder="35" locked="false" isInGroup="-1"/>
+    <control controlID="95" controlTypeID="com.balsamiq.mockups::Canvas" x="1057" y="562" w="267" h="215" measuredW="100" measuredH="70" zOrder="36" locked="false" isInGroup="-1"/>
+    <control controlID="99" controlTypeID="com.balsamiq.mockups::Label" x="1110" y="570" w="160" h="-1" measuredW="154" measuredH="36" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Title%20event%201</text>
+      </controlProperties>
+    </control>
+    <control controlID="100" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1057" y="731" w="267" h="27" measuredW="168" measuredH="27" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Comment%2C%20Participate</text>
+      </controlProperties>
+    </control>
+    <control controlID="102" controlTypeID="com.balsamiq.mockups::Label" x="1138" y="624" w="-1" h="-1" measuredW="103" measuredH="32" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>In%203%20days</text>
+      </controlProperties>
+    </control>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::Label" x="1085" y="656" w="-1" h="-1" measuredW="209" measuredH="32" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Wensday%2027%20march</text>
+      </controlProperties>
+    </control>
+    <control controlID="104" controlTypeID="com.balsamiq.mockups::Label" x="1268" y="698" w="-1" h="-1" measuredW="41" measuredH="28" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Free</text>
+      </controlProperties>
+    </control>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::HRule" x="1057" y="1027" w="214" h="-1" measuredW="100" measuredH="10" zOrder="42" locked="false" isInGroup="-1"/>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::Label" x="1066" y="1038" w="196" h="-1" measuredW="93" measuredH="24" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Title%20event%204</text>
+      </controlProperties>
+    </control>
+    <control controlID="115" controlTypeID="com.balsamiq.mockups::Button" x="1213" y="1036" w="-1" h="-1" measuredW="49" measuredH="27" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vote</text>
+      </controlProperties>
+    </control>
+    <control controlID="149" controlTypeID="com.balsamiq.mockups::Canvas" x="1046" y="1015" w="288" h="196" measuredW="100" measuredH="70" zOrder="45" locked="false" isInGroup="-1"/>
+    <control controlID="150" controlTypeID="com.balsamiq.mockups::Image" x="1245" y="1117" w="77" h="79" measuredW="77" measuredH="79" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20Exia</text>
+      </controlProperties>
+    </control>
+    <control controlID="151" controlTypeID="com.balsamiq.mockups::Image" x="1245" y="1027" w="77" h="79" measuredW="77" measuredH="79" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20EI</text>
+      </controlProperties>
+    </control>
+    <control controlID="157" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1027" w="-1" h="-1" measuredW="86" measuredH="22" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Legals%20notice</text>
+      </controlProperties>
+    </control>
+    <control controlID="158" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1046" w="-1" h="-1" measuredW="38" measuredH="22" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>About</text>
+      </controlProperties>
+    </control>
+    <control controlID="159" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1068" w="-1" h="-1" measuredW="52" measuredH="22" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="160" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1090" w="-1" h="-1" measuredW="27" measuredH="22" zOrder="51" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>FAQ</text>
+      </controlProperties>
+    </control>
+    <control controlID="162" controlTypeID="com.balsamiq.mockups::Icon" x="1178" y="206" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ellipsis-h%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="164" controlTypeID="com.balsamiq.mockups::Button" x="1057" y="751" w="267" h="27" measuredW="127" measuredH="27" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>More%20informations</text>
+      </controlProperties>
+    </control>
+    <control controlID="168" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1046" y="38" w="288" h="1195" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BDE%20Cesi%20Lyon%0Ahttp%3A//bde.cesi.fr/</text>
+      </controlProperties>
+    </control>
+    <control controlID="169" controlTypeID="com.balsamiq.mockups::Button" x="1241" y="130" w="-1" h="-1" measuredW="59" measuredH="27" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Log%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="170" controlTypeID="com.balsamiq.mockups::Button" x="1241" y="162" w="-1" h="-1" measuredW="63" measuredH="27" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sign%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="171" controlTypeID="com.balsamiq.mockups::Calendar" x="597" y="276" w="214" h="221" measuredW="96" measuredH="96" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="172" controlTypeID="com.balsamiq.mockups::Icon" x="189" y="235" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>arrow-circle-left%7Cmedium</icon>
+      </controlProperties>
+    </control>
+    <control controlID="173" controlTypeID="com.balsamiq.mockups::Label" x="227" y="239" w="-1" h="-1" measuredW="86" measuredH="24" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Past%20events</text>
+      </controlProperties>
+    </control>
+    <control controlID="174" controlTypeID="com.balsamiq.mockups::Label" x="680" y="239" w="-1" h="-1" measuredW="88" measuredH="24" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Next%20events</text>
+      </controlProperties>
+    </control>
+    <control controlID="175" controlTypeID="com.balsamiq.mockups::Icon" x="773" y="235" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>arrow-circle-right%7Cmedium</icon>
+      </controlProperties>
+    </control>
+    <control controlID="176" controlTypeID="com.balsamiq.mockups::Icon" x="1057" y="250" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>arrow-circle-left%7Cmedium</icon>
+      </controlProperties>
+    </control>
+    <control controlID="177" controlTypeID="com.balsamiq.mockups::Icon" x="1294" y="250" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="61" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>arrow-circle-right%7Cmedium</icon>
+      </controlProperties>
+    </control>
+    <control controlID="178" controlTypeID="com.balsamiq.mockups::Label" x="1094" y="254" w="-1" h="-1" measuredW="86" measuredH="24" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Past%20events</text>
+      </controlProperties>
+    </control>
+    <control controlID="179" controlTypeID="com.balsamiq.mockups::Label" x="1199" y="254" w="-1" h="-1" measuredW="88" measuredH="24" zOrder="63" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Next%20events</text>
+      </controlProperties>
+    </control>
+    <control controlID="180" controlTypeID="com.balsamiq.mockups::Canvas" x="1057" y="784" w="267" h="215" measuredW="100" measuredH="70" zOrder="64" locked="false" isInGroup="-1"/>
+    <control controlID="181" controlTypeID="com.balsamiq.mockups::Label" x="1110" y="792" w="160" h="-1" measuredW="161" measuredH="36" zOrder="65" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Title%20event%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="182" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1057" y="953" w="267" h="27" measuredW="168" measuredH="27" zOrder="66" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Comment%2C%20Participate</text>
+      </controlProperties>
+    </control>
+    <control controlID="183" controlTypeID="com.balsamiq.mockups::Label" x="1138" y="846" w="-1" h="-1" measuredW="102" measuredH="32" zOrder="67" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>In%205%20days</text>
+      </controlProperties>
+    </control>
+    <control controlID="184" controlTypeID="com.balsamiq.mockups::Label" x="1085" y="878" w="-1" h="-1" measuredW="204" measuredH="32" zOrder="68" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Wensday%2013%20march</text>
+      </controlProperties>
+    </control>
+    <control controlID="185" controlTypeID="com.balsamiq.mockups::Label" x="1241" y="918" w="-1" h="-1" measuredW="72" measuredH="28" zOrder="69" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>14%20%u20AC%2050</text>
+      </controlProperties>
+    </control>
+    <control controlID="186" controlTypeID="com.balsamiq.mockups::Button" x="1057" y="973" w="267" h="27" measuredW="127" measuredH="27" zOrder="70" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>More%20informations</text>
+      </controlProperties>
+    </control>
+    <control controlID="187" controlTypeID="com.balsamiq.mockups::Calendar" x="1057" y="291" w="267" h="261" measuredW="96" measuredH="96" zOrder="71" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>

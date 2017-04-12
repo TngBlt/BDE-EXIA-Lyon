@@ -1,0 +1,199 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1334" measuredH="1396" mockupW="1324" mockupH="1358">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="10" y="38" w="980" h="827" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BDE%20Cesi%20Lyon%0Ahttp%3A//bde.cesi.fr/</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="10" y="108" w="980" h="102" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="25" y="120" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="861" y="120" w="114" h="79" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="888" y="129" w="-1" h="-1" measuredW="59" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Log%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="888" y="161" w="-1" h="-1" measuredW="63" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sign%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::MenuBar" x="117" y="145" w="730" h="29" measuredW="311" measuredH="29" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <text>Home%2CEvents%2CGallery%2CShop%2CMembers</text>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::Canvas" x="10" y="739" w="980" h="102" measuredW="100" measuredH="70" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Image" x="898" y="751" w="77" h="79" measuredW="77" measuredH="79" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20Exia</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::Image" x="811" y="751" w="77" h="79" measuredW="77" measuredH="79" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20EI</text>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Label" x="413" y="755" w="-1" h="-1" measuredW="50" measuredH="26" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Social</text>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Label" x="413" y="784" w="-1" h="-1" measuredW="57" measuredH="21" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Facebook</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Label" x="413" y="805" w="-1" h="-1" measuredW="42" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Twitter</text>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::Label" x="491" y="784" w="-1" h="-1" measuredW="60" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Instagram</text>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::Label" x="491" y="805" w="-1" h="-1" measuredW="55" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Snapchat</text>
+      </controlProperties>
+    </control>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::Label" x="25" y="751" w="-1" h="-1" measuredW="86" measuredH="22" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Legals%20notice</text>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::Label" x="25" y="770" w="-1" h="-1" measuredW="38" measuredH="22" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>About</text>
+      </controlProperties>
+    </control>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::Label" x="25" y="792" w="-1" h="-1" measuredW="52" measuredH="22" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::Label" x="25" y="814" w="-1" h="-1" measuredW="27" measuredH="22" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>FAQ</text>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Canvas" x="1046" y="108" w="288" h="127" measuredW="100" measuredH="70" zOrder="20" locked="false" isInGroup="-1"/>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Image" x="1057" y="120" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo</text>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::Canvas" x="1213" y="120" w="114" h="79" measuredW="100" measuredH="70" zOrder="22" locked="false" isInGroup="-1"/>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::HRule" x="1057" y="1188" w="214" h="-1" measuredW="100" measuredH="10" zOrder="23" locked="false" isInGroup="-1"/>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::Label" x="1066" y="1199" w="196" h="-1" measuredW="93" measuredH="24" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Title%20event%204</text>
+      </controlProperties>
+    </control>
+    <control controlID="115" controlTypeID="com.balsamiq.mockups::Button" x="1213" y="1197" w="-1" h="-1" measuredW="49" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vote</text>
+      </controlProperties>
+    </control>
+    <control controlID="149" controlTypeID="com.balsamiq.mockups::Canvas" x="1046" y="1176" w="288" h="196" measuredW="100" measuredH="70" zOrder="26" locked="false" isInGroup="-1"/>
+    <control controlID="150" controlTypeID="com.balsamiq.mockups::Image" x="1245" y="1278" w="77" h="79" measuredW="77" measuredH="79" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20Exia</text>
+      </controlProperties>
+    </control>
+    <control controlID="151" controlTypeID="com.balsamiq.mockups::Image" x="1245" y="1188" w="77" h="79" measuredW="77" measuredH="79" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%20CESI%20EI</text>
+      </controlProperties>
+    </control>
+    <control controlID="157" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1188" w="-1" h="-1" measuredW="86" measuredH="22" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Legals%20notice</text>
+      </controlProperties>
+    </control>
+    <control controlID="158" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1207" w="-1" h="-1" measuredW="38" measuredH="22" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>About</text>
+      </controlProperties>
+    </control>
+    <control controlID="159" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1229" w="-1" h="-1" measuredW="52" measuredH="22" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="160" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="1251" w="-1" h="-1" measuredW="27" measuredH="22" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>FAQ</text>
+      </controlProperties>
+    </control>
+    <control controlID="162" controlTypeID="com.balsamiq.mockups::Icon" x="1178" y="206" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ellipsis-h%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="168" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1046" y="38" w="288" h="1358" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BDE%20Cesi%20Lyon%0Ahttp%3A//bde.cesi.fr/</text>
+      </controlProperties>
+    </control>
+    <control controlID="169" controlTypeID="com.balsamiq.mockups::Button" x="1241" y="130" w="-1" h="-1" measuredW="59" measuredH="27" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Log%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="170" controlTypeID="com.balsamiq.mockups::Button" x="1241" y="162" w="-1" h="-1" measuredW="63" measuredH="27" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sign%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="188" controlTypeID="com.balsamiq.mockups::Label" x="189" y="221" w="384" h="-1" measuredW="169" measuredH="48" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Page%20title</text>
+      </controlProperties>
+    </control>
+    <control controlID="190" controlTypeID="com.balsamiq.mockups::Paragraph" x="189" y="276" w="622" h="440" measuredW="275" measuredH="80" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*ipsum%20dolor*%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident%2C%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum.%0A%20%0A*Lorem%20ipsum*%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20Morbi%20convallis%20scelerisque%20nibh%2C%20ullamcorper%20gravida%20libero%20interdum%20nec.%20Fusce%20suscipit%20faucibus%20ullamcorper.%20Etiam%20id%20nibh%20leo.%20Nulla%20viverra%20nulla%20eros%2C%20sit%20amet%20dapibus%20ante%20efficitur%20sit%20amet.%20Integer%20vitae%20molestie%20nulla.%20Nunc%20vitae%20ante%20ut%20nulla%20rhoncus%20aliquam.%20Nunc%20et%20turpis%20lobortis%2C%20consectetur%20lectus%20vel%2C%20elementum%20ligula.%20Nunc%20rutrum%20id%20eros%20a%20fringilla.%20Pellentesque%20dictum%20accumsan%20lobortis.%20Nullam%20est%20metus%2C%20fermentum%20sit%20amet%20tellus%20eget%2C%20tincidunt%20accumsan%20tellus.%20Quisque%20nulla%20dolor%2C%20elementum%20ut%20sollicitudin%20hendrerit%2C%20fermentum%20fringilla%20lectus.%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A*Cras*%20semper%20consectetur%20lorem%20et%20finibus.%20Duis%20non%20sem%20placerat%20tortor%20consectetur%20accumsan.%20Donec%20malesuada%20nisl%20ac%20tortor%20gravida%20laoreet.%20In%20hac%20habitasse%20platea%20dictumst.%20Interdum%20et%20malesuada%20fames%20ac%20ante%20ipsum%20primis%20in%20faucibus.%20Aenean%20ornare%20lorem%20a%20elit%20lacinia%2C%20vitae%20fringilla%20urna%20faucibus.%20Vestibulum%20convallis%20ante%20in%20justo%20pulvinar%20scelerisque.%20Morbi%20accumsan%20volutpat%20vestibulum.%20Sed%20ante%20nulla%2C%20venenatis%20id%20fermentum%20ac%2C%20auctor%20eget%20massa.%20Nulla%20varius%20urna%20id%20arcu%20iaculis%2C%20ultricies%20volutpat%20lorem%20pharetra.%20Aliquam%20lobortis%20eros%20sollicitudin%2C%20lobortis%20arcu%20vitae%2C%20venenatis%20risus.%20Duis%20lobortis%20iaculis%20sapien%2C%20ut%20auctor%20erat%20blandit%20eu.%20Suspendisse%20quis%20volutpat%20sapien%2C%20quis%20auctor%20quam.%20Phasellus%20vestibulum%20urna%20ac%20erat%20consectetur%20laoreet.%20Ut%20aliquam%20libero%20ut%20risus%20tincidunt%20facilisis%20et%20id%20turpis.</text>
+      </controlProperties>
+    </control>
+    <control controlID="191" controlTypeID="com.balsamiq.mockups::Image" x="361" y="468" w="279" h="125" measuredW="77" measuredH="79" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="192" controlTypeID="com.balsamiq.mockups::Label" x="1059" y="244" w="263" h="-1" measuredW="169" measuredH="48" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Page%20title</text>
+      </controlProperties>
+    </control>
+    <control controlID="193" controlTypeID="com.balsamiq.mockups::Paragraph" x="1059" y="299" w="263" h="877" measuredW="275" measuredH="80" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*ipsum%20dolor*%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident%2C%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum.%0A%20%0A*Lorem%20ipsum*%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20Morbi%20convallis%20scelerisque%20nibh%2C%20ullamcorper%20gravida%20libero%20interdum%20nec.%20Fusce%20suscipit%20faucibus%20ullamcorper.%20Etiam%20id%20nibh%20leo.%20Nulla%20viverra%20nulla%20eros%2C%20sit%20amet%20dapibus%20ante%20efficitur%20sit%20amet.%20Integer%20vitae%20molestie%20nulla.%20Nunc%20vitae%20ante%20ut%20nulla%20rhoncus%20aliquam.%20Nunc%20et%20turpis%20lobortis%2C%20consectetur%20lectus%20vel%2C%20elementum%20ligula.%20Nunc%20rutrum%20id%20eros%20a%20fringilla.%20Pellentesque%20dictum%20accumsan%20lobortis.%20Nullam%20est%20metus%2C%20fermentum%20sit%20amet%20tellus%20eget%2C%20tincidunt%20accumsan%20tellus.%20Quisque%20nulla%20dolor%2C%20elementum%20ut%20sollicitudin%20hendrerit%2C%20fermentum%20fringilla%20lectus.%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A%20%0A*Cras*%20semper%20consectetur%20lorem%20et%20finibus.%20Duis%20non%20sem%20placerat%20tortor%20consectetur%20accumsan.%20Donec%20malesuada%20nisl%20ac%20tortor%20gravida%20laoreet.%20In%20hac%20habitasse%20platea%20dictumst.%20Interdum%20et%20malesuada%20fames%20ac%20ante%20ipsum%20primis%20in%20faucibus.%20Aenean%20ornare%20lorem%20a%20elit%20lacinia%2C%20vitae%20fringilla%20urna%20faucibus.%20Vestibulum%20convallis%20ante%20in%20justo%20pulvinar%20scelerisque.%20Morbi%20accumsan%20volutpat%20vestibulum.%20Sed%20ante%20nulla%2C%20venenatis%20id%20fermentum%20ac%2C%20auctor%20eget%20massa.%20Nulla%20varius%20urna%20id%20arcu%20iaculis%2C%20ultricies%20volutpat%20lorem%20pharetra.%20Aliquam%20lobortis%20eros%20sollicitudin%2C%20lobortis%20arcu%20vitae%2C%20venenatis%20risus.%20Duis%20lobortis%20iaculis%20sapien%2C%20ut%20auctor%20erat%20blandit%20eu.%20Suspendisse%20quis%20volutpat%20sapien%2C%20quis%20auctor%20quam.%20Phasellus%20vestibulum%20urna%20ac%20erat%20consectetur%20laoreet.%20Ut%20aliquam%20libero%20ut%20risus%20tincidunt%20facilisis%20et%20id%20turpis.</text>
+      </controlProperties>
+    </control>
+    <control controlID="194" controlTypeID="com.balsamiq.mockups::Image" x="1059" y="728" w="263" h="125" measuredW="77" measuredH="79" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
