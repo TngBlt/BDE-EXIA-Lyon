@@ -30,6 +30,7 @@ a {
     border: #c2242a solid 1px;
     border-radius: 2px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
 }
     .event-background-container {
         position: relative;
@@ -38,7 +39,7 @@ a {
 
     .event-background {
         position: absolute;
-        top: -50%;
+        top: 0;
         left: 0;
         opacity: 0.4;
     }
@@ -69,11 +70,10 @@ a {
         }
 
     .event-content {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        min-height: 150px;
     }
 
-        .event-content-date, .event-content-offset {
+        .event-content-main, .event-content-offset {
             text-align: center;
         }
 
