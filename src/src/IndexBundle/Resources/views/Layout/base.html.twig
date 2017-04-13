@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block maintitle %}{% endblock %}{% if block("maintitle") != "" %} - {% endif %}{{ sitename }}</title>
+        {% block mainhead %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}" />
+    </head>
+    <body>
+        {% block mainbody %}{% endblock %}
+        {% block mainscripts %}{% endblock %}
+    </body>
+</html>

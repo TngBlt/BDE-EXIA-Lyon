@@ -1,3 +1,29 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+gallery:
+    resource: "@GalleryBundle/Controller/"
+    type:     annotation
+    prefix:   /gellery/
+
+shop:
+    resource: "@ShopBundle/Controller/"
+    type:     annotation
+    prefix:   /shop/
+
+event:
+    resource: "@EventBundle/Controller/"
+    type:     annotation
+    prefix:   /events/
+
+pages:
+    resource: "@PagesBundle/Controller/"
+    type:     annotation
+    prefix:   /pages/
+
+index:
+    resource: "@IndexBundle/Controller/"
+    type:     annotation
+    prefix:   /
