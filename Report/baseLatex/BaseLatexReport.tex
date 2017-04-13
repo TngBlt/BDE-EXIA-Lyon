@@ -11,9 +11,10 @@
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage[some]{background}
-\usepackage{lipsum}
+\usepackage{pdfpages}
 
 \definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+
 
 \DeclareFixedFont{\bigsf}{T1}{phv}{b}{n}{1.5cm}
 
@@ -45,6 +46,9 @@ contents={\begin{tikzpicture}[remember picture,overlay]
 
 \begin{document}
 \renewcommand{\abstractname}{Abstract}
+\renewcommand\contentsname{Table of Contents}
+\renewcommand\contentsname{Table of Contents}
+\renewcommand\listfigurename{Table of Figures}
 \begin{titlepage}
 	\BgThispage
 	\newgeometry{left=1cm,right=4cm}
