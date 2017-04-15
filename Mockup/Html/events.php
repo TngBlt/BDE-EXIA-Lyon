@@ -2,7 +2,6 @@
 $customTitle = "Calendar of events";
 $customHead = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/articles.css\"/>
 <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/events.css\"/>";
-$customScripts = "<p>Monscript</p>";
 include "includes/header.php"; ?>
 
 <nav class="time-travel row">
