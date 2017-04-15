@@ -1,0 +1,39 @@
+.main-page {
+    padding-top: 20px;
+}
+
+.time-travel{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+    .time-travel-next{
+        text-align: right;
+    }
+
+.calendar{}
+
+    .calendar-header{
+        text-align: center;
+    }
+
+    .calendar-table{
+        width: 100%;
+    }
+
+    .calendar-days {
+        font-weight: bold;
+    }
+
+.widget{
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+    border: #0065a7 solid 1px;
+}
+
+    .widget-offset{
+        margin-bottom: 20px;
+    }
