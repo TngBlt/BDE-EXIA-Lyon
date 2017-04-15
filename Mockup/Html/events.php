@@ -1,7 +1,14 @@
 <?php
 $customTitle = "Calendar of events";
+
 $customHead = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/articles.css\"/>
 <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/events.css\"/>";
+
+$customActions = "<li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Participations</a></li>
+                <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 1</a></li>
+                <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 2</a></li>
+                <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 3</a></li>";
+
 include "includes/header.php"; ?>
 
 <nav class="time-travel row">

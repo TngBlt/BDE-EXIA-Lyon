@@ -41,3 +41,22 @@ include "includes/header.php"; ?>
 <?php include "includes/footer.php"; ?>
 
 ```
+
+### Administration
+
+La barre d'administration est visible en passant la pramètre `admin` dans l'url.
+
+> Par exemple `localhost:8081/events.php?admin`
+
+#### Ajouter des actions
+
+Les actions contextuelles peuvent êtres ajoutés en remplissant la variable `$customActions` avec des `li` correctement organisés.
+
+Ci dessous, un exemple d'actions personnalisés : 
+
+```php
+$customActions = "<li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Participations</a></li>
+                <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 1</a></li>
+                <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 2</a></li>
+                <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 3</a></li>";
+```
