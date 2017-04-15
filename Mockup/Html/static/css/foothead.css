@@ -93,12 +93,12 @@
 
 /**Footer*/
 
-footer{
-	width: 100%;
+.footer-infos li{
+	list-style-type: none;
 }
 
-li{
-	list-style-type: none;
+.footer-infos ul {
+    padding-left: 0;
 }
 
 .footer{
@@ -106,11 +106,11 @@ li{
 	font-family: "Open sans", sans-serif;
 	font-weight: lighter;
 	padding: 2em;
+    color: #ffffff;
 }
 
-.footer a{
-	color: #ffffff;
-	text-decoration: none;
+.footer-social {
+    text-align: center;
 }
 
 .footer-social-logos{
@@ -120,8 +120,4 @@ li{
 .footer-logos{
 	text-align: right;
 	margin-top: 1em;
-}
-
-.footer-logs img{
-	border-radius: 25px;
 }
