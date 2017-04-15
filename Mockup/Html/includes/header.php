@@ -2,15 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>BDE Exia</title>
+    <title><?php if(isset($customTitle)){ echo $customTitle." - "; }?>BDE Cesi Lyon</title>
     <link rel="stylesheet" href="/static/css/bootstrap.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/foothead.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/articles.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/events.css"/>
+    <?php if(isset($customHead)){ echo $customHead; }?>
 </head>
 <body>
 <header class="container-fluid header">
