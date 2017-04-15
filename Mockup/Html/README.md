@@ -60,3 +60,9 @@ $customActions = "<li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Partic
                 <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 2</a></li>
                 <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Idea 3</a></li>";
 ```
+
+### Widgets
+
+Un système de widgets est commun à tout le site. Ce système fournis une organisation en cartes. Pour plus d'infos, rendez vous sur la page [localhost:8081/widget-structure.php](http://localhost:8081/widget-structure.php).
+
+Tout le CSS est contenu dans le fichier `base.css`.
