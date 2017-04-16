@@ -1,0 +1,63 @@
+.teambde h1{
+	float: left;
+	color: #1E90FF;
+	margin-left: 3em;
+}
+
+.teambde-members{
+	width:230px;
+	height:330px;
+	background-color:#808080;
+}
+
+.registration h1{
+	text-align: center;
+	color: #1E90FF;
+}
+
+.registration-area{
+	text-align: center;
+}
+
+.registration-form{
+	width:700px;
+	height:620px;
+	background-color:#F4A460;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	padding: 0.2em;
+	margin: 2em 2em 2em 10em;
+}
+
+label{
+	padding: 1em;
+	color: #000000;
+	font-weight: bold ;
+	letter-spacing: 1px;
+}
+
+label:hover
+{
+	font-weight: bold;
+}
+
+input{
+	border: #CCC 1px solid;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+/* button submit */
+input[type="submit"]
+{
+	border: #DDEEFF 1px solid;
+}
+
+input[type="submit"]:hover
+{
+	background-color: #B0C4DE;
+	cursor: pointer;
+}
+
+
+.submit{
+	float: right;
+}
