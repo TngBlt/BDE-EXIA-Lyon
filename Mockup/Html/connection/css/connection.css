@@ -19,13 +19,22 @@
 	text-align: center;
 }
 
-.registration-form{
+.signin{
 	width:700px;
 	height:620px;
+	margin: 2em 2em 2em 10em;
+}
+
+.login{
+	width:525px;
+	height:200px;
+	margin: 9.5em 2em 9.5em 15em;
+}
+
+.registration-form{
 	background-color:#F4A460;
 	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
 	padding: 0.2em;
-	margin: 2em 2em 2em 10em;
 }
 
 label{

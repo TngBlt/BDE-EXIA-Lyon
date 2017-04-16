@@ -1,13 +1,13 @@
 <?php $customTitle = "Sign in !";
 
-$customHead = "<link rel='stylesheet' href='css/signin.css'/>";
+$customHead = "<link rel='stylesheet' href='css/connection.css'/>";
 
 include "../includes/header.php"; ?>
 	
 	<div class="container">
 			<div class="row">
 				<div class="col-md-12 registration-area">
-					<div class="row registration-form">
+					<div class="row registration-form signin">
 						<form action = "signin.php" method="post">
 							<div class="col-md-12">
 								<label for="username">Name : </label><input type="text" name="username" value="<?php if(isset($_POST['username'])){echo htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8');} ?>"/>
