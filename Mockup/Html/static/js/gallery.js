@@ -11,10 +11,3 @@ $('.item-image').on('mouseenter mouseleave', function () {
     $icons.fadeToggle('fast','linear');
 });
 
-iconsImage.on('mouseenter', function () {
-    $(this).parent().find('.image-link img').css('opacity','0.7')
-});
-
-iconsImage.on('mouseleave', function () {
-    $(this).parent().find('.image-link img').css('opacity','1')
-});

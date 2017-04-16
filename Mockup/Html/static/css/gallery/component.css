@@ -26,34 +26,49 @@
     left: 12px;
     height: 100%;
     width:100%;
-    cursor: pointer;
+    pointer-events: none;
 }
 
-.icons-image .fa-thumbs-up {
+.icons-image .thumbs-up {
     position: absolute;
     right: 25px;
-    bottom:17px;
+    bottom:0;
+    display: flex;
+    align-items: baseline;
+}
+.icons-image .fa-thumbs-up,
+.icons-image .fa-comments {
+    margin-left: 5px;
 }
 
-
-.icons-image .fa-comments {
+.icons-image .comments {
     position: absolute;
     left: 3px;
-    bottom:17px;
+    bottom:0;
+    display: flex;
+    align-items: baseline;
 }
-.icons-image .fa-share-alt {
+.icons-image .share-alt {
     position: absolute;
     right: 25px;
     top:7px;
 }
 
 
-.grid .item a,
+.grid .item a {
+    outline: none;
+    border: none;
+    max-width: 100%;
+}
 .grid .item img {
     outline: none;
     border: none;
     display: block;
     max-width: 100%;
+}
+
+.grid .item img:hover {
+    opacity: 0.7;
 }
 
 .grid .item img {

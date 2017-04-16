@@ -29,9 +29,9 @@ include "includes/header.php"; ?>
                 </a>
                 <div class="icons-image hidden">
 
-                    <a href="#"><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-lg fa-share-alt" aria-hidden="true"></i></a>
+                    <a href="#" class="thumbs-up"><p><?php echo '12 '?></p><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
+                    <a href="#" class="comments"><p><?php echo '14 '?></p><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
+                    <a href="#" class="share-alt"><i class="fa fa-lg fa-share-alt" aria-hidden="true"></i></a>
                 </div>
             </div>
 
