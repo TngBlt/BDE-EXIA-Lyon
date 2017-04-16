@@ -8,7 +8,7 @@ $(grid).imagesLoaded( function() {
         itemSelector: 'div.item'
     });
     itemImage.each(function (){
-        var isOnView = Utils.isElementInView(this,true);
+        var isOnView = Utils.isElementInView(this,false);
 
         if(isOnView)
         {
@@ -24,9 +24,12 @@ $(window).scroll( function () {
     console.log('scroll');
     itemImage.each(function (){
         var isOnView = Utils.isElementInView(this,false);
-
+        var elem = $(this);
         if(isOnView) {
-            $(this).css({'opacity':'1'});
+            elem.css({'opacity':'1'});
+        }
+        else {
+            elem.css({'opacity':'0'});
         }
     });
 });
@@ -36,6 +39,19 @@ itemImage.on('mouseenter mouseleave', function () {
     var icons = $(this).children('.icons-image');
     icons.fadeToggle('fast','linear');
 });
+
+
+itemImage.on('click', function (e) {
+    var elem = $(this);
+    elem.toggleClass('clicked');
+    elem.next('.item-image-sidepart').fadeToggle();
+
+    grid.masonry('layout');
+    e.preventDefault();
+
+});
+
+
 
 
 

@@ -75,15 +75,24 @@
 }
 
 .grid .item img {
-    -webkit-transition: opacity 0.2s ease-in-out;
-    -moz-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.posted-by {
+    color:#555;
+    font-style: italic;
+}
+.posted-by-name {
+    font-style:normal;
+    counter-reset:inherit;
 }
 
 .item-image {
-    -webkit-transition: opacity 0.6s ease-in-out;
-    -moz-transition: opacity 0.6s ease-in-out;
-    transition: opacity 0.6s ease-in-out;
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 
 
