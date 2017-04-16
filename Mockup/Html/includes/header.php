@@ -74,10 +74,10 @@
         <div class="col-12 col-md-3 main-header-connection-container">
             <div class="row justify-content-center main-header-connection align-items-center">
                 <div class="col-md-5 main-header-connection-btn-container">
-                    <a href="../Signin/signin.php" class="main-header-connection-btn" >Log in</a>
+                    <a href="../connection/signin.php" class="main-header-connection-btn" >Log in</a>
                 </div>
                 <div class="col-md-5 main-header-connection-btn-container">
-                    <a href="../Signin/login.php" class="main-header-connection-btn">Sign in</a>
+                    <a href="../connection/login.php" class="main-header-connection-btn">Sign in</a>
                 </div>
             </div>
         </div>
