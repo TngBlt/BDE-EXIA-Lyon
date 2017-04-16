@@ -16,8 +16,11 @@
     margin-top: 20px;
 }
 
+.hidden-item{
+    opacity:0;
+}
 .hidden {
-    display: none;
+   display: none;
 }
 
 .icons-image {
@@ -77,16 +80,11 @@
     transition: opacity 0.2s ease-in-out;
 }
 
-
-
-@media screen and (max-width: 900px) {
-    .grid li {
-        width: 50%;
-    }
+.item-image {
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
 }
 
-@media screen and (max-width: 400px) {
-    .grid li {
-        width: 100%;
-    }
-}
+
+

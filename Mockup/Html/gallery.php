@@ -14,7 +14,7 @@ include "includes/header.php"; ?>
 <div class="gallery-title">
     <h2>Gallery</h2>
 </div>
-<div class="grid" id="grid">
+<div class="grid effect" id="grid">
     <?php $files = glob('static/img/gallery/*.{jpg,png}',GLOB_BRACE);
     $i = 0;
     while ($i < 3) { ?>
@@ -22,7 +22,7 @@ include "includes/header.php"; ?>
     foreach($files as $image): ?>
 
         <div class="item">
-            <div class="item-image">
+            <div class="item-image hidden-item">
 
                 <a href="#" class="image-link">
                     <img src="<?php echo $image ?>" alt="">
