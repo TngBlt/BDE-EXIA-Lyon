@@ -12,6 +12,14 @@
     width: 33%;
 }
 
+.grid .item.mid-width {
+    width:50%;
+    z-index: 5;
+}
+.grid .item-image.blur {
+    filter:blur(5px);
+}
+
 .gallery-title {
     margin-top: 20px;
 }

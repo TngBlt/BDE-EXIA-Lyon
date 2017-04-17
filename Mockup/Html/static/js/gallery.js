@@ -43,7 +43,20 @@ itemImage.on('mouseenter mouseleave', function () {
 
 itemImage.on('click', function (e) {
     var elem = $(this);
-    elem.toggleClass('clicked');
+    if (elem.hasClass('active'))
+    {
+        grid.find(".item-image").not('.active').toggleClass('blur');
+        elem.remove('active');
+        elem.next('.item-image-sidepart').removeClass('active');
+    }
+    else {
+        elem.addClass('active');
+        elem.next('.item-image-sidepart').addClass('active');
+        grid.find(".item-image").not('.active').toggleClass('blur');
+    }
+
+
+    elem.parent().toggleClass('mid-width');
     elem.next('.item-image-sidepart').fadeToggle();
 
     grid.masonry('layout');
