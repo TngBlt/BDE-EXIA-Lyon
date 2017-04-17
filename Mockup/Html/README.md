@@ -101,6 +101,7 @@ Vopus pouvez modifier les éléments inclus a l'aide de 3 variables :
 * **$customTitle** Ajoute un titre avant la mention "BDE CESI Lyon"
 * **$customHead** Permet d'ajouter des éléments dans la balise head de la page comme du CSS
 * **$customScripts** Permet d'ajouter des éléments a la fin de la page comme du Javascript
+* **$topPadding** Quand mis a `true`, permet d'ajouter un padding de 20px normalisé en haut de la page (cela ajoute la classe `.main-page-pad` à la page)
 
 Toutes ces variables doivent êtres définis en premier dans la page.
 
@@ -141,3 +142,17 @@ $customActions = "<li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Partic
 Un système de widgets est commun à tout le site. Ce système fournis une organisation en cartes. Pour plus d'infos, rendez vous sur la page [localhost:8081/widget-structure.php](http://localhost:8081/widget-structure.php).
 
 Tout le CSS est contenu dans le fichier `base.css`.
+
+### Classes générales
+
+#### Titre de section
+
+Le titre de section est un titre mis en valeur dans une section, c'est un titre général de section.
+
+Ce titre peut simplement etre définis comme ceci : 
+
+```php
+<h2 class="section-title">Your title</h2>
+```
+
+La balise `h2` n'est pas obligatoire mais recommendée pour donner l'importance requise au titre.

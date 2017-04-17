@@ -11,16 +11,8 @@
         text-align: right;
     }
 
-.calendar{}
+.vote-widget {}
 
-    .calendar-header{
+    .vote-widget-text {
         text-align: center;
-    }
-
-    .calendar-table{
-        width: 100%;
-    }
-
-    .calendar-days {
-        font-weight: bold;
     }

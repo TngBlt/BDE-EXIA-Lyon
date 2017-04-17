@@ -16,6 +16,10 @@ a {
 		text-decoration: none;
 	}
 
+.main-page.main-page-pad {
+	padding-top: 20px;
+}
+
 .widget{
 	margin-bottom: 20px;
 	padding: 10px;
@@ -32,3 +36,33 @@ a {
     .widget-primary {
         border-color: #c2242a;
     }
+
+.section-title{
+	font-size: 45px;
+	color: #0065a7;
+    font-weight: lighter;
+}
+
+.button {
+	background-color: white;
+	box-shadow : 0 3px 5px rgba(0,0,0,0.5);
+	padding: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+	.button-invisible {
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	.button-primary {
+		color: white;
+		background-color: #0065a7;
+	}
+
+.no-margin-row, .button-row {
+    margin-left: 0;
+    margin-right: 0;
+}

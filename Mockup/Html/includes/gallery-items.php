@@ -1,5 +1,5 @@
 <?php
-$customScripts = "
+$customScripts = $customScripts."
 <script src=\"/static/js/jquery-3.1.1.js\"></script>
 <script src=\"/static/js/masonry.pkgd.min.js\"></script>
 <script src=\"/static/js/imagesloaded.pkgd.min.js\"></script>

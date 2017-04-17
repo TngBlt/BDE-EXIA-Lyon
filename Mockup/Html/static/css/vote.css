@@ -1,0 +1,33 @@
+.proposition {}
+
+    .proposition-title {
+        font-weight: lighter;
+        color: #c2242a;
+    }
+
+    .proposition-like {
+        cursor: pointer;
+        position: relative;
+    }
+
+        .proposition-like i {
+            position: relative;
+            top: -2px;
+        }
+
+        .proposition-like.is-checked .proposition-like-content {
+            color: #c2242a;
+        }
+
+        .proposition-like-form {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+            width: 300px;
+            z-index: 100;
+        }
+
+        .proposition-like:hover:not(.is-checked) .proposition-like-form {
+            display: block;
+        }

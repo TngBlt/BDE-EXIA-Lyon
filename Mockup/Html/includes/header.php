@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title><?php if(isset($customTitle)){ echo $customTitle." - "; }?>BDE Cesi Lyon</title>
     <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/static/css/fa/css/font-awesome.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="icon" href="../static/img/favicon.png" type="image/png">
@@ -74,13 +74,13 @@
         <div class="col-12 col-md-3 main-header-connection-container">
             <div class="row justify-content-center main-header-connection align-items-center">
                 <div class="col-md-5 main-header-connection-btn-container">
-                    <a href="../connection/login.php" class="main-header-connection-btn" >Log in</a>
+                    <a href="../connection/login.php" class="main-header-connection-btn button" >Log in</a>
                 </div>
                 <div class="col-md-5 main-header-connection-btn-container">
-                    <a href="../connection/signin.php" class="main-header-connection-btn">Sign in</a>
+                    <a href="../connection/signin.php" class="main-header-connection-btn button">Sign in</a>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<section class="container main-page">
+<section class="container main-page<?php if(isset($topPadding) && $topPadding){ echo ' main-page-pad'; } ?>">
