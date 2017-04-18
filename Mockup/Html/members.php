@@ -92,7 +92,7 @@ include "includes/header.php"; ?>
                         <div class="member-icons">
                             <a href="mailto:<?php echo $member->email; ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                             <a href="<?php echo $member->facebook; ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="profil.php"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ include "includes/header.php"; ?>
                         <div class="other-member-icons col-xs-2 col-md-2 col-lg-2">
                             <a href="mailto:<?php echo $otherMember->email; ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                             <a href="<?php echo $otherMember->facebook; ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="profil.php"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     </div>
@@ -146,7 +146,7 @@ include "includes/header.php"; ?>
                     <div class="other-member-icons col-xs-2 col-md-2 col-lg-2">
                         <a href="mailto:<?php echo $otherMember->email; ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                         <a href="<?php echo $otherMember->facebook; ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                        <a href="profil.php"><i class="fa fa-user" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

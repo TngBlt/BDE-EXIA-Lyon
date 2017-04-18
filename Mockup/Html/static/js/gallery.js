@@ -1,6 +1,6 @@
 var grid = $('#grid');
 var itemImage = $('.item-image');
-
+var elem;
 
 $(grid).imagesLoaded( function() {
     $(grid).masonry({
@@ -37,30 +37,49 @@ $(window).scroll( function () {
 
 itemImage.on('mouseenter mouseleave', function () {
     var icons = $(this).children('.icons-image');
-    icons.fadeToggle('fast','linear');
+    if(!$(this).parent().hasClass('active'))
+    {
+
+        icons.fadeToggle('fast','linear');
+    }
+    else {
+        icons.fadeOut();
+    }
+
 });
 
 
+
 itemImage.on('click', function (e) {
-    var elem = $(this);
-    if (elem.hasClass('active'))
-    {
-        grid.find(".item-image").not('.active').toggleClass('blur');
-        elem.remove('active');
-        elem.next('.item-image-sidepart').removeClass('active');
+
+    if(!grid.find('.item').hasClass('active') || elem.is($(this))){
+        elem = $(this);
+        elem.parent().toggleClass('mid-width');
+        elem.parent().toggleClass('active');
+        grid.find('.item').not('.active').not(elem.parent()).toggleClass('blur');
+        //$(elem.parent()).bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+            grid.masonry('layout');
+        //});
+        elem.find('.icons-image').fadeToggle();
+        e.preventDefault();
     }
     else {
-        elem.addClass('active');
-        elem.next('.item-image-sidepart').addClass('active');
-        grid.find(".item-image").not('.active').toggleClass('blur');
+        // previous element
+        elem.parent().toggleClass('mid-width');
+        elem.parent().toggleClass('active');
+        grid.find('.item').not('.active').not(elem.parent()).toggleClass('blur');
+
+        // new element
+        elem = $(this);
+        elem.parent().toggleClass('mid-width');
+        elem.parent().toggleClass('active');
+        grid.find('.item').not('.active').not(elem.parent()).toggleClass('blur');
+
+        grid.masonry('layout');
+
+        elem.find('.icons-image').fadeToggle();
+
     }
-
-
-    elem.parent().toggleClass('mid-width');
-    elem.next('.item-image-sidepart').fadeToggle();
-
-    grid.masonry('layout');
-    e.preventDefault();
 
 });
 
