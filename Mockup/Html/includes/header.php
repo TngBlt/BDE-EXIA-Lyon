@@ -77,7 +77,7 @@
                     <a href="../connection/login.php" class="main-header-connection-btn button" >Log in</a>
                 </div>
                 <div class="col-md-5 main-header-connection-btn-container">
-                    <a href="../connection/signin.php" class="main-header-connection-btn button">Sign in</a>
+                    <a href="../connection/login.php" class="main-header-connection-btn button">Sign in</a>
                 </div>
             </div>
         </div>
