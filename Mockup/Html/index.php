@@ -117,7 +117,7 @@ include "includes/header.php"; ?>
                         <a href="#" class="event-header-sharebtn col-1"><i class="fa fa-share" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="container-fluid">
+            <div class="container-fluid">
                     <div class="event-content row align-items-center justify-content-center">
                         <h4 class="event-content-main col-12">Monday 12 march</h4>
                         <h5 class="event-content-offset col-12">1 months ago</h5>
@@ -127,7 +127,7 @@ include "includes/header.php"; ?>
             <div class="container-fluid">
                 <nav class="event-footer row">
                     <a href="#" class="event-footer-item event-commentbtn col-4">
-                        <div class="event-footer-item-icon"><i class="fa fa-comment-o" aria-hidden="true"></i></i></div>
+                        <div class="event-footer-item-icon"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
                         <div class="event-footer-item-title">Comment</div>
                     </a>
                     <a href="#" class="event-footer-item event-morebtn col-4">
@@ -142,7 +142,7 @@ include "includes/header.php"; ?>
 
     <section class="col-12 col-md-4">
     	<aside class="vote-content">
-    	        <div class="widget vote-widget">
+    	<div class="widget vote-widget">
             <h4 class="widget-title widget-offset">Vote !</h4>
             <p class="widget-offset vote-widget-text">Vote for the next event you want to see in this list !</p>
             <div class="row justify-content-center widget-offset">
@@ -152,10 +152,9 @@ include "includes/header.php"; ?>
     </aside>
 
     <aside class="shop-content">
+    	<h4>Shop</h4>
 	<div class="row">
 		<div class="col-12 col-md-6 widget">
-
-            <h4 class="widget-title widget-offset">Shop</h4>
                 <div class="product-image">
                     <img src="static/img/gallery/15.jpg" alt="FirstProduct" class="product1" />
                 </div>
@@ -170,6 +169,7 @@ include "includes/header.php"; ?>
                         </nav>
                     </div>
                 </div>
+            </div>
 
             <div class="col-12 col-md-6 widget">
                 <div class="product-image">
@@ -186,6 +186,7 @@ include "includes/header.php"; ?>
                         </nav>
                     </div>
                 </div>
+            </div>
     </aside>
 </section>           
 
