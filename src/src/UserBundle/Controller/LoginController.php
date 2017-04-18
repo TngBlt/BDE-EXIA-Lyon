@@ -28,7 +28,7 @@ class LoginController extends Controller
             ->add("username",TextType::class,["label"=>"Username","attr"=>["required"=>"1"]])
             ->add("email",EmailType::class,["label"=>"Email","attr"=>["required"=>"1"]])
             ->add("password",PasswordType::class,["label"=>"Password","attr"=>["required"=>"1"]])
-            ->add("save",SubmitType::class,["label"=>"Sign in"])
+            ->add("save",SubmitType::class,["label"=>"Sign in","attr"=>["class"=>"button button-primary"]])
             ->getForm();
 
         $signInForm->handleRequest($request);
@@ -65,6 +65,13 @@ class LoginController extends Controller
      * @Route("/login/check",name="login_check")
      */
     public function LoginCheckAction(Request $request){
+        return null;
+    }
+
+    /**
+     * @Route("/logout",name="logout")
+     */
+    public function LogOutAction(Request $request){
         return null;
     }
 }

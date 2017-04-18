@@ -12,7 +12,7 @@ include "includes/header.php"; ?>
         <div class="widget widget-offset">
             <div class="row"> 
                 <div class="col-lg-4 profil-image">                                                          
-                        <div><img src="static\img\members\Bapt.png" alt="members"/></div>
+                        <div><img src="static/img/members/Bapt.PNG" alt="members"/></div>
                 </div>
 
                 <div class="col-lg-6">
@@ -29,7 +29,7 @@ include "includes/header.php"; ?>
                 </div>
 
                 <div class="col-lg-2">
-                    Member of the BDE'staff
+                    Member of the BDE' staff
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@ include "includes/header.php"; ?>
                 <div class="container-fluid">
                     <div class="event-header row">
                         <h3 class="event-header-title col-11">
-                            <a href="#">
+                            <a href="/event.php">
                                 <span class="event-header-icon">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                 </span>

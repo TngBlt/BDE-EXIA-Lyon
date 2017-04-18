@@ -1,3 +1,7 @@
+gallery_picture:
+    resource: "@GalleryBundle/Controller/PictureController.php"
+    type:     annotation
+
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation

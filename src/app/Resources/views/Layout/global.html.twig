@@ -1,1 +1,11 @@
 {% extends "Layout/base.html.twig" %}
+
+{% block mainhead %}
+{% block head %}{% endblock %}
+{% endblock %}
+
+{% block mainbody %}{% block body %}{% endblock %}{% endblock %}
+
+{% block mainscripts %}
+    {% block scripts %}{% endblock %}
+{% endblock %}
