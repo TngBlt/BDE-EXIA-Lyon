@@ -22,6 +22,10 @@
     filter:blur(5px);
 }
 
+.grid .item.blur:hover {
+    filter:none;
+}
+
 .gallery-title {
     margin-top: 20px;
 }
