@@ -40,19 +40,15 @@
     margin-top: 20px;
 }
 
-.member {
+.member,.other-member {
     cursor: pointer;
 }
 
-.row.members {
+.row.members,.row.other-members {
     justify-content: center;
 }
 
-.member:hover {
-    box-shadow: 0 5px 7px rgba(0,0,0,0.6);
-}
-
-.other-member {
+.other-members {
     display: flex;
     flex-direction:row;
 }

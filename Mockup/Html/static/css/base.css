@@ -29,6 +29,11 @@ a {
 	border: #0065a7 solid 1px;
 }
 
+.widget-primary:hover {
+	box-shadow: 0 5px 7px rgba(0,0,0,0.4);
+}
+
+
 	.widget-offset{
 		margin-bottom: 20px;
 	}
