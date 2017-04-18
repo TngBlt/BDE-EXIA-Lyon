@@ -16,13 +16,18 @@
 .member-info p {
     margin-bottom: 1px;
 }
-.member-info .member-name {
+.member-info .member-name,
+.other-member-info .member-name {
     font-weight: bold;;
 }
 
 .member-info .member-role {
     font-style: italic;
     color: #555;
+}
+
+.others.widgets {
+    margin-right: 10px;
 }
 
 .member-icons {
@@ -44,6 +49,9 @@
     cursor: pointer;
 }
 
+.other-member {
+    padding-right: 0;
+}
 .row.members,.row.other-members {
     justify-content: center;
 }
@@ -51,4 +59,43 @@
 .other-members {
     display: flex;
     flex-direction:row;
+}
+
+
+.other-member-avatar {
+    min-width: 45%;
+    max-width: 50%;
+    margin:0;
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.other-member-info {
+    padding: 0;
+}
+
+.other-member-avatar img {
+    width: 100%;
+}
+
+.other-member-icons {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding:0;
+}
+
+@media screen and (max-width: 1000px) {
+    .other-member-icons {
+        -webkit-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        padding:0;
+    }
+    .col
 }

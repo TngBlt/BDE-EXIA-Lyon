@@ -77,8 +77,7 @@ include "includes/header.php"; ?>
         $membersJSON = json_decode($members);
 
         foreach ($membersJSON->members as $member): ?>
-           <!-- <a href="<?php echo $member->name; ?>"> -->
-                <div class="col-lg-4 widgets">
+                <div class="col-lg-4 col-md-6 widgets">
                     <div class="widget widget-primary member">
                         <?php if (isset($member->avatar)): ?>
                             <div class="member-avatar">
@@ -97,7 +96,6 @@ include "includes/header.php"; ?>
                         </div>
                     </div>
                 </div>
-            <!-- </a> -->
         <?php endforeach; ?>
     </div>
 
@@ -111,28 +109,49 @@ include "includes/header.php"; ?>
         $otherMembersJSON = json_decode($otherMembers);
 
         foreach ($otherMembersJSON->members as $otherMember):?>
-            <a href="<?php echo $otherMember->name; ?>">
-                <div class="col-lg-4 widgets">
-                    <div class="widget widget-primary other-member">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                    <div class="others widgets">
+                       <div class="widget widget-primary other-member row">
                         <?php if (isset($otherMember->avatar)): ?>
-                            <div class="member-avatar">
-                                <img src="/static/img/members/<?php echo $otherMember->avatar; ?>" alt="member-avatar" width="65%">
+                            <div class="other-member-avatar col-xs-3 col-md-3 col-lg-3">
+                                <img src="/static/img/members/<?php echo $otherMember->avatar; ?>" alt="member-avatar">
                             </div>
                         <?php endif; ?>
-                        <div class="member-info">
+                        <div class="other-member-info col-xs-4 col-md-4 col-lg-4">
                             <p class="member-name"><?php echo $otherMember->name; ?></p>
                             <p class="member-class"><?php echo $otherMember->prom; ?></p>
                         </div>
-                        <div class="member-icons">
+                        <div class="other-member-icons col-xs-2 col-md-2 col-lg-2">
                             <a href="mailto:<?php echo $otherMember->email; ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                             <a href="<?php echo $otherMember->facebook; ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
+                    </div>
                 </div>
-            </a>
+        <?php endforeach; ?>
+        <?php foreach ($otherMembersJSON->members as $otherMember):?>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+            <div class="others widgets">
+                <div class="widget widget-primary other-member row">
+                    <?php if (isset($otherMember->avatar)): ?>
+                        <div class="other-member-avatar col-xs-3 col-md-3 col-lg-3">
+                            <img src="/static/img/members/<?php echo $otherMember->avatar; ?>" alt="member-avatar">
+                        </div>
+                    <?php endif; ?>
+                    <div class="other-member-info col-xs-4 col-md-4 col-lg-4">
+                        <p class="member-name"><?php echo $otherMember->name; ?></p>
+                        <p class="member-class"><?php echo $otherMember->prom; ?></p>
+                    </div>
+                    <div class="other-member-icons col-xs-2 col-md-2 col-lg-2">
+                        <a href="mailto:<?php echo $otherMember->email; ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        <a href="<?php echo $otherMember->facebook; ?>" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php endforeach; ?>
     </div>
-
 </div>
     <?php include "includes/footer.php"; ?>
