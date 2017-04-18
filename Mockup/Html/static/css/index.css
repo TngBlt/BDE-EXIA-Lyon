@@ -1,0 +1,25 @@
+.moreevents{
+	display: flex;
+	justify-content: center;
+}
+
+.vote-content{
+	margin-top: 3.55em;
+}
+
+.discover{
+	margin-top: 3em;
+}
+
+.event-footer{
+	display: flex;
+	justify-content: center;
+}
+
+.product1{
+	width: 60%;
+}
+
+.product2{
+	width: 50%;
+}

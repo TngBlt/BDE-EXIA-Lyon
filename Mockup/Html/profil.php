@@ -100,15 +100,15 @@ include "includes/header.php"; ?>
                                 <span class="event-header-icon">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                 </span>
-                                Title event 2</a>
+                                Title event 3</a>
                         </h3>
                         <a href="#" class="event-header-sharebtn col-1"><i class="fa fa-share" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="container-fluid">
                     <div class="event-content row align-items-center justify-content-center">
-                        <h4 class="event-content-main col-12">Saturday 8 April 15h25</h4>
-                        <h5 class="event-content-offset col-12">In 1 Day</h5>
+                        <h4 class="event-content-main col-12">Saturday 12 March 12h00</h4>
+                        <h5 class="event-content-offset col-12">1 month ago</h5>
                     </div>
                 </div>
             </div>
