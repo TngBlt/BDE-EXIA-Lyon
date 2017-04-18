@@ -1,3 +1,63 @@
-body{
-    background-color: blue;
+.main-page h1 {
+    font-size: 45px !important;
+    color: #0065a7 !important;
+    font-weight: lighter !important;
+}
+
+.main-page table, .main-page > form {
+    width: 75% !important;
+    margin: 20px auto !important;
+    padding: 10px !important;
+    background-color: white !important;
+    border-radius: 2px !important;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5) !important;
+    border: #0065a7 solid 1px !important;
+}
+
+.main-page > form {
+    padding-bottom: 50px !important;
+}
+
+.main-page table td, .main-page table th {
+    text-align: center !important;
+}
+
+.main-page table a {
+    color: #0065a7 !important;
+}
+
+.main-page li {
+    list-style: none;
+}
+
+.main-page > ul {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+}
+
+.main-page > ul > *, .main-page > form > input[type="submit"] {
+    background-color: white !important;
+    box-shadow : 0 3px 5px rgba(0,0,0,0.5) !important;
+    padding: 5px !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main-page > form > input[type="submit"] {
+    color: white !important;
+    background-color: #0065a7 !important;
+    float: right;
+}
+
+.main-page > ul > * input[type="submit"] {
+    display: inline;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }

@@ -1,5 +1,7 @@
-{% extends "global.html.twig" %}
+{% extends "Layout/global.html.twig" %}
 
-{% block mainhead %}
+{% block head %}
 <link rel="stylesheet" href="{{ asset("css/crud.css") }}" />
 {% endblock %}
+
+{% block pageExtraClass %}main-page-pad{% endblock %}

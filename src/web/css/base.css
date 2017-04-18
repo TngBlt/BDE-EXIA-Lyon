@@ -1,0 +1,79 @@
+* {
+	font-family: "Open sans", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Roboto", sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+	a:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+
+
+.main-page {
+	min-height: 100vh;
+	min-height: calc(100vh - 230px);
+}
+
+	.main-page.main-page-pad {
+		padding-top: 20px;
+	}
+
+.widget{
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	border: #0065a7 solid 1px;
+}
+
+.widget-primary:hover {
+	box-shadow: 0 5px 7px rgba(0,0,0,0.4);
+}
+
+
+	.widget-offset{
+		margin-bottom: 20px;
+	}
+
+    .widget-primary {
+        border-color: #c2242a;
+    }
+
+.section-title{
+	font-size: 45px;
+	color: #0065a7;
+    font-weight: lighter;
+}
+
+.button {
+	background-color: white;
+	box-shadow : 0 3px 5px rgba(0,0,0,0.5);
+	padding: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+	.button-invisible {
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	.button-primary {
+		color: white;
+		background-color: #0065a7;
+	}
+
+.no-margin-row, .button-row {
+    margin-left: 0;
+    margin-right: 0;
+}

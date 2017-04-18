@@ -28,6 +28,11 @@ class Prom
      */
     private $name;
 
+    function __toString()
+    {
+        return $this->getName();
+    }
+
 
     /**
      * Get id

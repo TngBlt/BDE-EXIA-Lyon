@@ -120,6 +120,12 @@ class User implements UserInterface, \Serializable
      */
     private $eventsVoted;
 
+    function __toString()
+    {
+        return $this->getUsername();
+    }
+
+
     public function eraseCredentials()
     {
     }
