@@ -12,7 +12,7 @@ include "includes/header.php"; ?>
         <div class="widget widget-offset">
             <div class="row"> 
                 <div class="col-lg-4 profil-image">                                                          
-                        <div><img src="static\img\members\Bapt.png" alt="members"/></div>
+                        <div><img src="static/img/members/Bapt.PNG" alt="members"/></div>
                 </div>
 
                 <div class="col-lg-6">
@@ -29,7 +29,7 @@ include "includes/header.php"; ?>
                 </div>
 
                 <div class="col-lg-2">
-                    Member of the BDE'staff
+                    Member of the BDE' staff
                 </div>
             </div>
         </div>
@@ -96,19 +96,19 @@ include "includes/header.php"; ?>
                 <div class="container-fluid">
                     <div class="event-header row">
                         <h3 class="event-header-title col-11">
-                            <a href="#">
+                            <a href="/event.php">
                                 <span class="event-header-icon">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                 </span>
-                                Title event 2</a>
+                                Title event 3</a>
                         </h3>
                         <a href="#" class="event-header-sharebtn col-1"><i class="fa fa-share" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="container-fluid">
                     <div class="event-content row align-items-center justify-content-center">
-                        <h4 class="event-content-main col-12">Saturday 8 April 15h25</h4>
-                        <h5 class="event-content-offset col-12">In 1 Day</h5>
+                        <h4 class="event-content-main col-12">Saturday 12 March 12h00</h4>
+                        <h5 class="event-content-offset col-12">1 month ago</h5>
                     </div>
                 </div>
             </div>
