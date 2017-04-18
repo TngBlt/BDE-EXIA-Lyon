@@ -6,6 +6,8 @@ $customHead = "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/sho
 $customActions = "<li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Purchases</a></li>
 <li class=\"admin-toolbar-dropdown-item\"><a href=\"#\">Waiting Purchases</a></li>";
 
+$topPadding = true;
+
 include "includes/header.php"; ?>
 
 <div class="shop row">

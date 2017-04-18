@@ -59,7 +59,7 @@ include "includes/header.php"; ?>
                 <div class="form-group">
                     <label for="prop-date">Preferred date</label>
                     <input type="datetime" class="form-control" name="prop-date" id="prop-date"/>
-                    <small class="text-muted form-text">The date when you preffer to this event tekes place</small>
+                    <small class="text-muted form-text">The date when you preffer to this event takes place</small>
                 </div>
                 <div class="row justify-content-end button-row">
                     <button class="col-auto button button-primary">Propose</button>
