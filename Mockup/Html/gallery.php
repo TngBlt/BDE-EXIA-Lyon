@@ -12,9 +12,28 @@ include "includes/header.php"; ?>
 
 <?php $image_dir = 'gallery' ; ?>
 
-<?php $comments = array('Utque aegrum corpus quassari etiam levibus solet offensis.',
-    'Utque aegrum corpus quassari etiam levibus solet offensis, ita animus eius angustus et tener, quicquid increpuisset.',
-    'Utque aegrum corpus quassari etiam levibus solet offensis, ita animus eius angustus et tener.');
+<?php $comments = '{
+  "comments": {
+    "1": {
+      "name":"TngBlt",
+      "content":"Utque aegrum corpus quassari etiam levibus solet offensis.",
+      "date":"2016-07-14"
+      },
+    "2": {
+      "name":"Juncaaa",
+      "content":"Utque aegrum corpus quassari etiam levibus solet offensis, ita animus eius angustus et tener, quicquid increpuisset.",
+      "date":"2016-07-14"
+      },
+      "3": {
+      "name":"Epickiwi",
+      "content":"Utque aegrum corpus quassari etiam levibus solet offensis, ita animus eius angustus et tener.",
+      "date":"2016-07-14"
+      }
+  }
+}';
+
+$comments = json_decode($comments);
+
 ?>
 <?php include "includes/gallery-items.php"; ?>
 

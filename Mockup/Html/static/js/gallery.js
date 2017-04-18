@@ -37,8 +37,17 @@ $(window).scroll( function () {
 
 itemImage.on('mouseenter mouseleave', function () {
     var icons = $(this).children('.icons-image');
-    icons.fadeToggle('fast','linear');
+    if(!$(this).parent().hasClass('active'))
+    {
+
+        icons.fadeToggle('fast','linear');
+    }
+    else {
+        icons.fadeOut();
+    }
+
 });
+
 
 
 itemImage.on('click', function (e) {
@@ -48,7 +57,10 @@ itemImage.on('click', function (e) {
         elem.parent().toggleClass('mid-width');
         elem.parent().toggleClass('active');
         grid.find('.item').not('.active').not(elem.parent()).toggleClass('blur');
-        grid.masonry('layout');
+        //$(elem.parent()).bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+            grid.masonry('layout');
+        //});
+        elem.find('.icons-image').fadeToggle();
         e.preventDefault();
     }
 });

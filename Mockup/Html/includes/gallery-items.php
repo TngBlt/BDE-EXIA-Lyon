@@ -29,15 +29,27 @@ $customScripts = $customScripts."
                 <div class="item-image item-image-sidepart hidden">
                     <div class="item-likes">
                         <a href="#" class="thumbs-up">
-                            <p><?php echo '12 '?></p>
-                            <i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i>
+                            <p><?php echo '12 '?>
+                            <i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></p>
                         </a>
                     </div>
-                    <?php foreach($comments as $comment): ?>
-                        <div class="item-commment">
-                            <p class="item-comment-content"><?php echo $comment; ?></p>
-                        </div>
-                    <?php endforeach; ?>
+                    <div class="item-comments widget widget-primary">
+                        <?php foreach($comments->comments as $comment): ?>
+                            <div class="item-commment">
+                                <p class="item-comment-content"><span class="comment-name"><?php echo $comment->name; ?></span> - <?php echo $comment->content; ?></p>
+                                <p><span class="comment-date">on <?php echo $comment->date; ?></span></p>
+                            </div>
+                        <?php endforeach; ?>
+
+                        <form class="form-inline" role="form">
+                            <div class="form-group">
+                                <textarea class="form-control" id="comment" rows="3"></textarea>
+                            </div>
+                            <div class="form-group add-comment">
+                                <button class="btn btn-default">Add</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         <?php endforeach; ?>
