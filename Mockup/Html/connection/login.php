@@ -22,9 +22,9 @@ include "../includes/header.php"; ?>
                     <form class="login-form">
 
                         <div class="form-group">
-                            <label for="login-username">Username</label>
-                            <input type="text" name="login-username" id="login-username" class="form-control"/>
-                            <small class="text-muted form-text">The username defined during the registration</small>
+                            <label for="login-email">Email</label>
+                            <input type="text" name="login-email" id="login-email" class="form-control"/>
+                            <small class="text-muted form-text">The email defined during the registration</small>
                         </div>
 
                         <div class="form-group">
