@@ -23,3 +23,8 @@
 .product2{
 	width: 60%;
 }
+
+.product {
+	text-align: center;
+	text-align: -webkit-center;
+}
