@@ -8,7 +8,7 @@
 
             <h4 class="widget-title widget-offset">Organisation</h4>
 
-            <p>Pour conserver une charte graphique constante, on préfère utiliser un découpage en deux colonne avec une largeur de 6 et 4 sur les écrans larges.</p>
+            <p>Pour conserver une charte graphique constante, on préfère utiliser un découpage en deux colonne avec une largeur de 8 et 4 sur les écrans larges.</p>
             <p>On donne les widgets sur l'aside a droite.</p>
 
         </div>
