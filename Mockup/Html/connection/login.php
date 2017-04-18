@@ -23,13 +23,13 @@ include "../includes/header.php"; ?>
 
                         <div class="form-group">
                             <label for="login-email">Email</label>
-                            <input type="text" name="login-email" id="login-email" class="form-control"/>
+                            <input type="text" name="username" id="login-email" class="form-control"/>
                             <small class="text-muted form-text">The email defined during the registration</small>
                         </div>
 
                         <div class="form-group">
                             <label for="login-password">Password</label>
-                            <input type="password" name="login-password" id="login-password" class="form-control"/>
+                            <input type="password" name="password" id="login-password" class="form-control"/>
                             <small class="text-muted form-text">The password defined during the registration</small>
                         </div>
 

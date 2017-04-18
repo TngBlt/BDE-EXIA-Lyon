@@ -440,15 +440,15 @@ CREATE TABLE `user` (
   `isActive` tinyint(1) NOT NULL,
   `avatar` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `role` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `prom_id` int(11) NOT NULL,
-  `firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `prom_id` int(11) DEFAULT NULL,
+  `firstname` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lastname` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_8D93D649F85E0677` (`username`),
   UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`),
   KEY `IDX_8D93D6497CC070FF` (`prom_id`),
   CONSTRAINT `FK_8D93D6497CC070FF` FOREIGN KEY (`prom_id`) REFERENCES `prom` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -457,6 +457,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'victor','$2y$10$/zl5eW0NhMKGfZibYIwcH.szDwP3WtMHWODbWs9STcjMn1XBWZXLK','vz@cesi.fr',1,'','ROLE_STAFF',NULL,'Victor','Zimmerman'),(2,'thierry','$2y$10$uP.QyiL4DHCjZu/.TCyOk.4D1fH3J4NMyvhBaiXQfQC5YoNZ1.goW','tb@cesi.fr',1,'','ROLE_BOSS',NULL,'Thierry','Blanc'),(3,'user','$2y$10$D3vaPMqi44x2n/MW5yTq1OSr0UxPUylYubKSx0/WoaBN5E.eQGCTq','us@cesi.fr',1,NULL,'ROLE_USER',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -523,4 +524,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-13 17:02:51
+-- Dump completed on 2017-04-18 11:57:24

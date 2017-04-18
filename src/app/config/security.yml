@@ -8,21 +8,8 @@ security:
             entity:
                 class: UserBundle:User
                 property: email
-        in_memory:
-            memory:
-                users:
-                    ryan:
-                        password: ryanpass
-                        roles: 'ROLE_USER'
-                    thierry:
-                        password: thierrypass
-                        roles: 'ROLE_BOSS'
-                    victor:
-                        password: victorpass
-                        roles: 'ROLE_STAFF'
 
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
         UserBundle\Entity\User:
             algorithm: bcrypt
 
@@ -34,10 +21,9 @@ security:
 
         main:
             anonymous: ~
-            # activate different ways to authenticate
-
-            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
-            http_basic: ~
+            form_login:
+                login_path: login
+                check_path: login_check
 
     access_control:
         - {path: staff, roles: ROLE_STAFF}

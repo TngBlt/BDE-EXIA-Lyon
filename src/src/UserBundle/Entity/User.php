@@ -32,14 +32,14 @@ class User implements UserInterface, \Serializable
     /**
      * @var string
      *
-     * @ORM\Column(name="firstname", type="string", length=255)
+     * @ORM\Column(name="firstname", type="string", length=255, nullable=true)
      */
     private $firstname;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lastname", type="string", length=255)
+     * @ORM\Column(name="lastname", type="string", length=255, nullable=true)
      */
     private $lastname;
 
@@ -82,7 +82,7 @@ class User implements UserInterface, \Serializable
      * @var string
      *
      * @ORM\ManyToOne(targetEntity="UserBundle\Entity\Prom")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $prom;
 
@@ -192,6 +192,7 @@ class User implements UserInterface, \Serializable
      */
     public function setPassword($password)
     {
+
         $this->password = $password;
 
         return $this;

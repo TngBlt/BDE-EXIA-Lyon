@@ -6,7 +6,7 @@ user:
 gallery:
     resource: "@GalleryBundle/Controller/"
     type:     annotation
-    prefix:   /gellery/
+    prefix:   /gallery/
 
 shop:
     resource: "@ShopBundle/Controller/"
