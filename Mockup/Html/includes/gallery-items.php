@@ -17,12 +17,12 @@ $customScripts = $customScripts."
             <div class="item">
                 <div class="item-image hidden-item">
                     <a href="#" class="image-link">
-                        <img src="<?php echo $image ?>" alt="">
+                        <img src="<?php echo $image ;?>" alt="">
                     </a>
                     <div class="icons-image hidden">
-                        <a href="#"><p class="posted-by"><?php echo 'posted by ' ?><span class="posted-by-name"><?php echo 'TngBlt' ?></span></p></a>
-                        <a href="#" class="thumbs-up"><p><?php echo '12 '?></p><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
-                        <a href="#" class="comments"><p><?php echo '14 '?></p><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
+                        <a href="#"><p class="posted-by"><?php echo 'posted by '; ?><span class="posted-by-name"><?php echo 'TngBlt' ;?></span></p></a>
+                        <a href="#" class="thumbs-up"><p><?php echo '12 ';?></p><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
+                        <a href="#" class="comments"><p><?php echo '14 ';?></p><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
                         <a href="#" class="share-alt"><i class="fa fa-lg fa-share-alt" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -33,6 +33,11 @@ $customScripts = $customScripts."
                             <i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i>
                         </a>
                     </div>
+                    <?php foreach($comments as $comment): ?>
+                        <div class="item-commment">
+                            <p class="item-comment-content"><?php echo $comment; ?></p>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         <?php endforeach; ?>
