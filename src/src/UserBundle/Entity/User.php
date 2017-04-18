@@ -4,6 +4,7 @@ namespace UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints\Regex;
 
 /**
  * User
@@ -52,7 +53,10 @@ class User implements UserInterface, \Serializable
 
     /**
      * @var string
-     *
+     * @Regex(
+     *     pattern="/^[^@]+@(via)?cesi\.fr$/i",
+     *     htmlPattern="^[^@]+@(via)?cesi\.fr$",
+     *     message="The email must be a valid Cesi.fr or Viacesi.fr email")
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     private $email;
