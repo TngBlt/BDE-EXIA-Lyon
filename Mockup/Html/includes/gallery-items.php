@@ -39,6 +39,7 @@ $customScripts = $customScripts."
                                 <p class="item-comment-content"><span class="comment-name"><?php echo $comment->name; ?></span> - <?php echo $comment->content; ?></p>
                                 <p><span class="comment-date">on <?php echo $comment->date; ?></span></p>
                             </div>
+                            <hr class="half-rule"/>
                         <?php endforeach; ?>
 
                         <form class="form-inline" role="form">

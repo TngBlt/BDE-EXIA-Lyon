@@ -125,3 +125,14 @@
 .add-comment {
     margin-left: 5px;
 }
+
+.item-comment-content {
+    margin-bottom: 0;
+}
+
+.half-rule {
+    border-color: #c2242a;
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+}

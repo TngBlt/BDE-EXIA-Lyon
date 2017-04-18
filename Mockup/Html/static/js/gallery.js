@@ -63,6 +63,24 @@ itemImage.on('click', function (e) {
         elem.find('.icons-image').fadeToggle();
         e.preventDefault();
     }
+    else {
+        // previous element
+        elem.parent().toggleClass('mid-width');
+        elem.parent().toggleClass('active');
+        grid.find('.item').not('.active').not(elem.parent()).toggleClass('blur');
+
+        // new element
+        elem = $(this);
+        elem.parent().toggleClass('mid-width');
+        elem.parent().toggleClass('active');
+        grid.find('.item').not('.active').not(elem.parent()).toggleClass('blur');
+
+        grid.masonry('layout');
+
+        elem.find('.icons-image').fadeToggle();
+
+    }
+
 });
 
 
