@@ -98,6 +98,8 @@ include "includes/header.php"; ?>
 		<div class="widget widget-primary">
 			<a href="events.php"  class="moreevents"><h5>More events</h5></a>
 		</div>
+
+
         <h2 class="section-title">Discover</h2>
 
         <article class="event">
@@ -149,7 +151,7 @@ include "includes/header.php"; ?>
                 <a href="/vote.php" class="button button-primary col-auto">Vote now</a>
             </div>
         </div>
-    </aside>
+    	</aside>
 
     <aside class="shop-content">
     	<h4>Shop</h4>
@@ -188,6 +190,7 @@ include "includes/header.php"; ?>
                 </div>
             </div>
     </aside>
-</section>           
+</section>    
+</div>       
 
 <?php include "includes/footer.php"; ?>
