@@ -14,10 +14,10 @@ include "includes/header.php"; ?>
 <div class=".section-title gallery-title">
     <h2>Gallery</h2>
 </div>
+
 <div class="grid effect" id="grid">
     <?php $files = glob('static/img/gallery/*.{jpg,png}',GLOB_BRACE);
     $i = 0;
-    print_r($files);
     while ($i < 3) { ?>
         <?php
     foreach($files as $image): ?>
