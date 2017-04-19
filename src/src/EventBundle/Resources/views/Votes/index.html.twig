@@ -1,0 +1,61 @@
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}Propositions of events{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/vote.css") }}"/>
+{% endblock %}
+
+{% block body %}
+    <h2 class="section-title">Propositions of events</h2>
+
+    <div class="votes row">
+
+        <section class="votes-section col-12 col-lg-8">
+
+            {% for proposition in propositions %}
+            <article class="proposition widget widget-primary">
+                <h3 class="proposition-title widget-title widget-offset"><i class="fa fa-calendar-o"></i> {{ proposition.title }}</h3>
+                <div class="propostion-desc">
+                    {{ proposition.description|e|markdown|raw }}
+                </div>
+                <small class="text-muted">Proposed on {{ proposition.proposedDate|date("Y-m-d") }} at {{ proposition.proposedDate|date("H\\hi") }} by {{ proposition.user.fullName }}</small>
+                <nav class="proposition-toolbar row justify-content-end no-margin-row">
+                    <div class="proposition-like"><span class="proposition-like-content">{{ proposition.votes|length }} <i class="fa fa-thumbs-up fa-lg"></i></span>
+                        <form class="proposition-like-form widget">
+                            <div class="form-group">
+                                <label for="vote-date">Prefered date</label>
+                                <input type="datetime" name="vote-date" id="vote-date" class="form-control"/>
+                                <small class="form-text text-muted">The date you prefer the event takes place</small>
+                            </div>
+                            <div class="row justify-content-end no-margin-row">
+                                <button class="button button-primary">Like this event</button>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </article>
+            {% endfor %}
+            {% if propositions|length == 0 %}
+            <article class="widget">
+                <h2 class="widget-title widget-offset">It's too calm here...</h2>
+                <p>The users doesn't have proposed any events yet. When somewone want to propose an event it will be displayed here.</p>
+                <p>You can propose your event by filling the form on the right.</p>
+            </article>
+            {% endif %}
+
+        </section>
+
+        <aside class="widgets col-12 col-lg-4">
+
+            <div class="widget proposition-widget">
+                <h4 class="widget-title widget-offset">Add proposition</h4>
+                {{ form_start(propositionForm) }}
+                {{ form_widget(propositionForm) }}
+                {{ form_end(propositionForm) }}
+            </div>
+
+        </aside>
+
+    </div>
+{% endblock %}

@@ -167,6 +167,7 @@ class EventProposition
     public function __construct()
     {
         $this->votes = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->proposedDate = new \DateTime();
     }
 
     /**

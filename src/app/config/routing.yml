@@ -1,3 +1,7 @@
+event_event_proposition:
+    resource: "@EventBundle/Controller/EventPropositionController.php"
+    type:     annotation
+
 event_activity_event:
     resource: "@EventBundle/Controller/ActivityEventController.php"
     type:     annotation

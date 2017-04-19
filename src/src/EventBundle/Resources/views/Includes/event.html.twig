@@ -20,6 +20,7 @@
         <div class="container-fluid">
             <div class="event-content row align-items-center justify-content-center">
                 <h4 class="event-content-main col-12">{{ event.date|date("l d F Y") }}</h4>
+                <h4 class="event-content-offset col-12">{{ event.date|date("H\\hi") }}</h4>
                 {#TODO Relative time #}
                 {% if event.price > 0 %}
                 <h5 class="event-content-offset col-12">{{ event.price }} €</h5>

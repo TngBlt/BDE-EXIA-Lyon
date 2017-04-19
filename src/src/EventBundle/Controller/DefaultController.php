@@ -33,7 +33,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/{id}",name="event_show")
+     * @Route("/{id}",name="event_show",requirements={"id": "\d+"})
      */
     public function showAction($id)
     {
