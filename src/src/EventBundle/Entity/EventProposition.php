@@ -55,6 +55,15 @@ class EventProposition
      */
     private $votes;
 
+    public function doUserVoted($user){
+        if(!$user) return false;
+        foreach($this->getVotes() as $vote){
+            if($vote->getUser()->getId() == $user->getId()){
+                return $vote;
+            }
+        }
+        return false;
+    }
 
     /**
      * Get id

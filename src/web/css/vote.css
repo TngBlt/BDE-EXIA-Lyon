@@ -33,3 +33,7 @@
         .proposition-like:hover:not(.is-checked) .proposition-like-form {
             display: block;
         }
+
+        .proposition-like.is-active{
+            color: #2b542c;
+        }
