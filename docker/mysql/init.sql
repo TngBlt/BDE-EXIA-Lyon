@@ -274,14 +274,14 @@ CREATE TABLE `picture` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `path` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `date` datetime NOT NULL,
-  `event_id` int(11) NOT NULL,
+  `event_id` int(11) DEFAULT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_16DB4F8971F7E88B` (`event_id`),
   KEY `IDX_16DB4F89A76ED395` (`user_id`),
   CONSTRAINT `FK_16DB4F8971F7E88B` FOREIGN KEY (`event_id`) REFERENCES `activityEvent` (`id`),
   CONSTRAINT `FK_16DB4F89A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -290,6 +290,7 @@ CREATE TABLE `picture` (
 
 LOCK TABLES `picture` WRITE;
 /*!40000 ALTER TABLE `picture` DISABLE KEYS */;
+INSERT INTO `picture` VALUES (1,'1.png','2017-04-19 09:57:00',NULL,2),(2,'2.jpg','2017-04-19 09:58:00',NULL,2),(3,'3.png','2017-04-19 09:58:00',NULL,2),(4,'4.jpg','2017-04-19 09:59:00',NULL,2),(5,'5.jpg','2017-04-19 09:59:00',NULL,2),(6,'6.jpg','2017-04-19 09:59:00',NULL,2),(7,'7.png','2017-04-19 09:59:00',NULL,2),(8,'8.jpg','2017-04-19 10:00:00',NULL,2),(9,'10.png','2017-04-19 10:00:00',NULL,2),(10,'12.png','2017-04-19 10:01:00',NULL,2),(11,'13.png','2017-04-19 10:01:00',NULL,2),(12,'15.jpg','2017-04-19 10:01:00',NULL,2);
 /*!40000 ALTER TABLE `picture` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -526,4 +527,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-18 22:59:09
+-- Dump completed on 2017-04-19 14:53:58

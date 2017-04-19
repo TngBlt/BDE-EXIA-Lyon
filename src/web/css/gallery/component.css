@@ -1,0 +1,139 @@
+.grid {
+    max-width: 69em;
+    list-style: none;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.grid .item {
+    display: block;
+    float: left;
+    padding: 7px;
+    width: 33%;
+
+}
+
+.grid .item.mid-width {
+    width:50%;
+    z-index: 5;
+
+}
+.grid .item.blur {
+    filter:blur(5px);
+}
+
+.grid .item.blur:hover {
+    filter:none;
+}
+
+.gallery-title {
+    margin-top: 20px;
+}
+
+.hidden {
+   display: none;
+}
+
+.icons-image {
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    height: 100%;
+    width:100%;
+    pointer-events: none;
+}
+
+.icons-image .thumbs-up {
+    position: absolute;
+    right: 25px;
+    bottom:0;
+    display: flex;
+    align-items: baseline;
+}
+.icons-image .fa-thumbs-up,
+.icons-image .fa-comments {
+    margin-left: 5px;
+}
+
+.icons-image .comments {
+    position: absolute;
+    left: 3px;
+    bottom:0;
+    display: flex;
+    align-items: baseline;
+}
+.icons-image .share-alt {
+    position: absolute;
+    right: 25px;
+    top:7px;
+}
+
+.grid .item a {
+    outline: none;
+    border: none;
+    max-width: 100%;
+}
+.grid .item img {
+    outline: none;
+    border: none;
+    display: block;
+    max-width: 100%;
+}
+
+.grid .item:not(.active) img:hover {
+    opacity: 0.7;
+}
+
+.grid .item img {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.posted-by {
+    color:#555;
+    font-style: italic;
+}
+.posted-by-name {
+    font-style:normal;
+    counter-reset:inherit;
+}
+
+.item-image {
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.item-image-sidepart {
+    display: none;
+}
+
+
+.item.active .item-image-sidepart {
+    display: block;
+}
+
+.comment-date {
+    color:#aaa;
+    font-size:11px;
+}
+
+.comment-name {
+    font-weight: bold;;
+}
+
+.add-comment {
+    margin-left: 5px;
+}
+
+.item-comment-content {
+    margin-bottom: 0;
+}
+
+.half-rule {
+    border-color: #c2242a;
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+}

@@ -32,7 +32,8 @@
         "symfony/swiftmailer-bundle": "^2.3.10",
         "symfony/symfony": "3.2.*",
         "twig/twig": "^1.0||^2.0",
-        "lablog/markdown": "1.0.*"
+        "lablog/markdown": "1.0.*",
+        "symfony/assetic-bundle": "2.8.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

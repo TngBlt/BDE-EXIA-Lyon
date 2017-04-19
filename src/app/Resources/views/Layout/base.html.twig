@@ -5,7 +5,7 @@
         <title>{% block title %}{% endblock %}{% if block("title") != "" %} - {% endif %}{{ sitename }}</title>
         {% block mainhead %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}" />
-        <meta name="viewport" content="width=device-width;user-scalable=no;initial-scale=1">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
         <link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}"/>
         <link rel="stylesheet" href="{{ asset("css/fa/css/font-awesome.css") }}"/>
         <link rel="stylesheet" href="{{ asset("css/base.css") }}"/>
@@ -75,8 +75,8 @@
                 <div class="row justify-content-left main-navbar">
                     <a href="{{ path("index") }}" class="col-12 col-md-auto"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                     <a href="#" class="col-12 col-md-auto"><i class="fa fa-calendar" aria-hidden="true"></i>Events</a>
-                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></i>Propositions</a>
-                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</a>
+                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Propositions</a>
+                    <a href="{{ path("show_gallery") }}" class="col-12 col-md-auto"><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</a>
                     <a href="#" class="col-12 col-md-auto"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Shop</a>
                     <a href="#" class="col-12 col-md-auto"><i class="fa fa-users" aria-hidden="true"></i>Members</a>
                 </div>

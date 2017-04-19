@@ -91,7 +91,7 @@ class User implements UserInterface, \Serializable
     private $prom;
 
     /**
-     * @ORM\ManyToMany(targetEntity="GalleryBundle\Entity\Picture", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="GalleryBundle\Entity\Picture", cascade={"persist"}, inversedBy="usersLiked")
      */
     private $picturesLiked;
 

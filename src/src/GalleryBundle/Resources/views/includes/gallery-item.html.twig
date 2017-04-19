@@ -1,0 +1,48 @@
+<div class="grid effect" id="grid">
+
+    {% if pictures %}
+        {% for picture in pictures %}
+
+            <div class="item">
+                <div class="item-image hidden-item">
+                    <a href="#" class="image-link">
+                        <img src="{{ asset('img/uploads/pictures/'~picture.path~'') }}" alt="">
+                    </a>
+                    <div class="icons-image hidden">
+                        <a href="#"><p class="posted-by">posted by <span class="posted-by-name">{{ picture.user }}</span></p></a>
+                        <a href="#" class="thumbs-up"><p>{{ picture.allLikes }}</p><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
+                        <a href="#" class="comments"><p>14 </p><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
+                        <a href="#" class="share-alt"><i class="fa fa-lg fa-share-alt" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="item-image item-image-sidepart hidden">
+                    <div class="item-likes">
+                        <a href="#" class="thumbs-up">
+                            <p>12
+                                <i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></p>
+                        </a>
+                    </div>
+                     <div class="item-comments widget widget-primary">
+
+                        {% for comment in comments %}
+                        <div class="item-commment">
+                            <p class="item-comment-content"><span class="comment-name">TngBlt </span> - content</p>
+                            <p><span class="comment-date">on date</span></p>
+                        </div>
+                        <hr class="half-rule"/>
+                         {% endfor %}
+
+                        <form class="form-inline" role="form">
+                            <div class="form-group">
+                                <textarea class="form-control" id="comment" rows="3"></textarea>
+                            </div>
+                            <div class="form-group add-comment">
+                                <button class="btn btn-default">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {%  endif %}
+</div>

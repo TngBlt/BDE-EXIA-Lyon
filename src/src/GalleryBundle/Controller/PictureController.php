@@ -40,6 +40,7 @@ class PictureController extends Controller
     public function newAction(Request $request)
     {
         $picture = new Picture();
+        $picture->setDate(new \DateTime());
         $form = $this->createForm('GalleryBundle\Form\PictureType', $picture);
         $form->handleRequest($request);
 
