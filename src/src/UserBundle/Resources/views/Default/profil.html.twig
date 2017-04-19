@@ -1,0 +1,49 @@
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}{{ member.fullname }}{% endblock %}
+{% block head %}
+	<link rel="stylesheet" href="{{ asset("css/profil.css") }}"/>
+	<link rel="stylesheet" href="{{ asset("css/articles.css") }}"/>
+	<link rel="stylesheet" href="{{ asset("css/events.css") }}"/>
+{% endblock %}
+
+
+{% block body %} 
+	<section class="col-12 col-lg-10">
+
+        <div class="widget widget-offset">
+            <div class="row"> 
+                <div class="col-lg-4 profil-image">                                                          
+                        <div><img src="{{ asset('img/uploads/members/' ~ member.avatar) }}" alt="members"/></div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h2>{{ member.fullname }}</h2>
+                    <h4>{{ member.prom.name }}</h4>
+                    <h5>About :</h5>
+                    <p>Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur.</p>
+                    <div class="profil-network">
+                    <a href="#" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    Member of the {{member.translatedRole}} !
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<ul>
+{% for participation in eventPast %}
+	<li>{{participation.event.title}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+
+

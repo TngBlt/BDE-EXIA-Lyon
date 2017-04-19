@@ -29,7 +29,7 @@
                         <div class="member-icons">
                             <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="{{ path("profil", {'id':member.id}) }}"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                         <div class="other-member-icons col-xs-2 col-md-2 col-lg-2">
                             <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <a href="{{ path("profil", {'id':otherMember.id}) }}"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>

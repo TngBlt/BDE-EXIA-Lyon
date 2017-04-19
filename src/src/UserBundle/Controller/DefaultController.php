@@ -34,4 +34,37 @@ class DefaultController extends Controller
 
     }
 
+
+    /**
+    *@Route("/profil/{id}", requirements={"id"="\d+"}, name="profil")
+    */
+    public function profilAction($id){
+
+    	$membersRepo = $this->getDoctrine()->getRepository("UserBundle:User");
+
+    	$member = $membersRepo->find($id);
+
+    	$participationRepo = $this->getDoctrine()->getRepository("EventBundle:Participation");
+
+    	$eventPast = $participationRepo->createQueryBuilder("par")
+    		->where("par.event.date < CURRENT_DATE()")
+    		->where("par.user = :user")
+    		->setParameter("user", $member)
+            ->getQuery()->getResult();
+
+    	$eventNext = $participationRepo->createQueryBuilder("par")
+    		->where("par.event.date > CURRENT_DATE()")
+    		->where("par.user = :user")
+    		->setParameter("user", $member)
+            ->getQuery()->getResult();
+
+
+    	return $this->render("UserBundle:Default:profil.html.twig",[
+        	"member"=>$member,
+        	"eventPast"=>$eventPast,
+        	"eventNext"=>$eventNext	
+        ]);
+
+    }
+
 }

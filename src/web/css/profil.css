@@ -1,0 +1,29 @@
+.profil-image{
+	border: none;
+	display: flex;
+	justify-content: center;
+}
+
+.profil-image img{
+	width: 100%;
+}
+
+.profil-network{
+	font-size: 2em;
+}
+
+.profil-network i{
+	padding: 5px;
+}
+
+.event-content{
+	text-align: center;
+}
+
+.event-cost{
+	text-align: right;
+}
+
+.event-action div{
+	border-style: solid;
+}
