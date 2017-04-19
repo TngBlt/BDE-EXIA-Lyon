@@ -1,1 +1,40 @@
-Hello World!
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}Shop{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ asset("css/shop.css") }}"/>
+{% endblock %}
+
+{% block body %}
+    <div class="shop row">
+
+        <section class="shop-section col-12 col-lg-8">
+
+            <div class="widget widget-primary shop-jumbotron">
+                <h2 class="shop-jumbotron-title">Welcome</h2>
+                <h3 class="widget-offset shop-jumbotron-lead">On the BDE's goodies shop</h3>
+                <form class="row shop-search-form" action="{{ path('shop_index') }}" method="get" >
+                    <input type="text" placeholder="Search" name="search" {% if search %}value="{{ search }}"{% endif %} class="form-control col-11"/>
+                    <button class="button button-invisible col-1">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="product-section row justify-content-center">
+            {% for product in products  %}
+            {% include "ShopBundle:Includes:product.html.twig" with {"cartAdd":true} %}
+            {% endfor %}
+            </div>
+
+        </section>
+
+        <aside class="widgets col-12 col-lg-4">
+
+            {{ render(controller("ShopBundle:Widget:cart")) }}
+
+        </aside>
+
+    </div>
+{% endblock %}

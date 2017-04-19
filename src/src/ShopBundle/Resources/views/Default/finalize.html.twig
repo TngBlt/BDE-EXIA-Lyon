@@ -1,0 +1,26 @@
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}Shop{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset("css/shop.css") }}"/>
+{% endblock %}
+
+{% block body %}
+    <div class="shop row justify-content-center">
+
+        <div class="widget widget-primary col-11 col-md-6">
+            <h2 class="widget-title widget-offset">Congratulation</h2>
+
+            <p class="widget-offset">Your purchase was saved and transmitted to the BDE, you have 7 days to go to your BDE, get the content of your cart and pay <strong>{{ total }} €</strong>.</p>
+
+            <p class="widget-offset">Thank you to buy our products and see you soon.</p>
+
+            <div class="row justify-content-center">
+                <a href="{{ path("shop_index") }}" class="button col-auto button-primary">Go back to the shop</a>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
