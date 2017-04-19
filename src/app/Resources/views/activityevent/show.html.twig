@@ -1,0 +1,48 @@
+{% extends "Layout/crud.html.twig" %}
+
+{% block body %}
+    <h1>Event</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ activityEvent.id }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if activityEvent.date %}{{ activityEvent.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ activityEvent.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ activityEvent.description }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ activityEvent.price }}</td>
+            </tr>
+            <tr>
+                <th>Frequency</th>
+                <td>{{ activityEvent.frequency }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('staff_event_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('staff_event_edit', { 'id': activityEvent.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

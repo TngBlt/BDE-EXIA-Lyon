@@ -1,13 +1,72 @@
 {% extends "Layout/global.html.twig" %}
 
 {% block title %}Members{% endblock %}
+{% block head %}
+	<link rel="stylesheet" href="{{ asset("css/members/members.css") }}"/>
+{% endblock %}
 
 {% block body %}
 
-    <ul>
+	<div class="content-title">
+		<h2 class="section-title">Student Union Team</h2>
+	</div>
+
+
+	<div class="row members">
     {% for member in members %}
-        <li>{{ member.username }}</li>
+
+    	<div class="col-lg-4 col-md-6 widgets">
+                    <div class="widget widget-primary member">
+                            <div class="member-avatar">
+                                <img src="{{ asset('img/uploads/members/' ~ member.avatar) }}" alt="other-member-avatar" width="65%">
+                            </div>
+                        <div class="member-info">
+                            <p class="member-name">{{ member.fullname }}</p>
+                            {% if member.prom %}
+                   				<p class="member-class">{{ member.prom.name }}</p>
+                   			{% endif %}
+                        </div>
+                        <div class="member-icons">
+                            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
     {% endfor %}
-    </ul>
+    </div>
+
+    <div class="content-title other-members-title">
+        <h2 class="section-title">Other members</h2>
+    </div>
+
+    <div class="row other-members">
+    {% for otherMember in otherMembers %}
+
+    	<div class="col-lg-3 col-md-3 col-sm-3 col-3">
+    		<div class="others widgets">
+                    <div class="widget widget-primary other-member row">
+                            <div class="other-member-avatar col-xs-3 col-md-3 col-lg-3">
+                                <img src="{{ asset('img/uploads/members/' ~ otherMember.avatar) }}" alt="other-member-avatar"/>
+                            </div>
+                        <div class="other-member-info col-xs-4 col-md-4 col-lg-4">
+                            <p class="member-name">{{ otherMember.fullname }}</p>
+							{% if otherMember.prom %}
+                   				<p class="member-class">{{ otherMember.prom.name }}</p>
+                   			{% endif %}                       
+                   		 </div>
+                        <div class="other-member-icons col-xs-2 col-md-2 col-lg-2">
+                            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+
+
+
+    </div>
 
 {% endblock %}

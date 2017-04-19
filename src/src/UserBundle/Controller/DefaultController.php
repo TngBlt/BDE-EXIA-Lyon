@@ -15,12 +15,21 @@ class DefaultController extends Controller
 
         $membersRepo = $this->getDoctrine()->getRepository("UserBundle:User");
 
-        $members = $membersRepo->createQueryBuilder("user")
-            ->orderBy("user.username","DESC")
+        $staffmembers = $membersRepo->createQueryBuilder("user")
+        	->where("user.role = 'ROLE_STAFF'")
+            ->orderBy("user.username")
             ->getQuery()->getResult();
 
+
+        $othermembers = $membersRepo->createQueryBuilder("user")
+        	->where("user.role = 'ROLE_USER'")
+            ->orderBy("user.username")
+            ->getQuery()->getResult();
+
+
         return $this->render("UserBundle:Default:members.html.twig",[
-            "members"=>$members
+            "members"=>$staffmembers,
+            "otherMembers"=>$othermembers
         ]);
 
     }

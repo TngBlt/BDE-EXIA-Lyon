@@ -1,0 +1,47 @@
+{% extends "Layout/crud.html.twig" %}
+
+{% block body %}
+    <h1>Events list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Frequency</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for activityEvent in activityEvents %}
+            <tr>
+                <td><a href="{{ path('staff_event_show', { 'id': activityEvent.id }) }}">{{ activityEvent.id }}</a></td>
+                <td>{% if activityEvent.date %}{{ activityEvent.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ activityEvent.title }}</td>
+                <td>{{ activityEvent.description }}</td>
+                <td>{{ activityEvent.price }}</td>
+                <td>{{ activityEvent.frequency }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('staff_event_show', { 'id': activityEvent.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('staff_event_edit', { 'id': activityEvent.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('staff_event_new') }}">Create a new Event</a>
+        </li>
+    </ul>
+{% endblock %}

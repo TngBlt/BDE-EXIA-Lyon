@@ -1,0 +1,57 @@
+<article class="event">
+    <div class="event-background-container">
+        <div class="event-background">
+            {% if event.pictures|length > 0 %}
+            <img src="{{ asset("img/uploads/gallery"~event.randomPicture) }}" alt=""/>
+            {% endif %}
+        </div>
+        <div class="container-fluid">
+            <div class="event-header row">
+                <h3 class="event-header-title col-11">
+                    <a href="#">
+                                <span class="event-header-icon">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </span>
+                        {{ event.title }}</a>
+                </h3>
+                <a href="#" class="event-header-sharebtn col-1"><i class="fa fa-share" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="event-content row align-items-center justify-content-center">
+                <h4 class="event-content-main col-12">{{ event.date|date("l d F Y") }}</h4>
+                {#TODO Relative time #}
+                {% if event.price > 0 %}
+                <h5 class="event-content-offset col-12">{{ event.price }} €</h5>
+                {% else %}
+                <h5 class="event-content-offset col-12">Free</h5>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% if toolbar is defined and toolbar %}
+    <div class="container-fluid">
+        <nav class="event-footer row">
+            <a href="#" class="event-footer-item event-commentbtn col-4">
+                <div class="event-footer-item-icon"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                <div class="event-footer-item-title">{{ event.pictures|length }} Pictures</div>
+            </a>
+            {% if event.doUserParticipate(app.user) %}
+                <a href="{{path('event_show',{"id":event.id})}}" class="event-footer-item event-participatebtn col-4 is-active">
+                    <div class="event-footer-item-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                    <div class="event-footer-item-title">Participating</div>
+                </a>
+            {% else %}
+            <a href="{{path('event_participate',{"id":event.id})}}" class="event-footer-item event-participatebtn col-4">
+                <div class="event-footer-item-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                <div class="event-footer-item-title">Participate</div>
+            </a>
+            {% endif %}
+            <a href="{{path('event_show',{"id":event.id})}}" class="event-footer-item event-morebtn col-4">
+                <div class="event-footer-item-title">More info</div>
+                <div class="event-footer-item-icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+            </a>
+        </nav>
+    </div>
+    {% endif %}
+</article>
