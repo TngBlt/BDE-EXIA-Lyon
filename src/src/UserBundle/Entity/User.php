@@ -407,6 +407,19 @@ class User implements UserInterface, \Serializable
         return $name;
     }
 
+    public function getTranslatedRole(){
+        switch($this->getRole()){
+            case "ROLE_USER":
+                return "Member";
+            case "ROLE_STAFF":
+                return "BDE's team";
+            case "ROLE_BOSS":
+                return "CESI's team";
+            default:
+                return $this->getRole();
+        }
+    }
+
     /**
      * Constructor
      */
