@@ -2,7 +2,7 @@
 
 $customTitle = "Members";
 
-$customHead = "<link rel='stylesheet' href='static/css/members/base.css'/>";
+$customHead = "<link rel='stylesheet' href='static/css/members/members.css'/>";
 
 include "includes/header.php"; ?>
 

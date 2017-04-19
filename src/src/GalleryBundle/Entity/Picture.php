@@ -3,6 +3,9 @@
 namespace GalleryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use EventBundle\EventBundle;
+use UserBundle\Entity\User;
+use UserBundle\UserBundle;
 
 /**
  * Picture
@@ -36,20 +39,26 @@ class Picture
     private $date;
 
     /**
-     * @var string
+     * @var \EventBundle\Entity\ActivityEvent
      *
      * @ORM\ManyToOne(targetEntity="EventBundle\Entity\ActivityEvent",inversedBy="pictures")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $event;
 
     /**
-     * @var string
+     * @var \UserBundle\Entity\User
      *
      * @ORM\ManyToOne(targetEntity="UserBundle\Entity\User",inversedBy="pictures")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\User", mappedBy="picturesLiked")
+     */
+    private $usersLiked;
 
 
     /**
@@ -156,5 +165,52 @@ class Picture
     public function getUser()
     {
         return $this->user;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->usersLiked = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add usersLiked
+     *
+     * @param \UserBundle\Entity\User $usersLiked
+     *
+     * @return Picture
+     */
+    public function addUsersLiked(\UserBundle\Entity\User $usersLiked)
+    {
+        $this->usersLiked[] = $usersLiked;
+
+        return $this;
+    }
+
+    /**
+     * Remove usersLiked
+     *
+     * @param \UserBundle\Entity\User $usersLiked
+     */
+    public function removeUsersLiked(\UserBundle\Entity\User $usersLiked)
+    {
+        $this->usersLiked->removeElement($usersLiked);
+    }
+
+    /**
+     * Get usersLiked
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsersLiked()
+    {
+        return $this->usersLiked;
+    }
+
+    public function getAllLikes() {
+        $likes = count($this->getUsersLiked());
+
+        return $likes;
     }
 }

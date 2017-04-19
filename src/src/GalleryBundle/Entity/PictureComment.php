@@ -3,6 +3,7 @@
 namespace GalleryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Illuminate\Support\Collection;
 
 /**
  * PictureComment
@@ -36,7 +37,7 @@ class PictureComment
     private $content;
 
     /**
-     * @var string
+     * @var \GalleryBundle\Entity\Picture
      *
      * @ORM\ManyToOne(targetEntity="GalleryBundle\Entity\Picture")
      * @ORM\JoinColumn(nullable=false)
@@ -44,7 +45,7 @@ class PictureComment
     private $picture;
 
     /**
-     * @var string
+     * @var \UserBundle\Entity\User
      *
      * @ORM\ManyToOne(targetEntity="UserBundle\Entity\User")
      * @ORM\JoinColumn(nullable=false)
@@ -156,5 +157,16 @@ class PictureComment
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * @param $id
+     *
+     * Get all the comments of a picture
+     *
+     * @return Collection
+     */
+    public function getPictureComments($id) {
+
     }
 }

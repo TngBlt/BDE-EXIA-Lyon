@@ -1,0 +1,25 @@
+{% extends "Layout/global.html.twig" %}
+
+{% block head %}
+    <link rel='stylesheet' href="{{ asset('css/gallery/base.css') }}"/>
+    <link rel='stylesheet' href="{{ asset('css/gallery/component.css') }}"/>
+{% endblock %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block body %}
+
+
+    {% include 'GalleryBundle:includes:gallery-item.html.twig' with pictures %}
+
+{% endblock %}
+{% block scripts %}
+    {% javascripts
+    '@GalleryBundle/Resources/public/js/jquery-3.1.1.js'
+    '@GalleryBundle/Resources/public/js/imagesloaded.pkgd.min.js'
+    '@GalleryBundle/Resources/public/js/masonry.pkgd.min.js'
+    '@GalleryBundle/Resources/public/js/gallery.js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+

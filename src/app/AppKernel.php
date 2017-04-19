@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new ShopBundle\ShopBundle(),
             new GalleryBundle\GalleryBundle(),
             new UserBundle\UserBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
