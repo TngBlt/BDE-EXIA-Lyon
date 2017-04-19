@@ -1,0 +1,39 @@
+{% extends 'Layout/crud.html.twig' %}
+
+{% block body %}
+    <h1>Class list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for prom in proms %}
+            <tr>
+                <td><a href="{{ path('boss_class_show', { 'id': prom.id }) }}">{{ prom.id }}</a></td>
+                <td>{{ prom.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('boss_class_show', { 'id': prom.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('boss_class_edit', { 'id': prom.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('boss_class_new') }}">Create a new Class</a>
+        </li>
+    </ul>
+{% endblock %}

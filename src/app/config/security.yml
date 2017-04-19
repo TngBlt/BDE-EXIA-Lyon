@@ -24,6 +24,9 @@ security:
             form_login:
                 login_path: login
                 check_path: login_check
+            logout:
+                path:   logout
+                target: /
 
     access_control:
         - {path: staff, roles: ROLE_STAFF}

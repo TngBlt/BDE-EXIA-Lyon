@@ -1,0 +1,36 @@
+{% extends 'Layout/crud.html.twig' %}
+
+{% block body %}
+    <h1>Picture</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ picture.id }}</td>
+            </tr>
+            <tr>
+                <th>Path</th>
+                <td>{{ picture.path }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if picture.date %}{{ picture.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('boss_picture_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('boss_picture_edit', { 'id': picture.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
