@@ -1,3 +1,7 @@
+pages_page:
+    resource: "@PagesBundle/Controller/PageController.php"
+    type:     annotation
+
 gallery_picture:
     resource: "@GalleryBundle/Controller/PictureController.php"
     type:     annotation

@@ -1,1 +1,17 @@
-Hello World!
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block body %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-12">
+            <h2 class="section-title">{{ page.title }}</h2>
+
+            <div class="page-content">
+                {{ page.content|markdown|raw }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
