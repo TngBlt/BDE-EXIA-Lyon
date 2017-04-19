@@ -3,6 +3,7 @@
 namespace EventBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +14,15 @@ class ActivityEventType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('date')->add('title')->add('description')->add('price')->add('frequency')->add('initialProposition');
+        $builder->add('date')->add('title')->add('description')->add('price')
+            ->add('frequency',ChoiceType::class,[
+                "choices"=>[
+                    "Unique" => null,
+                    "Dayly" => "dayly",
+                    "Mounthly" => "mounthly",
+                    "Yearly" => "yearly"
+                ]
+            ]);
     }
     
     /**

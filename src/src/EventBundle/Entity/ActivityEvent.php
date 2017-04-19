@@ -31,7 +31,7 @@ class ActivityEvent
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255)
+     * @ORM\Column(name="title", type="string", length=255,nullable=true)
      */
     private $title;
 
@@ -234,6 +234,7 @@ class ActivityEvent
     public function __construct()
     {
         $this->participations = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->date = new \DateTime();
     }
 
     /**

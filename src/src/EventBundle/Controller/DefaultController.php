@@ -12,6 +12,12 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('EventBundle:Default:index.html.twig');
+        $eventsRpo = $this->getDoctrine()->getRepository("EventBundle:ActivityEvent");
+        $events = $eventsRpo->createQueryBuilder("event")
+                            ->where("event.date >= NOW()");
+
+        return $this->render('EventBundle:Default:index.html.twig',[
+            "events"=>$events
+        ]);
     }
 }

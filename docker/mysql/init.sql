@@ -25,15 +25,15 @@ DROP TABLE IF EXISTS `activityEvent`;
 CREATE TABLE `activityEvent` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
-  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `description` longtext COLLATE utf8_unicode_ci NOT NULL,
   `price` double NOT NULL,
-  `frequency` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `frequency` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `initial_proposition_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_A48E8E2AC190B4C9` (`initial_proposition_id`),
   CONSTRAINT `FK_A48E8E2AC190B4C9` FOREIGN KEY (`initial_proposition_id`) REFERENCES `event_proposition` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `activityEvent` (
 
 LOCK TABLES `activityEvent` WRITE;
 /*!40000 ALTER TABLE `activityEvent` DISABLE KEYS */;
+INSERT INTO `activityEvent` VALUES (1,'2017-04-20 13:06:00','fun','tytytytytytyty',0,NULL,NULL),(2,'2017-04-01 13:06:00','Blague','gygygygygygy',0,NULL,NULL);
 /*!40000 ALTER TABLE `activityEvent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,7 +196,7 @@ CREATE TABLE `page` (
   `content` longtext COLLATE utf8_unicode_ci NOT NULL,
   `footerDisplayed` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -338,7 +339,7 @@ CREATE TABLE `product` (
   `price` double NOT NULL,
   `available` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -347,6 +348,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` VALUES (1,'Macaron','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisis metus enim, ac congue ipsum fermentum ac. Vestibulum turpis urna, sagittis eu magna a, pretium convallis tellus. Cras et aliquet enim. Nullam auctor rutrum ante ac dignissim. Nulla nec dignissim ipsum, nec gravida libero. Suspendisse potenti. Quisque interdum sagittis nisl, eu mattis arcu dapibus gravida. Vestibulum in aliquet nunc. Morbi sit amet erat elementum, consectetur enim luctus, scelerisque erat. Quisque vestibulum erat dolor. Ut aliquet mauris erat, faucibus mattis justo semper vitae.','maka.png',0.2,1),(2,'Muffin','Fusce venenatis, mauris a posuere convallis, leo orci ultrices erat, eu laoreet purus lectus sit amet justo. Duis turpis leo, ultrices eu placerat vel, hendrerit sed quam. Proin fermentum dui tellus, non vestibulum odio hendrerit sed. Fusce eget magna ut enim tristique rhoncus. Nullam justo diam, luctus et ultrices vitae, fringilla sed ligula. Aliquam viverra eget magna quis dapibus. Suspendisse id auctor nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec semper leo lacus, vel egestas dui auctor eu. Nulla rhoncus augue sit amet quam scelerisque egestas fringilla ac erat. Praesent viverra volutpat facilisis. Aenean venenatis, mauris sed porta sagittis, eros erat iaculis massa, vitae egestas est mi vitae ex. Phasellus rhoncus aliquam euismod. Donec bibendum elit at ultricies iaculis.','muffin.png',1.5,1),(3,'Panier de légumes','Phasellus eu metus a tellus gravida egestas. Vivamus nec erat sit amet eros molestie blandit eu et lacus. Mauris laoreet et odio et bibendum. Aliquam sollicitudin orci non hendrerit fermentum. Donec interdum suscipit tellus, nec feugiat lectus tincidunt at. Maecenas id pretium felis. Etiam aliquam consequat tortor vel convallis. Morbi non urna vitae orci suscipit dictum. Donec nec posuere ligula, in luctus risus.','panier.png',25,1),(4,'Sanwich mozarella','Nullam aliquam varius euismod. Nam condimentum arcu eu leo malesuada ullamcorper. In ullamcorper suscipit velit, nec sagittis erat efficitur ac. Nullam ullamcorper pretium odio et efficitur. Ut feugiat condimentum augue, nec porta diam auctor quis. Integer semper sem eu molestie commodo. Vivamus mattis dictum velit vitae sagittis. Morbi ultrices lorem euismod sapien pellentesque, volutpat congue ante dapibus. Etiam ut dignissim orci, nec pharetra lorem. Nulla facilisi. Praesent sed nisl ex. Nullam sed ipsum convallis, aliquam purus eu, vulputate tellus. In accumsan turpis sit amet pellentesque consequat. Mauris vel feugiat neque, id pretium libero. Proin vel ligula ex.','sand-mozz.png',5,1),(5,'Sweat 2017','Nulla aliquam fringilla est, eget finibus ante eleifend eget. Vivamus in varius sem. Integer felis dui, commodo ac tincidunt non, maximus at enim. Duis leo lectus, aliquam eget pretium at, consequat eget turpis. Praesent lacinia justo eget sapien aliquam, a posuere nisi varius. Sed eu sapien egestas, hendrerit odio a, tincidunt magna. Aliquam posuere velit ut ligula auctor, at condimentum sapien varius. Morbi orci risus, congue ac pharetra in, porttitor sed libero. Aenean ullamcorper magna elementum libero vestibulum, quis fermentum neque ornare.','sweat.png',35,1),(6,'Tartelette au citron','Nunc tristique leo arcu, ut aliquet justo congue vel. Nam eleifend, risus sit amet vestibulum interdum, neque erat fringilla erat, non posuere est turpis vel metus. Etiam eu libero lectus. Phasellus ultrices ullamcorper lacus, id cursus massa. Maecenas rutrum odio at nunc dictum laoreet. Vestibulum at odio enim. Duis consequat tortor id feugiat semper. Quisque facilisis libero nulla, eu tristique nisi bibendum eget. Cras suscipit, metus volutpat laoreet porttitor, libero enim mattis felis, sed sodales risus libero sit amet augue.','tart-o-citron.png',2.5,1),(10,'Tartelette aux fruits','Tart o frui tart o frui tart o frui','tart-o-fruit.png',2.5,1);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -388,7 +390,7 @@ CREATE TABLE `purchase` (
   PRIMARY KEY (`id`),
   KEY `IDX_6117D13BA76ED395` (`user_id`),
   CONSTRAINT `FK_6117D13BA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -397,6 +399,7 @@ CREATE TABLE `purchase` (
 
 LOCK TABLES `purchase` WRITE;
 /*!40000 ALTER TABLE `purchase` DISABLE KEYS */;
+INSERT INTO `purchase` VALUES (3,2,'2017-04-19 11:56:29'),(5,1,'2017-04-19 12:40:30');
 /*!40000 ALTER TABLE `purchase` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -424,6 +427,7 @@ CREATE TABLE `purchase_product` (
 
 LOCK TABLES `purchase_product` WRITE;
 /*!40000 ALTER TABLE `purchase_product` DISABLE KEYS */;
+INSERT INTO `purchase_product` VALUES (3,1),(5,1),(5,4);
 /*!40000 ALTER TABLE `purchase_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -450,7 +454,7 @@ CREATE TABLE `user` (
   UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`),
   KEY `IDX_8D93D6497CC070FF` (`prom_id`),
   CONSTRAINT `FK_8D93D6497CC070FF` FOREIGN KEY (`prom_id`) REFERENCES `prom` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -526,4 +530,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-18 22:59:09
+-- Dump completed on 2017-04-19 15:07:33

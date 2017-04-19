@@ -1,3 +1,7 @@
+event_activity_event:
+    resource: "@EventBundle/Controller/ActivityEventController.php"
+    type:     annotation
+
 shop_purchase:
     resource: "@ShopBundle/Controller/PurchaseController.php"
     type:     annotation
