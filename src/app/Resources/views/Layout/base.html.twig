@@ -36,6 +36,7 @@
                     {% if is_granted('ROLE_BOSS') %}
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_new") }}">Class</a></li>
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_product_new") }}">Product</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_picture_new") }}">Picture</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -51,6 +52,7 @@
                     {% if is_granted('ROLE_BOSS') %}
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_index") }}">Classes</a></li>
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_product_index") }}">Products</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_picture_index") }}">Pictures</a></li>
                     {% endif %}
                 </ul>
             </div>

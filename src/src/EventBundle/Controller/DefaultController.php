@@ -24,6 +24,7 @@ class DefaultController extends Controller
                             ->where("event.date BETWEEN :date AND :dateAfter")
                             ->setParameter("date",$today->format('Y-m-d'))
                             ->setParameter("dateAfter",$after->format('Y-m-d'))
+                            ->orderBy("event.date")
                             ->getQuery()->getResult();
 
         return $this->render('EventBundle:Default:index.html.twig',[

@@ -2,7 +2,7 @@
     <div class="event-background-container">
         <div class="event-background">
             {% if event.pictures|length > 0 %}
-            <img src="{{ asset("img/uploads/gallery"~event.randomPicture) }}" alt=""/>
+            <img src="{{ asset("img/uploads/pictures/"~event.randomPicture.path) }}" alt=""/>
             {% endif %}
         </div>
         <div class="container-fluid">

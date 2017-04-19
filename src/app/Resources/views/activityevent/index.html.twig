@@ -9,9 +9,8 @@
                 <th>Id</th>
                 <th>Date</th>
                 <th>Title</th>
-                <th>Description</th>
+                <th>Participations</th>
                 <th>Price</th>
-                <th>Frequency</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,9 +20,14 @@
                 <td><a href="{{ path('staff_event_show', { 'id': activityEvent.id }) }}">{{ activityEvent.id }}</a></td>
                 <td>{% if activityEvent.date %}{{ activityEvent.date|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ activityEvent.title }}</td>
-                <td>{{ activityEvent.description }}</td>
+                <td>
+                    <ul>
+                        {% for participation in activityEvent.participations %}
+                            <li>{{ participation.user.fullName }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
                 <td>{{ activityEvent.price }}</td>
-                <td>{{ activityEvent.frequency }}</td>
                 <td>
                     <ul>
                         <li>

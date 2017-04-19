@@ -83,6 +83,12 @@ class ActivityEvent
         }
     }
 
+    function __toString()
+    {
+        return $this->getDate()->format("Y-m-d")." ".$this->getTitle();
+    }
+
+
     /**
      * Get id
      *
