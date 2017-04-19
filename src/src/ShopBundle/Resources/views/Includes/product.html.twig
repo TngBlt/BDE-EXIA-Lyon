@@ -1,0 +1,21 @@
+<article class="product widget col-auto">
+    <div class="product-image">
+        <img src="{{ asset("uploads/products") }}/{{ product.picture }}" alt="{{ product.picture }}"/>
+    </div>
+    <div class="product-desc">
+        <h4 class="product-title">
+            {{ product.title }}
+        </h4>
+        <div class="product-price">
+            {{ product.price }}€
+            <nav class="product-menu">
+                {% if cartAdd is defined and cartAdd %}
+                <a href="{{ path("cart_add",{"id":product.id}) }}"><i class="fa fa-cart-plus"></i></a>
+                {% endif %}
+                {% if cartRemove is defined and cartRemove %}
+                <a href="{{ path("cart_remove",{"id":product.id}) }}"><i class="fa fa-times"></i></a>
+                {% endif %}
+            </nav>
+        </div>
+    </div>
+</article>

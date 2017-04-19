@@ -1,0 +1,27 @@
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}Purchase your cart{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset("css/shop.css") }}"/>
+{% endblock %}
+
+
+{% block body %}
+<h2 class="section-title">Purchase your cart</h2>
+<div class="row justify-content-center cart-summary">
+    {% for product in cart  %}
+        {% include "ShopBundle:Includes:product.html.twig" with {"cartRemove":true} %}
+    {% endfor %}
+</div>
+    <div class="row justify-content-center">
+        <div class="widget widget-primary col-md-6 col-11">
+            <h3 class="widget-title widget-offset">Finalize your pruchase</h3>
+            <p>Final cost of your cart : <strong>{{ total }} €</strong></p>
+            <p class="widget-offset">By finalizing your purchase your engaging yourself to buy the content of your cart in the next 7 days. You can get your purchase in your BDE in 24 hours.</p>
+            <div class="row justify-content-center">
+                <a href="{{ path("shop_finalize") }}" class="button col-auto button-primary">Finalize for <strong>{{ total }} €</strong></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

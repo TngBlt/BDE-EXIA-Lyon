@@ -15,6 +15,10 @@ class DefaultController extends Controller
     {
         $page = $this->getDoctrine()->getRepository("PagesBundle:Page")->find($id);
 
+        if (!$page) {
+            throw $this->createNotFoundException('The page does not exist');
+        }
+
         return $this->render('PagesBundle:Default:index.html.twig',["page"=>$page]);
     }
 }

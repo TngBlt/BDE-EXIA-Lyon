@@ -122,7 +122,7 @@ class User implements UserInterface, \Serializable
 
     function __toString()
     {
-        return $this->getUsername();
+        return $this->getFullName();
     }
 
 
@@ -385,6 +385,41 @@ class User implements UserInterface, \Serializable
     {
         return $this->prom;
     }
+
+    public function getFullName(){
+        $name = "";
+        if($this->getFirstname() or $this->getLastname()){
+            if ($this->getFirstname()) {
+                $name = $name . $this->getFirstname();
+                if ($this->getLastname()) {
+                    $name = $name . " " . $this->getLastname();
+                }
+            } else if ($this->getLastname()) {
+                $name = $name . $this->getLastname();
+            }
+
+        } else if($this->getUsername()) {
+            $name = $this->getUsername();
+        } else {
+            $name = $this->getEmail();
+        }
+
+        return $name;
+    }
+
+    public function getTranslatedRole(){
+        switch($this->getRole()){
+            case "ROLE_USER":
+                return "Member";
+            case "ROLE_STAFF":
+                return "BDE's team";
+            case "ROLE_BOSS":
+                return "CESI's team";
+            default:
+                return $this->getRole();
+        }
+    }
+
     /**
      * Constructor
      */

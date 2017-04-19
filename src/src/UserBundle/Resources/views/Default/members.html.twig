@@ -1,0 +1,13 @@
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}Members{% endblock %}
+
+{% block body %}
+
+    <ul>
+    {% for member in members %}
+        <li>{{ member.username }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

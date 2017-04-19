@@ -1,3 +1,11 @@
+shop_purchase:
+    resource: "@ShopBundle/Controller/PurchaseController.php"
+    type:     annotation
+
+shop_product:
+    resource: "@ShopBundle/Controller/ProductController.php"
+    type:     annotation
+
 pages_page:
     resource: "@PagesBundle/Controller/PageController.php"
     type:     annotation

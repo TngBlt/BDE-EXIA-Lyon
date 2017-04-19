@@ -1,0 +1,49 @@
+{% extends 'Layout/crud.html.twig' %}
+
+{% block body %}
+    <h1>Purchases list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>User</th>
+                <th>Content</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for purchase in purchases %}
+            <tr>
+                <td><a href="{{ path('staff_purchase_show', { 'id': purchase.id }) }}">{{ purchase.id }}</a></td>
+                <td>{% if purchase.date %}{{ purchase.date|date('Y/m/d') }}{% endif %}</td>
+                <td>{{ purchase.user.fullName }}</td>
+                <td>
+                    <ul>
+                        {% for product in purchase.products %}
+                        <li>{{ product.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('staff_purchase_show', { 'id': purchase.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('staff_purchase_edit', { 'id': purchase.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('staff_purchase_new') }}">Create a new purchase</a>
+        </li>
+    </ul>
+{% endblock %}

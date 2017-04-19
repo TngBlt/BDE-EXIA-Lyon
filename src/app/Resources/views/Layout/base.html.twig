@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}{% endblock %}{% if block("title") != "" %} - {% endif %}{{ sitename }}</title>
-        {% block mainhead %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}" />
         <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
         <link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}"/>
@@ -15,6 +14,7 @@
         {% if is_granted('ROLE_BOSS') or is_granted('ROLE_STAFF') %}
         <link rel="stylesheet" type="text/css" href="{{ asset("css/adminBar.css") }}"/>
         {% endif %}
+        {% block mainhead %}{% endblock %}
     </head>
     <body>
 
@@ -23,7 +23,7 @@
     <div class="admin-toolbar-container container-fluid">
         <div class="admin-toolbar row">
             <div class="col-12 col-md-2 admin-toolbar-title">
-                Admin login
+                {{ app.user.fullName }} <small class="text-muted">({{ app.user.email }})</small>
             </div>
             <div class="admin-toolbar-action col-auto both-lines">
                 <i class="fa fa-plus" aria-hidden="true"></i> Add <i class="fa fa-caret-down admin-toolbar-dropdown-icon" aria-hidden="true"></i>
@@ -34,18 +34,22 @@
                     {% endif %}
                     {% if is_granted('ROLE_BOSS') %}
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_new") }}">Class</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_product_new") }}">Product</a></li>
                     {% endif %}
                 </ul>
             </div>
             <div class="admin-toolbar-action col-auto">
-                <i class="fa fa-location-arrow" aria-hidden="true"></i> Go to <i class="fa fa-caret-down admin-toolbar-dropdown-icon" aria-hidden="true"></i>
+                <i class="fa fa-cog" aria-hidden="true"></i> Manage <i class="fa fa-caret-down admin-toolbar-dropdown-icon" aria-hidden="true"></i>
                 <ul class="admin-toolbar-dropdown">
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Pages</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Events</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Members</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Gallery</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Shop</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Purchases</a></li>
+                    {% if is_granted('ROLE_STAFF') %}
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_user_index") }}">Members</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_page_index") }}">Pages</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_purchase_index") }}">Purchases</a></li>
+                    {% endif %}
+                    {% if is_granted('ROLE_BOSS') %}
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_index") }}">Classes</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_product_index") }}">Products</a></li>
+                    {% endif %}
                 </ul>
             </div>
             {% if block("adminActions") != "" %}
@@ -75,10 +79,10 @@
                 <div class="row justify-content-left main-navbar">
                     <a href="{{ path("index") }}" class="col-12 col-md-auto"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                     <a href="#" class="col-12 col-md-auto"><i class="fa fa-calendar" aria-hidden="true"></i>Events</a>
-                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Propositions</a>
+                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></i>Propositions</a>
                     <a href="{{ path("show_gallery") }}" class="col-12 col-md-auto"><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</a>
-                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Shop</a>
-                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-users" aria-hidden="true"></i>Members</a>
+                    <a href="{{ path("shop_index") }}" class="col-12 col-md-auto"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Shop</a>
+                    <a href="{{ path('all_members') }}" class="col-12 col-md-auto"><i class="fa fa-users" aria-hidden="true"></i>Members</a>
                 </div>
             </nav>
             <div class="col-12 col-md-3 main-header-connection-container">
