@@ -4,6 +4,7 @@ namespace GalleryBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
 {
@@ -21,27 +22,30 @@ class DefaultController extends Controller
     }
     /**
      *
-     * @Route("/{id}/like-image", requirements={"id" = "\d+"},name="like_image")
+     * @Route("/{id}/like", requirements={"id" = "\d+"},name="like_image")
      */
     public function like_image($id) {
         if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirect($this->generateUrl('login'));
         }
         $repoDoctrine = $this->getDoctrine()->getRepository('GalleryBundle:Picture');
+
         $em = $this->getDoctrine()->getManager();
         $image = $repoDoctrine->find($id);
+
+        if(!$image){
+            throw new NotFoundHttpException();
+        }
+
         $user = $this->getUser();
 
         if($image->doUserLikes($user)) {
-            $image->removeUsersLiked($user);
-            $result = $image;
-        }
-        else {
-
-            $result = $image->addUsersLiked($user);
+            $user->removePicturesLiked($image);
+        } else {
+            $user->addPicturesLiked($image);
         }
 
-        $em->persist($result);
+        $em->persist($user);
         $em->flush();
 
         return $this->redirect($this->generateUrl('show_gallery'));
