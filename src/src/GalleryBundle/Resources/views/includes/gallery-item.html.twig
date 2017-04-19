@@ -10,24 +10,24 @@
                     </a>
                     <div class="icons-image hidden">
                         <a href="#"><p class="posted-by">posted by <span class="posted-by-name">{{ picture.user }}</span></p></a>
-                        <a href="#" class="thumbs-up"><p>{{ picture.allLikes }}</p><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
-                        <a href="#" class="comments"><p>14 </p><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
+                        <a href="#" class="thumbs-up"><p>{{ picture.usersLiked | length }}</p><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
+                        <a href="#" class="comments"><p>{{ picture.commentCount }} </p><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
                         <a href="#" class="share-alt"><i class="fa fa-lg fa-share-alt" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="item-image item-image-sidepart hidden">
                     <div class="item-likes">
-                        <a href="#" class="thumbs-up">
-                            <p>12
+                        <a href="{{ path('like_image',{'id':picture.id}) }}" class="thumbs-up">
+                            <p>{{ picture.usersLiked.count }}
                                 <i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></p>
                         </a>
                     </div>
                      <div class="item-comments widget widget-primary">
 
-                        {% for comment in comments %}
+                        {% for comment in picture.comments %}
                         <div class="item-commment">
-                            <p class="item-comment-content"><span class="comment-name">TngBlt </span> - content</p>
-                            <p><span class="comment-date">on date</span></p>
+                            <p class="item-comment-content"><span class="comment-name">{{ comment.user }} </span>- {{ comment.content }} </p>
+                            <p><span class="comment-date">on {{ comment.date }}</span></p>
                         </div>
                         <hr class="half-rule"/>
                          {% endfor %}

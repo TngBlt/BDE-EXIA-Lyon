@@ -13,13 +13,37 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $repoDoctrine = $this->getDoctrine()->getRepository('GalleryBundle:Picture');
-        $repository = $repoDoctrine->findAll();
+        $pictures = $repoDoctrine->findAll();
 
-        $comDoctrine = $this->getDoctrine()->getRepository('GalleryBundle:PictureComment');
-        $comments =  $comDoctrine->findAll();
         return $this->render('GalleryBundle:Default:gallery.html.twig', array(
-            'pictures' => $repository,
-            'comments' => $comments
+            'pictures' => $pictures
         ));
+    }
+    /**
+     *
+     * @Route("/{id}/like-image", requirements={"id" = "\d+"},name="like_image")
+     */
+    public function like_image($id) {
+        if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            return $this->redirect($this->generateUrl('login'));
+        }
+        $repoDoctrine = $this->getDoctrine()->getRepository('GalleryBundle:Picture');
+        $em = $this->getDoctrine()->getManager();
+        $image = $repoDoctrine->find($id);
+        $user = $this->getUser();
+
+        if($image->doUserLikes($user)) {
+            $image->removeUsersLiked($user);
+            $result = $image;
+        }
+        else {
+
+            $result = $image->addUsersLiked($user);
+        }
+
+        $em->persist($result);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('show_gallery'));
     }
 }
