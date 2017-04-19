@@ -38,14 +38,15 @@
                 </ul>
             </div>
             <div class="admin-toolbar-action col-auto">
-                <i class="fa fa-location-arrow" aria-hidden="true"></i> Go to <i class="fa fa-caret-down admin-toolbar-dropdown-icon" aria-hidden="true"></i>
+                <i class="fa fa-cog" aria-hidden="true"></i> Manage <i class="fa fa-caret-down admin-toolbar-dropdown-icon" aria-hidden="true"></i>
                 <ul class="admin-toolbar-dropdown">
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Pages</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Events</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Members</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Gallery</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Shop</a></li>
-                    <li class="admin-toolbar-dropdown-item"><a href="#">Purchases</a></li>
+                    {% if is_granted('ROLE_STAFF') %}
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_user_index") }}">Members</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_page_index") }}">Pages</a></li>
+                    {% endif %}
+                    {% if is_granted('ROLE_BOSS') %}
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_index") }}">Classes</a></li>
+                    {% endif %}
                 </ul>
             </div>
             {% if block("adminActions") != "" %}
