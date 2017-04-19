@@ -14,7 +14,7 @@ class PageType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title')->add('content')->add("footerDisplayed",CheckboxType::class,["label"=>"Display in the footer"]);
+        $builder->add('title')->add('content')->add("footerDisplayed",CheckboxType::class,["label"=>"Display in the footer","required"=>false]);
     }
     
     /**
