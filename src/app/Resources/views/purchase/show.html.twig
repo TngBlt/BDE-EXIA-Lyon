@@ -13,6 +13,20 @@
                 <th>Date</th>
                 <td>{% if purchase.date %}{{ purchase.date|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ purchase.user.fullName }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>
+                    <ul>
+                        {% for product in purchase.products %}
+                            <li>{{ product.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
         </tbody>
     </table>
 

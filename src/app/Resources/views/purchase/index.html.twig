@@ -18,7 +18,7 @@
             <tr>
                 <td><a href="{{ path('staff_purchase_show', { 'id': purchase.id }) }}">{{ purchase.id }}</a></td>
                 <td>{% if purchase.date %}{{ purchase.date|date('Y/m/d') }}{% endif %}</td>
-                <td>{% if purchase.user.email %}{{ purchase.user.username }} : {{ purchase.user.email }}{% endif %}</td>
+                <td>{{ purchase.user.fullName }}</td>
                 <td>
                     <ul>
                         {% for product in purchase.products %}

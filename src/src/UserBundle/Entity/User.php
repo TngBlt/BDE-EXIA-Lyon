@@ -385,6 +385,28 @@ class User implements UserInterface, \Serializable
     {
         return $this->prom;
     }
+
+    public function getFullName(){
+        $name = "";
+        if($this->getFirstname() or $this->getLastname()){
+            if ($this->getFirstname()) {
+                $name = $name . $this->getFirstname();
+                if ($this->getLastname()) {
+                    $name = $name . " " . $this->getLastname();
+                }
+            } else if ($this->getLastname()) {
+                $name = $name . $this->getLastname();
+            }
+
+        } else if($this->getUsername()) {
+            $name = $this->getUsername();
+        } else {
+            $name = $this->getEmail();
+        }
+
+        return $name;
+    }
+
     /**
      * Constructor
      */
