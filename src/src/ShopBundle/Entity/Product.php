@@ -56,6 +56,11 @@ class Product
      */
     private $available;
 
+    function __toString()
+    {
+        return $this->getTitle();
+    }
+
 
     /**
      * Get id

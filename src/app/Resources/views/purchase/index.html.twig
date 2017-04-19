@@ -8,6 +8,8 @@
             <tr>
                 <th>Id</th>
                 <th>Date</th>
+                <th>User</th>
+                <th>Content</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -15,7 +17,15 @@
         {% for purchase in purchases %}
             <tr>
                 <td><a href="{{ path('staff_purchase_show', { 'id': purchase.id }) }}">{{ purchase.id }}</a></td>
-                <td>{% if purchase.date %}{{ purchase.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if purchase.date %}{{ purchase.date|date('Y/m/d') }}{% endif %}</td>
+                <td>{% if purchase.user.email %}{{ purchase.user.username }} : {{ purchase.user.email }}{% endif %}</td>
+                <td>
+                    <ul>
+                        {% for product in purchase.products %}
+                        <li>{{ product.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
                 <td>
                     <ul>
                         <li>

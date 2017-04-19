@@ -31,7 +31,6 @@
                     {% if is_granted('ROLE_STAFF') %}
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_user_new") }}">Member</a></li>
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_page_new") }}">Page</a></li>
-                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_purchase_new") }}">Page</a></li>
                     {% endif %}
                     {% if is_granted('ROLE_BOSS') %}
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_new") }}">Class</a></li>
@@ -45,7 +44,7 @@
                     {% if is_granted('ROLE_STAFF') %}
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_user_index") }}">Members</a></li>
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_page_index") }}">Pages</a></li>
-                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_purchase_index") }}">Pages</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_purchase_index") }}">Purchases</a></li>
                     {% endif %}
                     {% if is_granted('ROLE_BOSS') %}
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_index") }}">Classes</a></li>

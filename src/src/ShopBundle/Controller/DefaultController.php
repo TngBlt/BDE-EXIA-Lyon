@@ -19,7 +19,8 @@ class DefaultController extends Controller
 
         $productRepo = $this->getDoctrine()->getRepository("ShopBundle:Product");
         $queryBuilder = $productRepo->createQueryBuilder("pro")
-                    ->where("pro.available = true");
+                    ->where("pro.available = true")
+                    ->orderBy("pro.price");
 
         if($search){
             $queryBuilder->where("LOWER(pro.title) like LOWER(:search) or LOWER(pro.description) like LOWER(:search)");
@@ -109,6 +110,8 @@ class DefaultController extends Controller
         $cart = $session->get("cart");
         if(!$cart) return $this->redirect($this->generateUrl('shop_index'));
 
+        $productRepo = $this->getDoctrine()->getRepository("ShopBundle:Product");
+
         $purchase = new Purchase();
         $purchase->setDate(new \DateTime());
         $purchase->setUser($this->getUser());
@@ -117,7 +120,10 @@ class DefaultController extends Controller
 
         foreach ($cart as $product){
             $total += $product->getPrice();
-            $purchase->addProduct($product);
+            $newProduct = $productRepo->find($product->getId());
+            if($newProduct){
+                $purchase->addProduct($newProduct);
+            }
         }
 
         $em = $this->getDoctrine()->getManager();
