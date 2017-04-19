@@ -122,7 +122,7 @@ class User implements UserInterface, \Serializable
 
     function __toString()
     {
-        return $this->getUsername();
+        return $this->getFullName();
     }
 
 
