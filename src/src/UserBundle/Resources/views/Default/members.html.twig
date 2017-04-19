@@ -17,14 +17,11 @@
 
     	<div class="col-lg-4 col-md-6 widgets">
                     <div class="widget widget-primary member">
-                        {% if '{{ member.avatar }}' is defined %}
                             <div class="member-avatar">
-                                <img src="{{ asset(member.avatar) }}" alt="member-avatar" width="65%">
+                                <img src="{{ asset('img/uploads/members/' ~ member.avatar) }}" alt="other-member-avatar" width="65%">
                             </div>
-                        {% endif %}
                         <div class="member-info">
-                            <p class="member-name">{{ member.username }}</p>
-                            <p class="member-role">{{ member.role }}</p>
+                            <p class="member-name">{{ member.fullname }}</p>
                             {% if member.prom %}
                    				<p class="member-class">{{ member.prom.name }}</p>
                    			{% endif %}
@@ -49,13 +46,11 @@
     	<div class="col-lg-3 col-md-3 col-sm-3 col-3">
     		<div class="others widgets">
                     <div class="widget widget-primary other-member row">
-                        {% if '{{ otherMember.avatar }}' is defined %}
                             <div class="other-member-avatar col-xs-3 col-md-3 col-lg-3">
-                                <img src="{{ asset(otherMember.avatar) }}" alt="other-member-avatar"/>
+                                <img src="{{ asset('img/uploads/members/' ~ otherMember.avatar) }}" alt="other-member-avatar"/>
                             </div>
-                        {% endif %}
                         <div class="other-member-info col-xs-4 col-md-4 col-lg-4">
-                            <p class="member-name">{{ otherMember.username }}</p>
+                            <p class="member-name">{{ otherMember.fullname }}</p>
 							{% if otherMember.prom %}
                    				<p class="member-class">{{ otherMember.prom.name }}</p>
                    			{% endif %}                       
