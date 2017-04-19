@@ -287,7 +287,12 @@ class User implements UserInterface, \Serializable
      */
     public function getAvatar()
     {
+        if($this->avatar){
         return $this->avatar;
+        }
+        else{
+            return 'default.png';
+        }   
     }
 
     /**
