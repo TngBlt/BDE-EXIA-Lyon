@@ -60,6 +60,12 @@ class Picture
      */
     private $usersLiked;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="GalleryBundle\Entity\PictureComment", mappedBy="picture")
+     */
+    private $comments;
 
     /**
      * Get id
@@ -208,9 +214,60 @@ class Picture
         return $this->usersLiked;
     }
 
-    public function getAllLikes() {
-        $likes = count($this->getUsersLiked());
+    /**
+     *
+     * @return Boolean
+     */
+    public function doUserLikes($user) {
+        if($this->getUsersLiked()->contains($user))
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
-        return $likes;
+
+
+    /**
+     * Add comment
+     *
+     * @param \GalleryBundle\Entity\PictureComment $comment
+     *
+     * @return Picture
+     */
+    public function addComment(\GalleryBundle\Entity\PictureComment $comment)
+    {
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \GalleryBundle\Entity\PictureComment $comment
+     */
+    public function removeComment(\GalleryBundle\Entity\PictureComment $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    public function getCommentCount()
+    {
+        $commentsCount = count($this->getComments());
+
+        return $commentsCount;
     }
 }

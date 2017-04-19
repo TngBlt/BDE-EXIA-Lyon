@@ -39,7 +39,7 @@ class PictureComment
     /**
      * @var \GalleryBundle\Entity\Picture
      *
-     * @ORM\ManyToOne(targetEntity="GalleryBundle\Entity\Picture")
+     * @ORM\ManyToOne(targetEntity="GalleryBundle\Entity\Picture", inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
      */
     private $picture;
