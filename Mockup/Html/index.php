@@ -96,9 +96,17 @@ include "includes/header.php"; ?>
             </div>
         </article>
 
+<<<<<<< HEAD
+		<div class="widget widget-primary">
+			<a href="events.php"  class="moreevents"><h5>More events</h5></a>
+		</div>
+
+
+=======
         <div class="widget widget-primary">
             <a href="events.php"  class="moreevents"><h5>More events</h5></a>
         </div>
+>>>>>>> origin/master
         <h2 class="section-title">Discover</h2>
 
         <article class="event">
@@ -142,12 +150,42 @@ include "includes/header.php"; ?>
     </section>
 
     <section class="col-12 col-md-4">
+<<<<<<< HEAD
+    	<aside class="vote-content">
+    	<div class="widget vote-widget">
+            <h4 class="widget-title widget-offset">Vote !</h4>
+            <p class="widget-offset vote-widget-text">Vote for the next event you want to see in this list !</p>
+            <div class="row justify-content-center widget-offset">
+                <a href="/vote.php" class="button button-primary col-auto">Vote now</a>
+            </div>
+        </div>
+    	</aside>
+
+    <aside class="shop-content">
+    	<h4>Shop</h4>
+	<div class="row">
+		<div class="col-12 col-md-6 widget">
+                <div class="product-image">
+                    <img src="static/img/gallery/15.jpg" alt="FirstProduct" class="product1" />
+                </div>
+                <div class="product-desc">
+                    <h4 class="product-title">
+                        Item 1
+                    </h4>
+                    <div class="product-price">
+                        10€
+                        <nav class="product-menu">
+                            <a href="#"><i class="fa fa-cart-plus"></i></a>
+                        </nav>
+                    </div>
+=======
         <aside class="vote-content">
             <div class="widget vote-widget">
                 <h4 class="widget-title widget-offset">Vote !</h4>
                 <p class="widget-offset vote-widget-text">Vote for the next event you want to see in this list !</p>
                 <div class="row justify-content-center widget-offset">
                     <a href="/vote.php" class="button button-primary col-auto">Vote now</a>
+>>>>>>> origin/master
                 </div>
             </div>
         </aside>
@@ -190,10 +228,16 @@ include "includes/header.php"; ?>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
+    </aside>
+</section>    
+</div>       
+=======
         </aside>
     </section>
 </div>
 
 
+>>>>>>> origin/master
 
 <?php include "includes/footer.php"; ?>
