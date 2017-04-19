@@ -1,0 +1,18 @@
+.main-page {
+    padding-top: 20px;
+}
+
+.time-travel{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+    .time-travel-next{
+        text-align: right;
+    }
+
+.vote-widget {}
+
+    .vote-widget-text {
+        text-align: center;
+    }

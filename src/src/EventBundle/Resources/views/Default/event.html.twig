@@ -1,0 +1,53 @@
+{% extends "Layout/global.html.twig" %}
+
+{% block title %}Events{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/articles.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/events.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/calendar-widget.css") }}"/>
+{% endblock %}
+
+{% block body %}
+
+    <h2 class="section-title">Event {{ event.title }}</h2>
+
+    <div class="events-section row">
+
+        <section class="events-section col-12 col-lg-8">
+
+        {% include "EventBundle:Includes:event.html.twig" %}
+
+        <article class="widget widget-primary">
+            <h4 class="widget-title widget-offset">Description</h4>
+
+            {{ event.description|markdown|raw }}
+
+        </article>
+
+            <h2 class="section-title">Gallery</h2>
+
+        </section>
+
+        <aside class="widgets col-12 col-lg-4">
+
+            {% if event.doUserParticipate(app.user) %}
+                <div class="widget">
+                    <h4 class="widget-title widget-offset">Participating</h4>
+                    <p>Congratulation ! You're participating to this event.</p>
+                </div>
+            {% else %}
+            <div class="widget">
+                <h4 class="widget-title widget-offset">Participate</h4>
+                <form action="{{path('event_participate',{"id":event.id})}}" method="post">
+                <div class="row justify-content-end no-margin-row">
+                    <button class="button button-primary col-auto">Participate{% if event.price > 0 %} and Pay{% endif %}</button>
+                </div>
+                </form>
+            </div>
+            {% endif %}
+
+        </aside>
+
+    </div>
+{% endblock %}

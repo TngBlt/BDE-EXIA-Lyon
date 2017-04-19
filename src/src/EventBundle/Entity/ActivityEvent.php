@@ -31,7 +31,8 @@ class ActivityEvent
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255,nullable=true)
+     * @ORM\Column(name="title", type="string", length=255)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $title;
 
@@ -74,6 +75,13 @@ class ActivityEvent
      */
     private $pictures;
 
+    public function getRandomPicture(){
+        if(count($this->pictures) > 0){
+            return $this->pictures->get(random_int(0,count($this->pictures)-1));
+        } else {
+            return null;
+        }
+    }
 
     /**
      * Get id
@@ -249,6 +257,16 @@ class ActivityEvent
         $this->participations[] = $participation;
 
         return $this;
+    }
+
+    public function doUserParticipate($user){
+        if(!$user) return false;
+        foreach ($this->getParticipations() as $participations){
+            if($participations->getUser()->getId() == $user->getId()){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

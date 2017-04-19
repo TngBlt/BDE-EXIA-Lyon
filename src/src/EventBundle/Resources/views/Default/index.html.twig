@@ -2,6 +2,46 @@
 
 {% block title %}Events{% endblock %}
 
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/articles.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/events.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/calendar-widget.css") }}"/>
+{% endblock %}
+
 {% block body %}
-Bonjour les events
+
+    <h2 class="section-title">Events</h2>
+
+    <nav class="time-travel row">
+        <div class="col-6 time-travel-past">
+            <a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i> Past events</a>
+        </div>
+        <div class="col-6 time-travel-next">
+            <a href="#">Next events <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </nav>
+
+    <div class="events-section row">
+
+        <section class="events-section col-12 col-lg-8">
+
+            {% for event in events %}
+            {% include "EventBundle:Includes:event.html.twig" with {"toolbar":true} %}
+            {% endfor %}
+
+        </section>
+
+        <aside class="widgets col-12 col-lg-4">
+
+            <div class="widget vote-widget">
+                <h4 class="widget-title widget-offset">Vote !</h4>
+                <p class="widget-offset vote-widget-text">Vote for the next event you want to see in this list !</p>
+                <div class="row justify-content-center widget-offset">
+                    <a href="/vote.php" class="button button-primary col-auto">Vote now</a>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
 {% endblock %}
