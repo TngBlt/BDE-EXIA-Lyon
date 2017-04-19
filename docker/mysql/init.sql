@@ -33,7 +33,7 @@ CREATE TABLE `activityEvent` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_A48E8E2AC190B4C9` (`initial_proposition_id`),
   CONSTRAINT `FK_A48E8E2AC190B4C9` FOREIGN KEY (`initial_proposition_id`) REFERENCES `event_proposition` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `activityEvent` (
 
 LOCK TABLES `activityEvent` WRITE;
 /*!40000 ALTER TABLE `activityEvent` DISABLE KEYS */;
-INSERT INTO `activityEvent` VALUES (1,'2017-04-20 13:06:00','fun','tytytytytytyty',0,NULL,NULL),(2,'2017-04-01 13:06:00','Blague','gygygygygygy',0,NULL,NULL);
+INSERT INTO `activityEvent` VALUES (1,'2017-04-25 13:06:00','First event ever','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec lorem ut mauris bibendum bibendum id ut lacus. Sed efficitur est neque. Donec odio quam, pulvinar nec fermentum at, ultrices eu mi. Phasellus consectetur viverra neque et volutpat. Etiam laoreet, massa vitae sollicitudin elementum, odio ipsum scelerisque metus, nec dapibus leo erat sed felis. Quisque posuere massa vel orci vulputate, eu laoreet ante ultrices. Nam quis tincidunt dolor. Proin mattis pharetra massa, at commodo tellus consequat at. Donec eget augue rhoncus, venenatis nulla et, consectetur augue. Proin feugiat id sapien non fermentum. Sed ac venenatis ex. Sed sit amet faucibus tortor, at auctor dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam a purus eleifend, efficitur diam eu, blandit nisl. Mauris quis venenatis orci. Sed tincidunt purus rhoncus tortor ultrices auctor.\r\n\r\nNulla facilisis suscipit gravida. Morbi gravida purus et sapien porttitor, in volutpat lectus commodo. Nam consequat odio arcu, quis fermentum sem bibendum at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sit amet odio sapien. Duis condimentum arcu at mauris rhoncus, vestibulum dapibus orci fringilla. Aenean eu efficitur turpis. Phasellus et diam eget neque eleifend rhoncus. Integer condimentum luctus libero, ut suscipit nibh dignissim eget. Nulla facilisi. Sed at sapien at magna venenatis vehicula sed sed mi. Aliquam mattis turpis facilisis, ullamcorper augue ut, molestie ipsum.',15,NULL,NULL),(2,'2017-04-01 13:06:00','Just a joke event','Phasellus ut volutpat ex. Ut ac sollicitudin enim. Aliquam rutrum ornare libero, id consequat sem fringilla ac. Quisque lobortis non massa a eleifend. Etiam eget velit nec ligula fringilla malesuada. Etiam varius ligula id nulla porta, vel luctus massa pellentesque. Nullam condimentum in neque ut tempor.\r\n\r\nCras sit amet imperdiet nisi, at consectetur lectus. Nunc venenatis pulvinar dolor, ac efficitur dolor lacinia non. Nullam vel elementum erat, eget semper orci. Phasellus iaculis pretium consectetur. Sed sit amet dui porta, porta felis eget, rhoncus quam. Proin neque tortor, luctus eu massa at, placerat porttitor enim. Phasellus nec eros imperdiet, cursus ligula a, auctor urna. Sed posuere porttitor leo sit amet efficitur.',0,NULL,NULL),(3,'2017-05-04 05:06:00','A future event','Mauris scelerisque ante mollis, blandit erat quis, condimentum felis. Praesent vestibulum felis a dui posuere, et blandit dolor sodales. Ut in placerat ligula. Praesent pulvinar urna at tellus commodo, id pellentesque eros consectetur. Nam non auctor est, sit amet aliquet ligula. Donec ultricies ex vitae ex rhoncus pellentesque. Vivamus vulputate, justo vel imperdiet aliquet, odio nibh pulvinar quam, eu pharetra tellus ante nec eros. Sed ultrices tincidunt nisl, vel egestas magna tempor eu. Donec id porttitor turpis.',0,NULL,NULL),(4,'2017-04-19 15:14:00','Large event','Ratione totam itaque et perferendis velit veniam et ut. Magnam sed optio sint enim laboriosam eos. Sunt quis quis saepe et voluptas. Eos veritatis molestiae ullam adipisci. Facere cupiditate facere optio officia eum nemo facilis.\r\n\r\nIllum quis sequi accusamus nulla ad velit rerum cumque. Dignissimos sunt consequatur quos veniam quisquam quos facilis. Tempore esse minus reiciendis quo amet error incidunt rem. Alias enim ad alias et enim qui in sint. Perspiciatis illum dolorum dolores perspiciatis quos eum ut beatae. Ipsa omnis vel vitae itaque aliquam.',150,NULL,NULL);
 /*!40000 ALTER TABLE `activityEvent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,7 +196,7 @@ CREATE TABLE `page` (
   `content` longtext COLLATE utf8_unicode_ci NOT NULL,
   `footerDisplayed` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +225,7 @@ CREATE TABLE `participation` (
   KEY `IDX_AB55E24F71F7E88B` (`event_id`),
   CONSTRAINT `FK_AB55E24F71F7E88B` FOREIGN KEY (`event_id`) REFERENCES `activityEvent` (`id`),
   CONSTRAINT `FK_AB55E24FA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -234,6 +234,7 @@ CREATE TABLE `participation` (
 
 LOCK TABLES `participation` WRITE;
 /*!40000 ALTER TABLE `participation` DISABLE KEYS */;
+INSERT INTO `participation` VALUES (1,1,1);
 /*!40000 ALTER TABLE `participation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -340,7 +341,7 @@ CREATE TABLE `product` (
   `price` double NOT NULL,
   `available` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -365,7 +366,7 @@ CREATE TABLE `prom` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_CC68A9335E237E06` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -374,6 +375,7 @@ CREATE TABLE `prom` (
 
 LOCK TABLES `prom` WRITE;
 /*!40000 ALTER TABLE `prom` DISABLE KEYS */;
+INSERT INTO `prom` VALUES (2,'Ei A2'),(1,'Exia A2');
 /*!40000 ALTER TABLE `prom` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -455,7 +457,7 @@ CREATE TABLE `user` (
   UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`),
   KEY `IDX_8D93D6497CC070FF` (`prom_id`),
   CONSTRAINT `FK_8D93D6497CC070FF` FOREIGN KEY (`prom_id`) REFERENCES `prom` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -464,7 +466,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'victor','$2y$10$/zl5eW0NhMKGfZibYIwcH.szDwP3WtMHWODbWs9STcjMn1XBWZXLK','vz@cesi.fr',1,'','ROLE_STAFF',NULL,'Victor','Zimmerman'),(2,'thierry','$2y$10$uP.QyiL4DHCjZu/.TCyOk.4D1fH3J4NMyvhBaiXQfQC5YoNZ1.goW','tb@cesi.fr',1,'','ROLE_BOSS',NULL,'Thierry','Blanc'),(3,'user','$2y$10$D3vaPMqi44x2n/MW5yTq1OSr0UxPUylYubKSx0/WoaBN5E.eQGCTq','us@cesi.fr',1,NULL,'ROLE_USER',NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'victor','$2y$10$/zl5eW0NhMKGfZibYIwcH.szDwP3WtMHWODbWs9STcjMn1XBWZXLK','vz@cesi.fr',1,'victorz.PNG','ROLE_STAFF',1,'Victor','Zimmerman'),(2,'thierry','$2y$10$uP.QyiL4DHCjZu/.TCyOk.4D1fH3J4NMyvhBaiXQfQC5YoNZ1.goW','tb@cesi.fr',1,'','ROLE_BOSS',NULL,'Thierry','Blanc'),(3,'user','$2y$10$D3vaPMqi44x2n/MW5yTq1OSr0UxPUylYubKSx0/WoaBN5E.eQGCTq','us@cesi.fr',1,'user.jpg','ROLE_USER',NULL,'Timmy',NULL),(4,'baptiste','$2y$13$Gj51FoBiJ1GNGEM3D8UCjuvAnIgwldYZxUcVnwj.qvjEQ0RImtgbS','bs@cesi.fr',1,'Bapt.PNG','ROLE_USER',1,'Baptiste','Saclier'),(5,'clement','$2y$13$xmFAwB1iHt6JMpD4tautQOhYuelD4UFfulevhwEQ/f8YsnBV727Hu','cc@cesi.fr',1,'clementchabrier.jpg','ROLE_USER',1,'Clément','Chabrier'),(6,'junca','$2y$13$U7WqWGCo6xwfGWHOmYjXret/wzz8CXiLSm4qjvM3ZNc72XNIO8NH.','rj@cesi.fr',1,'juncaaa.jpg','ROLE_USER',1,'Romain','Junca'),(7,'eric','$2y$13$7J.brGGPsW2wqdiXQqVDjuEc5pTtV9x6Fk5dPNvQGccvWjJpVesVC','ec@cesi.fr',1,NULL,'ROLE_STAFF',1,'Eric','Chirac'),(8,'marie','$2y$13$6I2mz/i4yOiAfW72Q1.I4O1M/ipjKdACvtRKlugmv3aQXnVEP7pQi','mc@cesi.fr',1,'mariechiaverini.jpg','ROLE_USER',1,'Marie','Chiaverini'),(9,'paul','$2y$13$jK9Aq1MHfIEztC9KqOn02O7NdKrBKctJocsKURiAGQstBlkS98LL6','pm@cesi.fr',1,'paulmanuel.jpg','ROLE_USER',2,'Paul','Manuel'),(11,'tanguy','$2y$13$EQWIs7JJ6wxJUKUqmoPeFerdEXs.s7kWyOCS26x9YYl1EancF8FDC','tnb@cesi.fr',1,'tngblt.png','ROLE_USER',1,'Tanguy','Blochet');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -531,4 +533,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-19 15:07:33
+-- Dump completed on 2017-04-19 17:18:45
