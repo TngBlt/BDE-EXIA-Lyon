@@ -1,0 +1,45 @@
+{% extends 'Layout/crud.html.twig' %}
+
+{% block body %}
+    <h1>Products list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Picture</th>
+                <th>Price</th>
+                <th>Available</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td><a href="{{ path('boss_product_show', { 'id': product.id }) }}">{{ product.id }}</a></td>
+                <td>{{ product.title }}</td>
+                <td>{{ product.picture }}</td>
+                <td>{{ product.price }}</td>
+                <td>{% if product.available %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('boss_product_show', { 'id': product.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('boss_product_edit', { 'id': product.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('boss_product_new') }}">Create a new product</a>
+        </li>
+    </ul>
+{% endblock %}
