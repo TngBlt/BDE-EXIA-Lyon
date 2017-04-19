@@ -56,14 +56,14 @@ class Picture
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\User", mappedBy="picturesLiked")
+     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\User", mappedBy="picturesLiked", cascade={"persist"})
      */
     private $usersLiked;
 
     /**
      * @var
      *
-     * @ORM\OneToMany(targetEntity="GalleryBundle\Entity\PictureComment", mappedBy="picture")
+     * @ORM\OneToMany(targetEntity="GalleryBundle\Entity\PictureComment", mappedBy="picture", cascade={"persist"})
      */
     private $comments;
 
