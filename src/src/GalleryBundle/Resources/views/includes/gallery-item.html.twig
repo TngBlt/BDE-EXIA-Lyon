@@ -27,19 +27,14 @@
                         {% for comment in picture.comments %}
                         <div class="item-commment">
                             <p class="item-comment-content"><span class="comment-name">{{ comment.user }} </span>- {{ comment.content }} </p>
-                            <p><span class="comment-date">on {{ comment.date }}</span></p>
+                            <p><span class="comment-date">on {{ comment.date|date('Y-m-d H:i:s') }}</span></p>
                         </div>
                         <hr class="half-rule"/>
                          {% endfor %}
+                         {{ form_start(form) }}
+                         {{ form_widget(form.picture, {'value' : picture.id}) }}
+                         {{ form_end(form) }}
 
-                        <form class="form-inline" role="form">
-                            <div class="form-group">
-                                <textarea class="form-control" id="comment" rows="3"></textarea>
-                            </div>
-                            <div class="form-group add-comment">
-                                <button class="btn btn-default">Add</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
