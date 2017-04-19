@@ -40,15 +40,15 @@ class UserController extends Controller
     public function newAction(Request $request)
     {
         $user = new User();
+        $user->setRole("ROLE_USER");
+        $user->setIsActive(true);
         $form = $this->createForm('UserBundle\Form\UserType', $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $user->setIsActive(true);
             $encoder = $this->container->get('security.password_encoder');
             $encoded = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($encoded);
-            $user->setRole("ROLE_USER");
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();

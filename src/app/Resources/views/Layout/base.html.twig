@@ -23,7 +23,7 @@
     <div class="admin-toolbar-container container-fluid">
         <div class="admin-toolbar row">
             <div class="col-12 col-md-2 admin-toolbar-title">
-                Admin login
+                {% if app.user.firstname or app.user.lastname %}{{ app.user.firstname }} {{ app.user.lastname }}{% else %}{{ app.user.username }}{% endif %} <small class="text-muted">({{ app.user.email }})</small>
             </div>
             <div class="admin-toolbar-action col-auto both-lines">
                 <i class="fa fa-plus" aria-hidden="true"></i> Add <i class="fa fa-caret-down admin-toolbar-dropdown-icon" aria-hidden="true"></i>
