@@ -1,5 +1,18 @@
 {% extends "Layout/global.html.twig" %}
 
-{% block mainbody %}
-    Welcome abroad !
+{% block body %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-12">
+            <div class="widget widget-primary">
+                <h2 class="widget-title widget-offset">Welcome abroad !</h2>
+
+                <p>Welcome on the BDE's site ! You can now connect you tou your brand new account with your email address and your password.</p>
+
+                <div class="row justify-content-center">
+                    <a href="{{ path("login") }}" class="button button-primary col-auto">Log in</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

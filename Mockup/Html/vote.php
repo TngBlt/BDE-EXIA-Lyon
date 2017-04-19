@@ -45,7 +45,6 @@ include "includes/header.php"; ?>
 
         <div class="widget proposition-widget">
             <h4 class="widget-title widget-offset">Add proposition</h4>
-            <h4 class="widget-title widget-offset">Add proposition</h4>
             <form>
                 <div class="form-group">
                     <label for="prop-name">Name</label>

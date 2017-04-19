@@ -35,6 +35,13 @@ class Page
      */
     private $content;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="footerDisplayed", type="boolean")
+     */
+    private $footerDisplayed;
+
 
     /**
      * Get id
@@ -92,5 +99,21 @@ class Page
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isFooterDisplayed()
+    {
+        return $this->footerDisplayed;
+    }
+
+    /**
+     * @param bool $footerDisplayed
+     */
+    public function setFooterDisplayed($footerDisplayed)
+    {
+        $this->footerDisplayed = $footerDisplayed;
     }
 }

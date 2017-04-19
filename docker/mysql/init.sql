@@ -193,8 +193,9 @@ CREATE TABLE `page` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `content` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `footerDisplayed` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -203,6 +204,7 @@ CREATE TABLE `page` (
 
 LOCK TABLES `page` WRITE;
 /*!40000 ALTER TABLE `page` DISABLE KEYS */;
+INSERT INTO `page` VALUES (1,'Legals Notice','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae ante egestas, pulvinar augue et, maximus enim. Aenean nulla tortor, scelerisque porta tortor a, convallis suscipit lorem. Integer rutrum, massa et elementum fringilla, urna elit volutpat ante, et vestibulum elit dolor quis lectus. Mauris orci magna, vulputate non orci non, lobortis vehicula magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc fermentum ante ex, posuere blandit odio luctus nec. Vivamus nec semper nulla. Etiam pellentesque ipsum in sodales gravida. Vestibulum convallis nibh vitae dapibus hendrerit. Aliquam cursus metus quis volutpat hendrerit. Proin lacinia tincidunt nisl, at luctus velit congue sed. In quis nisl euismod, maximus sapien vel, blandit ante.\r\n\r\nVestibulum gravida pulvinar leo et dignissim. Aenean eu magna sit amet odio scelerisque egestas in eget turpis. Morbi quis sem et est elementum sollicitudin nec sed velit. Aliquam erat volutpat. Phasellus suscipit interdum hendrerit. Curabitur sed massa posuere, mattis enim vel, fermentum lectus. Vestibulum pulvinar vehicula nisl, non fermentum justo vestibulum id. Aenean bibendum diam sed nisl cursus, in lobortis neque scelerisque. Vivamus accumsan nulla id mauris pulvinar, vitae eleifend turpis viverra. Suspendisse rutrum lacus at placerat ornare. Aliquam maximus faucibus ante, tristique dictum sapien lacinia ut. Fusce in massa auctor, tempor purus sit amet, blandit arcu. Praesent erat velit, blandit suscipit metus eu, fermentum laoreet dui. Cras quis nunc vel leo semper iaculis sit amet ac velit. Nam id felis hendrerit, gravida orci sit amet, suscipit enim.\r\n\r\nNullam in luctus libero. Sed vel felis cursus, feugiat sapien non, tristique nisi. Donec lacus lacus, blandit id justo placerat, elementum consectetur ante. Nulla eget luctus quam, et ultrices mi. Nullam id erat blandit, convallis felis vulputate, suscipit velit. Donec vitae iaculis nisl. Vivamus ipsum odio, feugiat tincidunt posuere vitae, placerat nec sem. Praesent viverra, mauris et facilisis euismod, neque arcu tempus mauris, sed rhoncus quam lorem vitae libero. Proin vulputate metus id diam malesuada rhoncus.\r\n\r\nPellentesque ut nisl tincidunt, malesuada mauris non, posuere lorem. Sed consequat at ligula quis pulvinar. Proin at metus ornare, euismod eros at, porta nibh. Fusce libero velit, laoreet nec nisl a, ultricies mattis est. Praesent sit amet rutrum purus. Fusce varius, neque in rutrum ultricies, ipsum augue placerat ligula, vitae interdum ex libero quis quam. Fusce id mauris metus. Mauris dictum, quam sit amet convallis aliquam, ipsum justo tempor justo, ut iaculis enim nibh suscipit purus. Aliquam tristique tincidunt leo vel facilisis.\r\n\r\nVivamus porta pulvinar bibendum. Sed condimentum augue enim. Sed dui metus, laoreet vel lacinia eu, ultrices id nisi. Aliquam erat volutpat. Quisque iaculis convallis consequat. Phasellus leo mi, tincidunt nec malesuada ut, dictum in est. Praesent tincidunt ultrices arcu, a pellentesque leo finibus at. Maecenas molestie lorem sit amet ipsum imperdiet, eget tristique nisl pretium. Mauris sodales et purus a tincidunt.',1),(2,'About','Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, sem at pulvinar viverra, sem massa ornare eros, eu mollis justo lectus nec nisi. Cras dapibus mi vel nibh vulputate pretium. Morbi enim risus, rutrum tincidunt imperdiet sed, vehicula placerat magna. Suspendisse eu consectetur ipsum, ac ornare lacus. Etiam molestie tincidunt turpis id iaculis. Vivamus consequat lectus auctor tellus pellentesque, lacinia lacinia sem mollis. Fusce est nunc, malesuada in velit sed, pretium rutrum eros. Cras condimentum quis risus at vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed facilisis, turpis ut volutpat aliquam, lectus leo maximus metus, quis euismod urna felis at sapien. Donec quis est vitae nisl placerat malesuada.\r\n\r\nSed vulputate turpis ac pulvinar fringilla. Phasellus tempus odio quam, at faucibus est interdum eget. Sed pretium ut lectus id tempus. Curabitur vestibulum risus id neque dignissim tincidunt. Cras ut accumsan lacus. Quisque dignissim massa vel molestie hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi luctus purus pellentesque metus ornare, quis mattis nisl imperdiet. Sed urna sem, vestibulum sed lorem vel, consequat pulvinar mauris. Sed lectus eros, tempor et nulla non, aliquam tincidunt metus.',1),(3,'Contact','To contact us please send an email to the address [bde-lyon@viacesi.fr](mailto:bde-lyon@viacesi.fr)\r\n\r\nPlease don\'t use this email form spamming or advertizing',1),(4,'FAQ','**First question ?**\r\n\r\nFirst answer\r\n\r\n**Second question ?**\r\n\r\nSecond answer...',1);
 /*!40000 ALTER TABLE `page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -448,7 +450,7 @@ CREATE TABLE `user` (
   UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`),
   KEY `IDX_8D93D6497CC070FF` (`prom_id`),
   CONSTRAINT `FK_8D93D6497CC070FF` FOREIGN KEY (`prom_id`) REFERENCES `prom` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -524,4 +526,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-18 11:57:24
+-- Dump completed on 2017-04-18 22:59:09

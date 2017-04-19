@@ -30,6 +30,7 @@
                 <ul class="admin-toolbar-dropdown">
                     {% if is_granted('ROLE_STAFF') %}
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_user_new") }}">Member</a></li>
+                    <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_page_new") }}">Page</a></li>
                     {% endif %}
                     {% if is_granted('ROLE_BOSS') %}
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_new") }}">Class</a></li>
@@ -82,8 +83,12 @@
             </nav>
             <div class="col-12 col-md-3 main-header-connection-container">
                 <div class="row justify-content-center main-header-connection align-items-center">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <a href="{{ path("logout") }}" class="main-header-connection-btn button col-auto" >Disconnect</a>
+                    {% else %}
                     <a href="{{ path("login") }}" class="main-header-connection-btn button col-auto" >Log in</a>
                     <a href="{{ path("login") }}" class="main-header-connection-btn button col-auto">Sign in</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -91,7 +96,7 @@
 
     {# starting of the page #}
 
-    <section class="container main-page {% block pageExtraClass %}{% endblock %}">
+    <section class="container main-page {% block pageExtraClass %}main-page-pad{% endblock %}">
 
         {% block mainbody %}{% endblock %}
 
@@ -100,12 +105,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4 footer-infos">
-                    <ul>
-                        <li><a href="#">Legals Notice</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
+                    {{ render(controller("PagesBundle:Widget:footerLinks")) }}
                 </div>
                 <diV class="col-12 col-md-4 footer-social">
                     <div class="footer-social-logos">

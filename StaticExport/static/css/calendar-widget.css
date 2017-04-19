@@ -1,0 +1,13 @@
+.calendar{}
+
+    .calendar-header{
+        text-align: center;
+    }
+
+    .calendar-table{
+        width: 100%;
+    }
+
+    .calendar-days {
+        font-weight: bold;
+    }

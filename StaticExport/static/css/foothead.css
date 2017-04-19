@@ -1,0 +1,140 @@
+.main-header{}
+
+    .main-header-container {
+        background-color: #c2242a;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    }
+
+    @media (min-width: 767px) {
+        .main-header-container {
+            padding-right: 0;
+        }
+
+        .main-header-container .row {
+            margin-right: 0;
+        }
+    }
+
+    .main-header-connection-container {
+        background-color: #0065a7;
+    }
+
+        .main-header-connection {
+            height: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .main-header-connection-container {
+                margin-bottom: 20px;
+                padding: 10px 0 10px 0;
+            }
+
+            .main-header-connection-btn-container:first-child {
+                padding-bottom: 10px;
+            }
+        }
+
+        .main-header-connection-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-header-connection-btn {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+    .main-header-logo {
+        position: relative;
+    }
+
+        .main-header-logo-img {
+            position: absolute;
+        }
+
+        @media (max-width: 767px) {
+            .main-header-logo {
+                text-align: center;
+            }
+
+            .main-header-logo-img {
+                position: relative;
+                width: 50%;
+            }
+        }
+
+.main-navbar {
+	height: 100%;
+    padding: 15px 0 15px 15px;
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+}
+
+    .main-navbar i {
+        padding-right: 5px;
+    }
+
+    .main-navbar > * {
+        padding: 0 15px 0 15px;
+    }
+
+    @media (max-width: 767px) {
+        .main-navbar > * {
+            padding: 5px 15px 5px 15px;
+            text-align: center;
+        }
+    }
+
+    .main-navbar > *:hover {
+        color: white;
+    }
+
+/**Footer*/
+
+.footer-infos li{
+	list-style-type: none;
+}
+
+.footer-infos li a{
+    text-decoration: none;
+    color: inherit;
+}
+.footer-infos li a:focus{
+    text-decoration: none;
+    color: inherit;
+}
+.footer-infos li a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-infos li a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-infos ul {
+    padding-left: 0;
+}
+
+.footer{
+	background-color: #2F4F4F;
+	font-family: "Open sans", sans-serif;
+	font-weight: lighter;
+	padding: 2em;
+    color: #ffffff;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social-logos{
+	font-size: 2em;
+}
+
+.footer-logos{
+	text-align: right;
+	margin-top: 1em;
+}
