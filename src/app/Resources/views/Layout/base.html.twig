@@ -36,6 +36,7 @@
                     {% if is_granted('ROLE_BOSS') %}
                     <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_new") }}">Class</a></li>
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_product_new") }}">Product</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_picture_new") }}">Picture</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -47,10 +48,12 @@
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_page_index") }}">Pages</a></li>
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_purchase_index") }}">Purchases</a></li>
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_event_index") }}">Events</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("staff_proposition_index") }}">Propositions</a></li>
                     {% endif %}
                     {% if is_granted('ROLE_BOSS') %}
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_class_index") }}">Classes</a></li>
                         <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_product_index") }}">Products</a></li>
+                        <li class="admin-toolbar-dropdown-item"><a href="{{ path("boss_picture_index") }}">Pictures</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -81,7 +84,7 @@
                 <div class="row justify-content-left main-navbar">
                     <a href="{{ path("index") }}" class="col-12 col-md-auto"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                     <a href="{{ path("events_index") }}" class="col-12 col-md-auto"><i class="fa fa-calendar" aria-hidden="true"></i>Events</a>
-                    <a href="#" class="col-12 col-md-auto"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></i>Propositions</a>
+                    <a href="{{ path("propositions_index") }}" class="col-12 col-md-auto"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></i>Propositions</a>
                     <a href="{{ path("show_gallery") }}" class="col-12 col-md-auto"><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</a>
                     <a href="{{ path("shop_index") }}" class="col-12 col-md-auto"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Shop</a>
                     <a href="{{ path('all_members') }}" class="col-12 col-md-auto"><i class="fa fa-users" aria-hidden="true"></i>Members</a>

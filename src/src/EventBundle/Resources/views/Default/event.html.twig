@@ -48,6 +48,24 @@
             </div>
             {% endif %}
 
+            {% if (is_granted('ROLE_BOSS') or is_granted('ROLE_STAFF')) %}
+
+                <div class="widget participation-widget">
+                    <h3 class="widget-title widget-offset">Participations</h3>
+                    {% if event.participations|length > 0 %}
+                        <p class="widget-offset">The users participating to this event.</p>
+                    {% else %}
+                        <p class="widget-offset">There is no participants to this event.</p>
+                    {% endif %}
+                    <ul class="participation-widget-list" >
+                        {% for participation in event.participations %}
+                        <li class="participation-widget-item" >{{ participation.user.fullName }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            {% endif %}
+
         </aside>
 
     </div>

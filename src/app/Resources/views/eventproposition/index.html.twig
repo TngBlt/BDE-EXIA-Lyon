@@ -1,0 +1,41 @@
+{% extends 'Layout/crud.html.twig' %}
+
+{% block body %}
+    <h1>Eventpropositions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Proposeddate</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for eventProposition in eventPropositions %}
+            <tr>
+                <td><a href="{{ path('staff_proposition_show', { 'id': eventProposition.id }) }}">{{ eventProposition.id }}</a></td>
+                <td>{{ eventProposition.title }}</td>
+                <td>{% if eventProposition.proposedDate %}{{ eventProposition.proposedDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('staff_proposition_show', { 'id': eventProposition.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('staff_proposition_edit', { 'id': eventProposition.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('staff_proposition_new') }}">Create a new eventProposition</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -67,6 +67,12 @@ class Picture
      */
     private $comments;
 
+    function __toString()
+    {
+        return $this->getPath();
+    }
+
+
     /**
      * Get id
      *

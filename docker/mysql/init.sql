@@ -33,7 +33,7 @@ CREATE TABLE `activityEvent` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_A48E8E2AC190B4C9` (`initial_proposition_id`),
   CONSTRAINT `FK_A48E8E2AC190B4C9` FOREIGN KEY (`initial_proposition_id`) REFERENCES `event_proposition` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `activityEvent` (
 
 LOCK TABLES `activityEvent` WRITE;
 /*!40000 ALTER TABLE `activityEvent` DISABLE KEYS */;
-INSERT INTO `activityEvent` VALUES (1,'2017-04-25 13:06:00','First event ever','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec lorem ut mauris bibendum bibendum id ut lacus. Sed efficitur est neque. Donec odio quam, pulvinar nec fermentum at, ultrices eu mi. Phasellus consectetur viverra neque et volutpat. Etiam laoreet, massa vitae sollicitudin elementum, odio ipsum scelerisque metus, nec dapibus leo erat sed felis. Quisque posuere massa vel orci vulputate, eu laoreet ante ultrices. Nam quis tincidunt dolor. Proin mattis pharetra massa, at commodo tellus consequat at. Donec eget augue rhoncus, venenatis nulla et, consectetur augue. Proin feugiat id sapien non fermentum. Sed ac venenatis ex. Sed sit amet faucibus tortor, at auctor dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam a purus eleifend, efficitur diam eu, blandit nisl. Mauris quis venenatis orci. Sed tincidunt purus rhoncus tortor ultrices auctor.\r\n\r\nNulla facilisis suscipit gravida. Morbi gravida purus et sapien porttitor, in volutpat lectus commodo. Nam consequat odio arcu, quis fermentum sem bibendum at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sit amet odio sapien. Duis condimentum arcu at mauris rhoncus, vestibulum dapibus orci fringilla. Aenean eu efficitur turpis. Phasellus et diam eget neque eleifend rhoncus. Integer condimentum luctus libero, ut suscipit nibh dignissim eget. Nulla facilisi. Sed at sapien at magna venenatis vehicula sed sed mi. Aliquam mattis turpis facilisis, ullamcorper augue ut, molestie ipsum.',15,NULL,NULL),(2,'2017-04-01 13:06:00','Just a joke event','Phasellus ut volutpat ex. Ut ac sollicitudin enim. Aliquam rutrum ornare libero, id consequat sem fringilla ac. Quisque lobortis non massa a eleifend. Etiam eget velit nec ligula fringilla malesuada. Etiam varius ligula id nulla porta, vel luctus massa pellentesque. Nullam condimentum in neque ut tempor.\r\n\r\nCras sit amet imperdiet nisi, at consectetur lectus. Nunc venenatis pulvinar dolor, ac efficitur dolor lacinia non. Nullam vel elementum erat, eget semper orci. Phasellus iaculis pretium consectetur. Sed sit amet dui porta, porta felis eget, rhoncus quam. Proin neque tortor, luctus eu massa at, placerat porttitor enim. Phasellus nec eros imperdiet, cursus ligula a, auctor urna. Sed posuere porttitor leo sit amet efficitur.',0,NULL,NULL),(3,'2017-05-04 05:06:00','A future event','Mauris scelerisque ante mollis, blandit erat quis, condimentum felis. Praesent vestibulum felis a dui posuere, et blandit dolor sodales. Ut in placerat ligula. Praesent pulvinar urna at tellus commodo, id pellentesque eros consectetur. Nam non auctor est, sit amet aliquet ligula. Donec ultricies ex vitae ex rhoncus pellentesque. Vivamus vulputate, justo vel imperdiet aliquet, odio nibh pulvinar quam, eu pharetra tellus ante nec eros. Sed ultrices tincidunt nisl, vel egestas magna tempor eu. Donec id porttitor turpis.',0,NULL,NULL),(4,'2017-04-19 15:14:00','Large event','Ratione totam itaque et perferendis velit veniam et ut. Magnam sed optio sint enim laboriosam eos. Sunt quis quis saepe et voluptas. Eos veritatis molestiae ullam adipisci. Facere cupiditate facere optio officia eum nemo facilis.\r\n\r\nIllum quis sequi accusamus nulla ad velit rerum cumque. Dignissimos sunt consequatur quos veniam quisquam quos facilis. Tempore esse minus reiciendis quo amet error incidunt rem. Alias enim ad alias et enim qui in sint. Perspiciatis illum dolorum dolores perspiciatis quos eum ut beatae. Ipsa omnis vel vitae itaque aliquam.',150,NULL,NULL);
+INSERT INTO `activityEvent` VALUES (1,'2017-04-25 13:06:00','First event ever','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec lorem ut mauris bibendum bibendum id ut lacus. Sed efficitur est neque. Donec odio quam, pulvinar nec fermentum at, ultrices eu mi. Phasellus consectetur viverra neque et volutpat. Etiam laoreet, massa vitae sollicitudin elementum, odio ipsum scelerisque metus, nec dapibus leo erat sed felis. Quisque posuere massa vel orci vulputate, eu laoreet ante ultrices. Nam quis tincidunt dolor. Proin mattis pharetra massa, at commodo tellus consequat at. Donec eget augue rhoncus, venenatis nulla et, consectetur augue. Proin feugiat id sapien non fermentum. Sed ac venenatis ex. Sed sit amet faucibus tortor, at auctor dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam a purus eleifend, efficitur diam eu, blandit nisl. Mauris quis venenatis orci. Sed tincidunt purus rhoncus tortor ultrices auctor.\r\n\r\nNulla facilisis suscipit gravida. Morbi gravida purus et sapien porttitor, in volutpat lectus commodo. Nam consequat odio arcu, quis fermentum sem bibendum at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sit amet odio sapien. Duis condimentum arcu at mauris rhoncus, vestibulum dapibus orci fringilla. Aenean eu efficitur turpis. Phasellus et diam eget neque eleifend rhoncus. Integer condimentum luctus libero, ut suscipit nibh dignissim eget. Nulla facilisi. Sed at sapien at magna venenatis vehicula sed sed mi. Aliquam mattis turpis facilisis, ullamcorper augue ut, molestie ipsum.',15,NULL,NULL),(2,'2017-04-01 13:06:00','Just a joke event','Phasellus ut volutpat ex. Ut ac sollicitudin enim. Aliquam rutrum ornare libero, id consequat sem fringilla ac. Quisque lobortis non massa a eleifend. Etiam eget velit nec ligula fringilla malesuada. Etiam varius ligula id nulla porta, vel luctus massa pellentesque. Nullam condimentum in neque ut tempor.\r\n\r\nCras sit amet imperdiet nisi, at consectetur lectus. Nunc venenatis pulvinar dolor, ac efficitur dolor lacinia non. Nullam vel elementum erat, eget semper orci. Phasellus iaculis pretium consectetur. Sed sit amet dui porta, porta felis eget, rhoncus quam. Proin neque tortor, luctus eu massa at, placerat porttitor enim. Phasellus nec eros imperdiet, cursus ligula a, auctor urna. Sed posuere porttitor leo sit amet efficitur.',0,NULL,NULL),(3,'2017-05-04 05:06:00','A future event','Mauris scelerisque ante mollis, blandit erat quis, condimentum felis. Praesent vestibulum felis a dui posuere, et blandit dolor sodales. Ut in placerat ligula. Praesent pulvinar urna at tellus commodo, id pellentesque eros consectetur. Nam non auctor est, sit amet aliquet ligula. Donec ultricies ex vitae ex rhoncus pellentesque. Vivamus vulputate, justo vel imperdiet aliquet, odio nibh pulvinar quam, eu pharetra tellus ante nec eros. Sed ultrices tincidunt nisl, vel egestas magna tempor eu. Donec id porttitor turpis.',0,NULL,NULL),(4,'2017-04-19 15:14:00','Large event','Ratione totam itaque et perferendis velit veniam et ut. Magnam sed optio sint enim laboriosam eos. Sunt quis quis saepe et voluptas. Eos veritatis molestiae ullam adipisci. Facere cupiditate facere optio officia eum nemo facilis.\r\n\r\nIllum quis sequi accusamus nulla ad velit rerum cumque. Dignissimos sunt consequatur quos veniam quisquam quos facilis. Tempore esse minus reiciendis quo amet error incidunt rem. Alias enim ad alias et enim qui in sint. Perspiciatis illum dolorum dolores perspiciatis quos eum ut beatae. Ipsa omnis vel vitae itaque aliquam.',150,NULL,NULL),(5,'2017-04-23 15:31:00','Crazy T-shirt mouillés','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique est felis, a imperdiet velit facilisis in. Ut dictum purus eget magna fringilla, ut viverra risus ornare. Nulla ultricies diam eros, non interdum libero tincidunt ut. Donec scelerisque tortor gravida nibh commodo tempus. Maecenas sit amet porta libero. Sed nec elementum felis. Duis ullamcorper nisi sapien, at tincidunt augue aliquet eget. Pellentesque rhoncus dapibus mollis. Maecenas a ipsum hendrerit, sodales libero sed, facilisis felis. Sed imperdiet libero mauris, in aliquam metus venenatis a. Integer interdum eget arcu pretium tempus. Praesent eu mauris id risus pretium feugiat eget id magna. Phasellus fringilla ligula neque, eu elementum enim iaculis in. Aenean vehicula lacus eu urna sodales pretium.',0,NULL,NULL);
 /*!40000 ALTER TABLE `activityEvent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +142,7 @@ CREATE TABLE `event_proposition` (
   PRIMARY KEY (`id`),
   KEY `IDX_6C4410D3A76ED395` (`user_id`),
   CONSTRAINT `FK_6C4410D3A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,6 +151,7 @@ CREATE TABLE `event_proposition` (
 
 LOCK TABLES `event_proposition` WRITE;
 /*!40000 ALTER TABLE `event_proposition` DISABLE KEYS */;
+INSERT INTO `event_proposition` VALUES (1,7,'My first proposition','**Quis** quo dicta est dolor quas. Eligendi dicta labore minima. Vero qui incidunt eos atque. Maiores *iusto repellat* sit error animi magnam.','2017-04-26 22:00:00'),(2,1,'Hello café','Nostrum dolorum culpa soluta. Ut nobis rerum delectus. Impedit ut magnam aut ea tenetur nemo. Reprehenderit nesciunt ut beatae.\r\n\r\nAut eveniet vel harum atque. Earum laboriosam est id voluptatem natus aut est. Fugiat sed quisquam eos deserunt. <strong>Hic</strong> accusamus at doloribus.','2017-04-30 09:30:00');
 /*!40000 ALTER TABLE `event_proposition` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,7 +172,7 @@ CREATE TABLE `event_proposition_vote` (
   KEY `IDX_27A2A6DEDB96F9E` (`proposition_id`),
   CONSTRAINT `FK_27A2A6DEA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FK_27A2A6DEDB96F9E` FOREIGN KEY (`proposition_id`) REFERENCES `event_proposition` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,6 +181,7 @@ CREATE TABLE `event_proposition_vote` (
 
 LOCK TABLES `event_proposition_vote` WRITE;
 /*!40000 ALTER TABLE `event_proposition_vote` DISABLE KEYS */;
+INSERT INTO `event_proposition_vote` VALUES (3,4,1,'2017-04-26 22:00:00'),(4,1,1,'2017-04-26 22:00:00');
 /*!40000 ALTER TABLE `event_proposition_vote` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -225,7 +227,7 @@ CREATE TABLE `participation` (
   KEY `IDX_AB55E24F71F7E88B` (`event_id`),
   CONSTRAINT `FK_AB55E24F71F7E88B` FOREIGN KEY (`event_id`) REFERENCES `activityEvent` (`id`),
   CONSTRAINT `FK_AB55E24FA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -234,7 +236,7 @@ CREATE TABLE `participation` (
 
 LOCK TABLES `participation` WRITE;
 /*!40000 ALTER TABLE `participation` DISABLE KEYS */;
-INSERT INTO `participation` VALUES (1,1,1);
+INSERT INTO `participation` VALUES (1,1,1),(2,2,3),(3,2,5),(4,1,4),(5,4,4);
 /*!40000 ALTER TABLE `participation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,7 +294,7 @@ CREATE TABLE `picture` (
 
 LOCK TABLES `picture` WRITE;
 /*!40000 ALTER TABLE `picture` DISABLE KEYS */;
-INSERT INTO `picture` VALUES (1,'1.png','2017-04-19 09:57:00',NULL,2),(2,'2.jpg','2017-04-19 09:58:00',NULL,2),(3,'3.png','2017-04-19 09:58:00',NULL,2),(4,'4.jpg','2017-04-19 09:59:00',NULL,2),(5,'5.jpg','2017-04-19 09:59:00',NULL,2),(6,'6.jpg','2017-04-19 09:59:00',NULL,2),(7,'7.png','2017-04-19 09:59:00',NULL,2),(8,'8.jpg','2017-04-19 10:00:00',NULL,2),(9,'10.png','2017-04-19 10:00:00',NULL,2),(10,'12.png','2017-04-19 10:01:00',NULL,2),(11,'13.png','2017-04-19 10:01:00',NULL,2),(12,'15.jpg','2017-04-19 10:01:00',NULL,2);
+INSERT INTO `picture` VALUES (1,'1.png','2017-04-19 09:57:00',1,2),(2,'2.jpg','2017-04-19 09:58:00',1,2),(3,'3.png','2017-04-19 09:58:00',1,2),(4,'4.jpg','2017-04-19 09:59:00',2,2),(5,'5.jpg','2017-04-19 09:59:00',4,2),(6,'6.jpg','2017-04-19 09:59:00',3,2),(7,'7.png','2017-04-19 09:59:00',NULL,2),(8,'8.jpg','2017-04-19 10:00:00',NULL,2),(9,'10.png','2017-04-19 10:00:00',5,2),(10,'12.png','2017-04-19 10:01:00',5,2),(11,'13.png','2017-04-19 10:01:00',5,2),(12,'15.jpg','2017-04-19 10:01:00',5,2);
 /*!40000 ALTER TABLE `picture` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -521,6 +523,7 @@ CREATE TABLE `user_picture` (
 
 LOCK TABLES `user_picture` WRITE;
 /*!40000 ALTER TABLE `user_picture` DISABLE KEYS */;
+INSERT INTO `user_picture` VALUES (1,2),(1,5),(2,2);
 /*!40000 ALTER TABLE `user_picture` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -533,4 +536,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-19 17:18:45
+-- Dump completed on 2017-04-20  0:00:55
