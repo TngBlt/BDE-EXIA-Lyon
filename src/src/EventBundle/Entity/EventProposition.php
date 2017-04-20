@@ -51,7 +51,7 @@ class EventProposition
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity="EventBundle\Entity\EventPropositionVote", mappedBy="proposition")
+     * @ORM\OneToMany(targetEntity="EventBundle\Entity\EventPropositionVote", mappedBy="proposition",cascade={"persist","remove"})
      */
     private $votes;
 

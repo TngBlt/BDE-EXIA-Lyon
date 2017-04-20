@@ -66,7 +66,7 @@ class ActivityEvent
     private $initialProposition;
 
     /**
-     * @ORM\OneToMany(targetEntity="EventBundle\Entity\Participation", mappedBy="event")
+     * @ORM\OneToMany(targetEntity="EventBundle\Entity\Participation", mappedBy="event", cascade={"persist","remove"})
      */
     private $participations;
 

@@ -73,7 +73,7 @@ class Picture
     /**
      * @var
      *
-     * @ORM\OneToMany(targetEntity="GalleryBundle\Entity\PictureComment", mappedBy="picture", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="GalleryBundle\Entity\PictureComment", mappedBy="picture", cascade={"persist","remove"})
      */
     private $comments;
 
