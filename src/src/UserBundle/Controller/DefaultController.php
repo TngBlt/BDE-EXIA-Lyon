@@ -49,15 +49,17 @@ class DefaultController extends Controller
     	$maDate = new \DateTime("now");
 
     	$eventPast = $participationRepo->createQueryBuilder("par")
-    		->where('par.user = :user')
-    		->setParameter('user', $member)
-    		->where('par.event.date < CURRENT_DATE()')
+            ->leftJoin("par.event","evn")
+            ->where("par.user = :user AND evn.date < CURRENT_DATE()")
+            ->setParameter("user",$member)
+            ->orderBy("evn.date")
             ->getQuery()->getResult();
 
-    	$eventNext = $participationRepo->createQueryBuilder("part")
-    		->where('part.event.date > CURRENT_DATE()')
-    		->where('part.user = :user')
-    		->setParameter('user', $member)
+        $eventNext = $participationRepo->createQueryBuilder("par")
+            ->leftJoin("par.event","evn")
+            ->where("par.user = :user AND evn.date > CURRENT_DATE()")
+            ->setParameter("user",$member)
+            ->orderBy("evn.date")
             ->getQuery()->getResult();
 
     	return $this->render("UserBundle:Default:profil.html.twig",[
