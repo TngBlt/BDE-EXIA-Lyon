@@ -22,9 +22,9 @@
 
 {% block body %}
 
-    <h2 class="section-title">Event {{ event.title|lower }}</h2>
+    <h2 class="section-title">{{ event.title }}</h2>
 
-    <div class="events-section row">
+    <div class="events-section row justify-content-center">
 
         <section class="events-section col-12 col-lg-8">
 
@@ -42,6 +42,8 @@
             {% include "GalleryBundle:includes:gallery-item.html.twig" with {"pictures":event.pictures} %}
 
         </section>
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
         <aside class="widgets col-12 col-lg-4">
 
@@ -92,6 +94,8 @@
             {% endif %}
 
         </aside>
+
+        {% endif %}
 
     </div>
 {% endblock %}

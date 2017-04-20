@@ -76,7 +76,7 @@ class DefaultController extends Controller
 
     public function getUploadForm($newPicture,$user,$event){
         $newPicture->setDate(new \DateTime());
-        $newPicture->setUser($user);
+        if($user) $newPicture->setUser($user);
         $newPicture->setEvent($event);
         $uploadForm = $this->createForm('GalleryBundle\Form\PictureUploadType',$newPicture,[
             "action"=>$this->generateUrl("event_upload_picture",["id"=>$event->getId()])
