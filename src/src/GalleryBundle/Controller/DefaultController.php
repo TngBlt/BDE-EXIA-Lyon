@@ -123,7 +123,7 @@ class DefaultController extends Controller
         $zip = new ZipArchive;
         $zip->open($zipPath,ZipArchive::CREATE);
         foreach ($pictures as $picture) {
-            $zip->addFile($baseDir.'/web/img/uploads/pictures/'.$picture->getPath());
+            $zip->addFile($baseDir.'/web/img/uploads/pictures/'.$picture->getPath(),$picture->getPath());
         }
 
         $zip->close();
