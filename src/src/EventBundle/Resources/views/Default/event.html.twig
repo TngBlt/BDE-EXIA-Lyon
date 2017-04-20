@@ -6,6 +6,18 @@
     <link rel="stylesheet" type="text/css" href="{{ asset("css/articles.css") }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset("css/events.css") }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset("css/calendar-widget.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/gallery/base.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/gallery/component.css") }}"/>
+{% endblock %}
+
+{% block scripts %}
+    {% javascripts
+    '@GalleryBundle/Resources/public/js/jquery-3.1.1.js'
+    '@GalleryBundle/Resources/public/js/imagesloaded.pkgd.min.js'
+    '@GalleryBundle/Resources/public/js/masonry.pkgd.min.js'
+    '@GalleryBundle/Resources/public/js/gallery.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 {% endblock %}
 
 {% block body %}
@@ -25,8 +37,9 @@
 
         </article>
 
-            {#TODO Gallery#}
-            {#<h2 class="section-title">Gallery</h2>#}
+            <h2 class="section-title">Gallery</h2>
+
+            {% include "GalleryBundle:includes:gallery-item.html.twig" with {"pictures":event.pictures} %}
 
         </section>
 
