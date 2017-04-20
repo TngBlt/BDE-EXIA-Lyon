@@ -6,7 +6,7 @@
     {% if pictures %}
         {% for picture in pictures %}
 
-            <div class="item">
+            <div class="item" {% if itemSize is defined %}style="width:{{ itemSize }};"{% endif %}>
                 <div class="item-image hidden-item">
                     <a href="#" class="image-link">
                         <img src="{{ asset('img/uploads/pictures/'~picture.path~'') }}" alt="">
