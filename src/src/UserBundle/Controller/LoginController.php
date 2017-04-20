@@ -28,6 +28,7 @@ class LoginController extends Controller
             ->add("username",TextType::class,["label"=>"Username","attr"=>["required"=>"1"]])
             ->add("email",EmailType::class,["label"=>"Email","attr"=>["required"=>"1"]])
             ->add("password",PasswordType::class,["label"=>"Password","attr"=>["required"=>"1"]])
+            ->add('prom',null,["label"=>"Class"])
             ->add("save",SubmitType::class,["label"=>"Sign in","attr"=>["class"=>"button button-primary"]])
             ->getForm();
 

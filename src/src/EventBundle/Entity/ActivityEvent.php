@@ -53,7 +53,7 @@ class ActivityEvent
     /**
      * @var string
      *
-     * @ORM\Column(name="frequency", type="string", length=255)
+     * @ORM\Column(name="frequency", type="string", length=255, nullable=true)
      */
     private $frequency;
 

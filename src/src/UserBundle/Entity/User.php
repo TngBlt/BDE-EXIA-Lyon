@@ -88,6 +88,14 @@ class User implements UserInterface, \Serializable
     /**
      * @var string
      *
+     * @ORM\Column(name="bio", type="text", length=255, nullable=true)
+     */
+    private $bio;
+
+
+    /**
+     * @var string
+     *
      * @ORM\ManyToOne(targetEntity="UserBundle\Entity\Prom")
      * @ORM\JoinColumn(nullable=true)
      */
@@ -704,4 +712,28 @@ class User implements UserInterface, \Serializable
     }
 
 
+
+    /**
+     * Set bio
+     *
+     * @param string $bio
+     *
+     * @return User
+     */
+    public function setBio($bio)
+    {
+        $this->bio = $bio;
+
+        return $this;
+    }
+
+    /**
+     * Get bio
+     *
+     * @return string
+     */
+    public function getBio()
+    {
+        return $this->bio;
+    }
 }
