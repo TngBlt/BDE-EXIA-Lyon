@@ -45,7 +45,7 @@
 
         <aside class="widgets col-12 col-lg-4">
 
-        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') and not event.finished %}
             {% if event.doUserParticipate(app.user) %}
                 <div class="widget">
                     <h4 class="widget-title widget-offset">Participating</h4>
