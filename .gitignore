@@ -67,3 +67,7 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+
+/src/web/downloads/*
+!/src/web/downloads/.gitkeep
+

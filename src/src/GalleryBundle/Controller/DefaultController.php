@@ -111,7 +111,7 @@ class DefaultController extends Controller
 
         $repoDoctrine = $this->getDoctrine()->getRepository('GalleryBundle:Picture');
         $pictures = $repoDoctrine->findById($ids);
-        $baseDir = $this->get('kernel')->getRootDir();
+        $baseDir = $this->get('kernel')->getRootDir().'/..';
         $em = $this->getDoctrine()->getManager();
         $zipname = 'images-'.join("-",$ids)."-".(new \DateTime())->format('Y-m-d-h-i-s').'.zip';
         $zipPath = $baseDir.'/web/downloads/'.$zipname;
@@ -128,6 +128,6 @@ class DefaultController extends Controller
 
         $zip->close();
 
-        return $this->redirect('/downloads/'.$zipname);
+        return $this->redirect($request->getBasePath().'/downloads/'.$zipname);
     }
 }
