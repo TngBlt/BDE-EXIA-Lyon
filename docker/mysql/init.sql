@@ -142,7 +142,7 @@ CREATE TABLE `event_proposition` (
   PRIMARY KEY (`id`),
   KEY `IDX_6C4410D3A76ED395` (`user_id`),
   CONSTRAINT `FK_6C4410D3A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -227,7 +227,7 @@ CREATE TABLE `participation` (
   KEY `IDX_AB55E24F71F7E88B` (`event_id`),
   CONSTRAINT `FK_AB55E24F71F7E88B` FOREIGN KEY (`event_id`) REFERENCES `activityEvent` (`id`),
   CONSTRAINT `FK_AB55E24FA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -236,7 +236,7 @@ CREATE TABLE `participation` (
 
 LOCK TABLES `participation` WRITE;
 /*!40000 ALTER TABLE `participation` DISABLE KEYS */;
-INSERT INTO `participation` VALUES (1,1,1),(2,2,3),(3,2,5),(4,1,4),(5,4,4);
+INSERT INTO `participation` VALUES (1,1,1),(2,2,3),(3,2,5),(4,1,4),(5,4,4),(6,6,5),(7,1,2),(8,1,5);
 /*!40000 ALTER TABLE `participation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,7 +285,7 @@ CREATE TABLE `picture` (
   KEY `IDX_16DB4F89A76ED395` (`user_id`),
   CONSTRAINT `FK_16DB4F8971F7E88B` FOREIGN KEY (`event_id`) REFERENCES `activityEvent` (`id`),
   CONSTRAINT `FK_16DB4F89A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -294,7 +294,7 @@ CREATE TABLE `picture` (
 
 LOCK TABLES `picture` WRITE;
 /*!40000 ALTER TABLE `picture` DISABLE KEYS */;
-INSERT INTO `picture` VALUES (1,'1.png','2017-04-19 09:57:00',1,2),(2,'2.jpg','2017-04-19 09:58:00',1,2),(3,'3.png','2017-04-19 09:58:00',1,2),(4,'4.jpg','2017-04-19 09:59:00',2,2),(5,'5.jpg','2017-04-19 09:59:00',4,2),(6,'6.jpg','2017-04-19 09:59:00',3,2),(7,'7.png','2017-04-19 09:59:00',NULL,2),(8,'8.jpg','2017-04-19 10:00:00',NULL,2),(9,'10.png','2017-04-19 10:00:00',5,2),(10,'12.png','2017-04-19 10:01:00',5,2),(11,'13.png','2017-04-19 10:01:00',5,2),(12,'15.jpg','2017-04-19 10:01:00',5,2);
+INSERT INTO `picture` VALUES (1,'1.png','2017-04-19 09:57:00',1,2),(2,'2.jpg','2017-04-19 09:58:00',1,2),(3,'3.png','2017-04-19 09:58:00',1,2),(4,'4.jpg','2017-04-19 09:59:00',2,2),(5,'5.jpg','2017-04-19 09:59:00',4,2),(6,'6.jpg','2017-04-19 09:59:00',3,2),(7,'7.png','2017-04-19 09:59:00',NULL,2),(8,'8.jpg','2017-04-19 10:00:00',NULL,2),(9,'10.png','2017-04-19 10:00:00',5,2),(10,'12.png','2017-04-19 10:01:00',5,2),(11,'13.png','2017-04-19 10:01:00',5,2),(12,'15.jpg','2017-04-19 10:01:00',5,2),(21,'bcf73dc834646d6120d3041593603258047b9eb1.png','2017-04-20 08:59:32',2,1);
 /*!40000 ALTER TABLE `picture` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -316,7 +316,7 @@ CREATE TABLE `picture_comment` (
   KEY `IDX_8952A6BEA76ED395` (`user_id`),
   CONSTRAINT `FK_8952A6BEA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FK_8952A6BEEE45BDBF` FOREIGN KEY (`picture_id`) REFERENCES `picture` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -325,6 +325,7 @@ CREATE TABLE `picture_comment` (
 
 LOCK TABLES `picture_comment` WRITE;
 /*!40000 ALTER TABLE `picture_comment` DISABLE KEYS */;
+INSERT INTO `picture_comment` VALUES (1,10,'2017-04-20 08:29:03','Wow',6),(2,9,'2017-04-20 08:32:14','Salut !',6),(3,9,'2017-04-20 08:35:50','hellooo',6),(4,21,'2017-04-20 08:59:43','Awesome !',1);
 /*!40000 ALTER TABLE `picture_comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -523,7 +524,7 @@ CREATE TABLE `user_picture` (
 
 LOCK TABLES `user_picture` WRITE;
 /*!40000 ALTER TABLE `user_picture` DISABLE KEYS */;
-INSERT INTO `user_picture` VALUES (1,2),(1,5),(2,2);
+INSERT INTO `user_picture` VALUES (1,2),(1,5),(1,21),(2,2),(6,2),(6,3),(6,9),(6,10),(6,11);
 /*!40000 ALTER TABLE `user_picture` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -536,4 +537,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-20  0:00:55
+-- Dump completed on 2017-04-20 11:14:07
