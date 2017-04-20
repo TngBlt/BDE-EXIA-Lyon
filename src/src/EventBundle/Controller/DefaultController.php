@@ -3,9 +3,10 @@
 namespace EventBundle\Controller;
 
 use EventBundle\Entity\Participation;
-use function Sodium\add;
+use GalleryBundle\Entity\Picture;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
@@ -44,9 +45,43 @@ class DefaultController extends Controller
             throw new NotFoundHttpException("Event not found");
         }
 
+        $newPicture = new Picture();
+        $uploadForm = $this->getUploadForm($newPicture,$this->getUser(),$event);
+
         return $this->render("EventBundle:Default:event.html.twig",[
-            "event"=>$event
+            "event"=>$event,
+            "uploadForm"=>$uploadForm->createView()
         ]);
+    }
+
+    /**
+     * @Route("/{id}/upload",name="event_upload_picture",requirements={"id": "\d+"})
+     */
+    public function uploadPictureAction($id,Request $request){
+        if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            return $this->redirect($this->generateUrl('login'));
+        }
+        $eventsRpo = $this->getDoctrine()->getRepository("EventBundle:ActivityEvent");
+        $event = $eventsRpo->find($id);
+        $newPicture = new Picture();
+        $uploadForm = $this->getUploadForm($newPicture,$this->getUser(),$event);
+        $uploadForm->handleRequest($request);
+        if($uploadForm->isSubmitted() && $uploadForm->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($newPicture);
+            $em->flush();
+        }
+        return $this->redirectToRoute("event_show",["id"=>$id]);
+    }
+
+    public function getUploadForm($newPicture,$user,$event){
+        $newPicture->setDate(new \DateTime());
+        $newPicture->setUser($user);
+        $newPicture->setEvent($event);
+        $uploadForm = $this->createForm('GalleryBundle\Form\PictureUploadType',$newPicture,[
+            "action"=>$this->generateUrl("event_upload_picture",["id"=>$event->getId()])
+        ]);
+        return $uploadForm;
     }
 
     /**

@@ -6,12 +6,14 @@ use Doctrine\ORM\Mapping as ORM;
 use EventBundle\EventBundle;
 use UserBundle\Entity\User;
 use UserBundle\UserBundle;
+use Symfony\Component\Validator\Constraints\Image;
 
 /**
  * Picture
  *
  * @ORM\Table(name="picture")
  * @ORM\Entity(repositoryClass="GalleryBundle\Repository\PictureRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Picture
 {
@@ -61,6 +63,14 @@ class Picture
     private $usersLiked;
 
     /**
+     * @Image(
+     *     maxSize="5M",
+     *     maxSizeMessage = "The maxmimum allowed file size is 5MB."
+     *     )
+     */
+    private $file;
+
+    /**
      * @var
      *
      * @ORM\OneToMany(targetEntity="GalleryBundle\Entity\PictureComment", mappedBy="picture", cascade={"persist"})
@@ -72,6 +82,43 @@ class Picture
         return $this->getPath();
     }
 
+    /**
+     * Called before saving the entity
+     *
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if ($this->file !== null) {
+            $filename = sha1(uniqid(mt_rand(), true));
+            $this->path = $filename.'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * Called after entity persistence
+     *
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
+
+        $this->file->move(
+            $this->getUploadRootDir(),
+            $this->path
+        );
+
+        $this->file = null;
+    }
+
+    public function getUploadRootDir(){
+        return __DIR__."/../../../web/img/uploads/pictures";
+    }
 
     /**
      * Get id
@@ -96,6 +143,24 @@ class Picture
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+
 
     /**
      * Get path

@@ -32,6 +32,7 @@
 
         <aside class="widgets col-12 col-lg-4">
 
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             {% if event.doUserParticipate(app.user) %}
                 <div class="widget">
                     <h4 class="widget-title widget-offset">Participating</h4>
@@ -47,6 +48,7 @@
                 </form>
             </div>
             {% endif %}
+        {% endif %}
 
             {% if (is_granted('ROLE_BOSS') or is_granted('ROLE_STAFF')) %}
 
@@ -64,6 +66,16 @@
                     </ul>
                 </div>
 
+            {% endif %}
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <div class="widget">
+                    <h3 class="widget-title widget-offset">Add a picture</h3>
+                    <p>Show the content of this event by uploading your image</p>
+                    {{ form_start(uploadForm) }}
+                    {{ form_widget(uploadForm) }}
+                    {{ form_end(uploadForm) }}
+                </div>
             {% endif %}
 
         </aside>
