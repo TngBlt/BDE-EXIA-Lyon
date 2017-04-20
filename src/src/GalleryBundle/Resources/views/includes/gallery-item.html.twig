@@ -31,9 +31,8 @@
                         </div>
                         <hr class="half-rule"/>
                          {% endfor %}
-                         {{ form_start(form) }}
-                         {{ form_widget(form.picture, {'value' : picture.id}) }}
-                         {{ form_end(form) }}
+
+                         {{ render(controller("GalleryBundle:PictureComment:commentForm", {'pictureID' : picture.id})) }}
 
                     </div>
                 </div>

@@ -49,7 +49,7 @@ itemImage.on('mouseenter mouseleave', function () {
 
 
 
-itemImage.on('click', function (e) {
+$(".item-image:not(.item-image-sidepart)").on('click', function (e) {
     if(!grid.find('.item').hasClass('active') || elem.is($(this))){
         elem = $(this);
         elem.parent().toggleClass('mid-width');
