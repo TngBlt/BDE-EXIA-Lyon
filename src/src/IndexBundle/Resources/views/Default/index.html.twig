@@ -1,5 +1,71 @@
 {% extends "Layout/global.html.twig" %}
 
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/articles.css")}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/events.css")}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/home.css")}}"/>
+{% endblock %}
+
 {% block mainbody %}
-Hello World!
+
+    <div class="row">
+        <section class="col-12 col-md-8">
+            <h2 class="section-title">Events to come</h2>
+
+            {% for event in nextEvents %}
+            {% include "EventBundle:Includes:event.html.twig" with {"toolbar":true} %}
+            {% endfor %}
+
+            <div class="widget">
+                <a href="{{ path("events_index") }}"  class="moreevents"><h5>More events</h5></a>
+            </div>
+
+            <h2 class="section-title">Discover</h2>
+
+            {% for event in pastEvents %}
+                {% include "EventBundle:Includes:event.html.twig" with {"toolbar":true} %}
+            {% endfor %}
+
+        </section>
+
+        <section class="col-12 col-md-4">
+            <aside class="vote-content">
+                <div class="widget vote-widget">
+                    <h4 class="widget-title widget-offset">Vote !</h4>
+                    <p class="widget-offset vote-widget-text">Vote for the next event you want to see in this list !</p>
+                    <div class="row justify-content-center widget-offset">
+                        <a href="{{ path("propositions_index") }}" class="button button-primary col-auto">Vote now</a>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="shop-content">
+                <div class="widget">
+                    <h4>Shop</h4>
+                    <div class="row">
+                        {% for product in products %}
+                        <div class="col-12 col-md-6 product">
+                            <div class="product-image">
+                                <img src="{{ asset("uploads/products/"~product.picture) }}" alt="FirstProduct" class="product1" />
+                            </div>
+                            <div class="product-desc">
+                                <h4 class="product-title">
+                                    {{ product.title }}
+                                </h4>
+                                <div class="product-price">
+                                    {{ product.price}} €
+                                    <nav class="product-menu">
+                                        <a href="{{ path("cart_add",{"id":product.id}) }}"><i class="fa fa-cart-plus"></i></a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </div>
+    <?php include "includes/footer.php"; ?>
+
 {% endblock %}
