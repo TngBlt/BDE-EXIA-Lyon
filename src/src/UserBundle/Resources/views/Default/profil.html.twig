@@ -38,11 +38,27 @@
 
     </section>
 
-<ul>
-{% for participation in eventPast %}
-	<li>{{participation.event.title}}</li>
-{% endfor %}
-</ul>
+<div class="row">
+    <section class="col-12 col-md-6">
+        <h2 class="section-title">Will participate to</h2>
+
+        {% for participation in eventNext %}
+        {% include "EventBundle:Includes:event.html.twig" with {"event":participation.event} %}
+        {% endfor %}
+
+    </section>
+    
+    
+
+<section class="col-12 col-md-6">
+        <h2 class="section-title">Has participated to</h2>
+
+        {% for participation in eventPast %}
+        {% include "EventBundle:Includes:event.html.twig" with {"event":participation.event} %}
+        {% endfor %}
+</section>
+
+</div>
 
 {% endblock %}
 
