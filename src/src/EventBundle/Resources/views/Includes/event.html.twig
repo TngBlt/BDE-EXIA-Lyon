@@ -10,7 +10,11 @@
                 <h3 class="event-header-title col-11">
                     <a href="{{path('event_show',{"id":event.id})}}">
                                 <span class="event-header-icon">
+                                    {% if not event.finished %}
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    {% else %}
+                                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                    {% endif %}
                                 </span>
                         {{ event.title }}</a>
                 </h3>
@@ -22,10 +26,12 @@
                 <h4 class="event-content-main col-12">{{ event.date|date("l d F Y") }}</h4>
                 <h4 class="event-content-offset col-12">{{ event.date|date("H\\hi") }}</h4>
                 {#TODO Relative time #}
+                {% if not event.finished %}
                 {% if event.price > 0 %}
                 <h5 class="event-content-offset col-12">{{ event.price }} €</h5>
                 {% else %}
                 <h5 class="event-content-offset col-12">Free</h5>
+                {% endif %}
                 {% endif %}
             </div>
         </div>
@@ -40,13 +46,23 @@
             {% if event.doUserParticipate(app.user) %}
                 <a href="{{path('event_show',{"id":event.id})}}" class="event-footer-item event-participatebtn col-4 is-active">
                     <div class="event-footer-item-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                    {% if not event.finished %}
                     <div class="event-footer-item-title">Participating</div>
+                    {% else %}
+                    <div class="event-footer-item-title">You have participated</div>
+                    {% endif %}
                 </a>
             {% else %}
+            {% if not event.finished %}
             <a href="{{path('event_participate',{"id":event.id})}}" class="event-footer-item event-participatebtn col-4">
                 <div class="event-footer-item-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
                 <div class="event-footer-item-title">Participate</div>
             </a>
+            {% else %}
+                <span class="event-footer-item event-participatebtn col-4">
+                    <div class="event-footer-item-title">It's over</div>
+                </span>
+            {% endif %}
             {% endif %}
             <a href="{{path('event_show',{"id":event.id})}}" class="event-footer-item event-morebtn col-4">
                 <div class="event-footer-item-title">More info</div>

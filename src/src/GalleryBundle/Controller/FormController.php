@@ -32,6 +32,12 @@ class FormController extends Controller
             $em->persist($newComment);
             $em->flush();
         }
-        return $this->redirect($this->generateUrl('show_gallery'));
+
+        $callback = $request->query->get("callback");
+        if($callback){
+            return $this->redirect($callback);
+        } else {
+            return $this->redirect($this->generateUrl('show_gallery'));
+        }
     }
 }

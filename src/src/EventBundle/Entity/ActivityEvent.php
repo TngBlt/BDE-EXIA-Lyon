@@ -113,6 +113,10 @@ class ActivityEvent
         return $this;
     }
 
+    public function isFinished(){
+        return (new \DateTime()) > $this->getDate();
+    }
+
     /**
      * Get date
      *

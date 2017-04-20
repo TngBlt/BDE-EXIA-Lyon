@@ -46,23 +46,26 @@ class DefaultController extends Controller
 
     	$participationRepo = $this->getDoctrine()->getRepository("EventBundle:Participation");
 
+    	$maDate = new \DateTime("now");
+
     	$eventPast = $participationRepo->createQueryBuilder("par")
-    		->where("par.event.date < CURRENT_DATE()")
-    		->where("par.user = :user")
-    		->setParameter("user", $member)
+            ->leftJoin("par.event","evn")
+            ->where("par.user = :user AND evn.date < CURRENT_DATE()")
+            ->setParameter("user",$member)
+            ->orderBy("evn.date")
             ->getQuery()->getResult();
 
-    	$eventNext = $participationRepo->createQueryBuilder("par")
-    		->where("par.event.date > CURRENT_DATE()")
-    		->where("par.user = :user")
-    		->setParameter("user", $member)
+        $eventNext = $participationRepo->createQueryBuilder("par")
+            ->leftJoin("par.event","evn")
+            ->where("par.user = :user AND evn.date > CURRENT_DATE()")
+            ->setParameter("user",$member)
+            ->orderBy("evn.date")
             ->getQuery()->getResult();
-
 
     	return $this->render("UserBundle:Default:profil.html.twig",[
         	"member"=>$member,
         	"eventPast"=>$eventPast,
-        	"eventNext"=>$eventNext	
+        	"eventNext"=>$eventNext
         ]);
 
     }

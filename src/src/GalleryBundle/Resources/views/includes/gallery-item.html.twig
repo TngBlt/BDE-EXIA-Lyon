@@ -3,11 +3,13 @@
 </div>
 <div class="grid effect" id="grid">
 
+    {% set currentPath = path(app.request.attributes.get('_route'),
+    app.request.attributes.get('_route_params')) %}
+
     {% if pictures %}
         {% for picture in pictures %}
 
-            <div class="item">
-
+   <div class="item" {% if itemSize is defined %}style="width:{{ itemSize }};"{% endif %}>
                 <div class="item-image hidden-item">
                     <a href="#" class="image-link">
                         <img src="{{ asset('img/uploads/pictures/'~picture.path~'') }}" alt="">
@@ -26,7 +28,7 @@
                 </div>
                 <div class="item-image item-image-sidepart hidden">
                     <div class="item-likes">
-                        <a href="{{ path('like_image',{'id':picture.id}) }}" class="thumbs-up">
+                        <a href="{{ path('like_image',{'id':picture.id,'callback':currentPath}) }}" class="thumbs-up">
                             <p>{{ picture.usersLiked.count }}
                                 <i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></p>
                         </a>
@@ -35,13 +37,13 @@
 
                         {% for comment in picture.comments %}
                         <div class="item-commment">
-                            <p class="item-comment-content"><span class="comment-name">{{ comment.user }} </span>- {{ comment.content }} </p>
+                            <p class="item-comment-content"><a href="{{ path("profil",{"id":comment.user.id}) }}"><span class="comment-name">{{ comment.user }} </span></a>- {{ comment.content }} </p>
                             <p><span class="comment-date">on {{ comment.date|date('Y-m-d H:i:s') }}</span></p>
                         </div>
                         <hr class="half-rule"/>
                          {% endfor %}
 
-                         {{ render(controller("GalleryBundle:PictureComment:commentForm", {'pictureID' : picture.id})) }}
+                         {{ render(controller("GalleryBundle:PictureComment:commentForm", {'pictureID' : picture.id,'callback':currentPath})) }}
 
                     </div>
                 </div>

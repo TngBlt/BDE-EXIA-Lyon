@@ -10,11 +10,12 @@ class PictureCommentController extends Controller
 {
 
 
-    public function commentFormAction($pictureID) {
+    public function commentFormAction($pictureID,$callback = null) {
 
         $newComment = New PictureComment();
-        $form = $this->createForm('GalleryBundle\Form\PictureCommentType',$newComment, array(
-            'action' => $this->generateUrl('comment_form',["id"=>$pictureID])
+
+        $form = $this->createForm('GalleryBundle\Form\PictureCommentType', $newComment, array(
+            'action' => $this->generateUrl('comment_form', ["id" => $pictureID,"callback"=>$callback])
         ));
 
 

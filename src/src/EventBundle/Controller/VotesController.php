@@ -6,7 +6,6 @@ namespace EventBundle\Controller;
 
 use EventBundle\Entity\EventProposition;
 use EventBundle\Entity\EventPropositionVote;
-use EventBundle\Form\PropositionType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;

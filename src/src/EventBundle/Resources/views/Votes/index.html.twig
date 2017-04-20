@@ -26,7 +26,9 @@
                         </a>
                     {% else %}
                     <div class="proposition-like"><span class="proposition-like-content">{{ proposition.votes|length }} <i class="fa fa-thumbs-up fa-lg"></i></span>
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                         {{ render(controller("EventBundle:Votes:likeForm",{"propId":proposition.id})) }}
+                        {% endif %}
                     </div>
                     {% endif %}
                 </nav>
