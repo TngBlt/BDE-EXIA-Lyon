@@ -4,6 +4,8 @@ namespace UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 
 class DefaultController extends Controller
 {
@@ -66,6 +68,34 @@ class DefaultController extends Controller
         	"member"=>$member,
         	"eventPast"=>$eventPast,
         	"eventNext"=>$eventNext
+        ]);
+
+    }
+
+    /**
+     * @Route("/profile/edit",name="profile_edit")
+     */
+    public function profileEditAction(Request $request){
+
+        $user = $this->getUser();
+        $lastPassword = $user->getPassword();
+        $form = $this->createForm('UserBundle\Form\UserProfileType',$user);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            if(!$user->getPassword() or $user->getPassword() == ""){
+                $user->setPassword($lastPassword);
+            } else {
+                $encoder = $this->container->get('security.password_encoder');
+                $encoded = $encoder->encodePassword($user, $user->getPassword());
+                $user->setPassword($encoded);
+            }
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+            return $this->redirectToRoute("profil",["id"=>$user->getId()]);
+        }
+        return $this->render("UserBundle:Default:profilEdit.html.twig",[
+            "form"=>$form->createView(),
         ]);
 
     }

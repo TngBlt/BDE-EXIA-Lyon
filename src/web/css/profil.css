@@ -27,3 +27,7 @@
 .event-action div{
 	border-style: solid;
 }
+
+.profile-edit-button {
+	float:right;
+}

@@ -3,7 +3,9 @@
 namespace UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Illuminate\Support\Facades\File;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Constraints\Regex;
 
 /**
@@ -11,6 +13,7 @@ use Symfony\Component\Validator\Constraints\Regex;
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class User implements UserInterface, \Serializable
 {
@@ -119,6 +122,14 @@ class User implements UserInterface, \Serializable
      * @ORM\OneToMany(targetEntity="EventBundle\Entity\EventPropositionVote", mappedBy="user")
      */
     private $eventsVoted;
+
+    /**
+     * @Assert\Image(
+     *     maxSize="1M",
+     *     maxSizeMessage = "The maxmimum allowed file size is 1MB."
+     *     )
+     */
+    private $file;
 
     function __toString()
     {
@@ -426,6 +437,44 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * Called before saving the entity
+     *
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if ($this->file !== null) {
+            $filename = sha1(uniqid(mt_rand(), true));
+            $this->avatar = $filename.'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * Called after entity persistence
+     *
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
+
+        $this->file->move(
+            $this->getUploadRootDir(),
+            $this->avatar
+        );
+
+        $this->file = null;
+    }
+
+    public function getUploadRootDir(){
+        return __DIR__."/../../../web/img/uploads/members";
+    }
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -637,4 +686,22 @@ class User implements UserInterface, \Serializable
     {
         return $this->pictures;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+
 }

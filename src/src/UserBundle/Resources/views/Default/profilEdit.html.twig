@@ -1,6 +1,6 @@
 {% extends "Layout/global.html.twig" %}
 
-{% block title %}{{ member.fullname }}{% endblock %}
+{% block title %}{{ app.user.fullname }}{% endblock %}
 {% block head %}
 	<link rel="stylesheet" href="{{ asset("css/profil.css") }}"/>
 	<link rel="stylesheet" href="{{ asset("css/articles.css") }}"/>
@@ -23,17 +23,22 @@
 {% block body %}
     <div class="row">
 	<section class="col-12">
-
+        <div class="widget widget-offset">
+            <h2 class="widget-title widget-offset">Edit your profile</h2>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
         <div class="widget widget-offset">
             <div class="row"> 
                 <div class="col-lg-4 profil-image">                                                          
-                        <div><img src="{{ asset('img/uploads/members/' ~ member.avatar) }}" alt="members"/></div>
+                        <div><img src="{{ asset('img/uploads/members/' ~ app.user.avatar) }}" alt="members"/></div>
                 </div>
 
                 <div class="col-lg-6">
-                    <h2>{{ member.fullname }}</h2>
-                    {% if member.prom %}
-                    <h4>{{ member.prom.name }}</h4>
+                    <h2>{{ app.user.fullname }}</h2>
+                    {% if app.user.prom %}
+                    <h4>{{ app.user.prom.name }}</h4>
                     {% endif %}
                     <h5>About :</h5>
                     <p>Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur.</p>
@@ -42,47 +47,14 @@
                     <a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                     <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     <a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                        {% if app.user.id == member.id %}
-                            <a href="{{ path("profile_edit") }}" title="Edit profile" class="profile-edit-button"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                        {% endif %}
                     </div>
                 </div>
 
                 <div class="col-lg-2">
-                    Member of the {{member.translatedRole}} !
+                    Member of the {{app.user.translatedRole}} !
                 </div>
             </div>
         </div>
-
-        <div class="row justify-content-center">
-
-            {% if eventPast|length > 0 %}
-                <section class="col-12 col-md-6">
-                    <h2 class="section-title">Has participated to</h2>
-
-                    {% for participation in eventPast %}
-                        {% include "EventBundle:Includes:event.html.twig" with {"toolbar":true,"event":participation.event} %}
-                    {% endfor %}
-                </section>
-            {% endif %}
-
-            {% if eventNext|length > 0 %}
-                <section class="col-12 col-md-6">
-                    <h2 class="section-title">Will participate to</h2>
-
-                {% for participation in eventNext %}
-                    {% include "EventBundle:Includes:event.html.twig" with {"toolbar":true,"event":participation.event} %}
-                {% endfor %}
-                </section>
-            {% endif %}
-
-        </div>
-    {% if member.pictures|length > 0 %}
-    <aside class="col-12">
-        <h2 class="section-title">Gallery</h2>
-        {% include "GalleryBundle:includes:gallery-item.html.twig" with {"pictures":member.pictures,"itemSize":"50%"} %}
-    </aside>
-{% endif %}
     </section>
     </div>
 
