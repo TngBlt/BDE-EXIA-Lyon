@@ -42,7 +42,7 @@
                     <a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                     <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     <a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                        {% if app.user.id == member.id %}
+                        {% if app.user and app.user.id == member.id %}
                             <a href="{{ path("profile_edit") }}" title="Edit profile" class="profile-edit-button"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         {% endif %}
                     </div>
