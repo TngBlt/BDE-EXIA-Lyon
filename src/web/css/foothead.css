@@ -90,6 +90,32 @@
         color: white;
     }
 
+
+
+.login-info{
+    padding-left: 50px;
+    color: white;
+}
+
+    .login-info:hover{
+        color: rgba(255,255,255,0.8);
+    }
+
+    .login-info-name {
+        font-weight: bold;
+    }
+
+    .login-info-avatar {
+        float: left;
+        margin: 5px 20px 5px 5px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+        .login-info-avatar img {
+            width: 40px;
+        }
+
 /**Footer*/
 
 .footer-infos li{
