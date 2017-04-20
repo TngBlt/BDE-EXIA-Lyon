@@ -8,9 +8,9 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="../ActivitiesEvents.html">ActivitiesEvents</a></td></tr>
-<tr><td><a href="../PicturesCommentLike.html">PicturesCommentLike</a></td></tr>
-<tr><td><a href="../shop.html">shop</a></td></tr>
+<tr><td><a href="ActivitiesEvents.html">ActivitiesEvents</a></td></tr>
+<tr><td><a href="PicturesCommentLike.html">PicturesCommentLike</a></td></tr>
+<tr><td><a href="shop.html">shop</a></td></tr>
 </tbody></table>
 </body>
 </html>
