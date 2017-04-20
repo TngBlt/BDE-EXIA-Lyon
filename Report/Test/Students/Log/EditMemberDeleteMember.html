@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://localhost:8080/" />
-<title>ActivitiesEvents</title>
+<title>EditMemberDeleteMember</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">ActivitiesEvents</td></tr>
+<tr><td rowspan="1" colspan="3">EditMemberDeleteMember</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -18,18 +18,18 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Sign in</td>
+	<td>link=Log in</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=login-email</td>
-	<td>rj@cesi.fr</td>
+	<td>vz@cesi.fr</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=login-password</td>
-	<td>root</td>
+	<td>victorpass</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -38,70 +38,69 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Propositions</td>
+	<td>link=Members</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'edit')])[11]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=eventbundle_eventproposition_title</td>
-	<td>Test !</td>
+	<td>id=userbundle_user_firstname</td>
+	<td>Alexis</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=eventbundle_eventproposition_description</td>
-	<td>This is a test.</td>
+	<td>id=userbundle_user_lastname</td>
+	<td>Billequin</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=eventbundle_eventproposition_proposedDate_date_month</td>
-	<td>label=Jun</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=eventbundle_eventproposition_proposedDate_date_day</td>
-	<td>label=18</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=eventbundle_eventproposition_proposedDate_time_hour</td>
-	<td>label=12</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=eventbundle_eventproposition_proposedDate_time_minute</td>
-	<td>label=00</td>
+	<td>id=userbundle_user_prom</td>
+	<td>label=Exia A2</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=eventbundle_eventproposition_submit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>xpath=(//select[@id='eventbundle_eventpropositionvote_date_time_hour'])[3]</td>
-	<td>label=19</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//button[@id='eventbundle_eventpropositionvote_submit'])[3]</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Events</td>
+	<td>xpath=(//a[contains(text(),'Members')])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//article[3]/div[2]/nav/a[2]/div[2]</td>
+	<td>//div[4]/div/div/div/div[3]/a[3]/i</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=div.login-info-name</td>
+	<td>link=Members</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'edit')])[11]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form[name=&quot;form&quot;] &gt; input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Members')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Disconnect</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
