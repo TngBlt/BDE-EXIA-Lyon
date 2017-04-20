@@ -29,7 +29,7 @@
 
                         {% for comment in picture.comments %}
                         <div class="item-commment">
-                            <p class="item-comment-content"><span class="comment-name">{{ comment.user }} </span>- {{ comment.content }} </p>
+                            <p class="item-comment-content"><a href="{{ path("profil",{"id":comment.user.id}) }}"><span class="comment-name">{{ comment.user }} </span></a>- {{ comment.content }} </p>
                             <p><span class="comment-date">on {{ comment.date|date('Y-m-d H:i:s') }}</span></p>
                         </div>
                         <hr class="half-rule"/>
