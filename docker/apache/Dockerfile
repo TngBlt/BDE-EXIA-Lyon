@@ -2,7 +2,7 @@
 FROM nimmis/apache-php7
 
 # Installation de MySQL et XDebug
-RUN apt-get update -y && apt-get install php-mysql php-xdebug php-dom -y
+RUN apt-get update -y && apt-get install php-mysql php-xdebug php-dom php-zip -y
 
 # Activation de l'extention rewrite
 RUN a2enmod rewrite
