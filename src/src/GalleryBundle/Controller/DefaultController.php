@@ -51,7 +51,7 @@ class DefaultController extends Controller
      *
      * @Route("/{id}/like", requirements={"id" = "\d+"},name="like_image")
      */
-    public function like_image($id) {
+    public function like_image($id,Request $request) {
         if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirect($this->generateUrl('login'));
         }
@@ -75,7 +75,12 @@ class DefaultController extends Controller
         $em->persist($user);
         $em->flush();
 
-        return $this->redirect($this->generateUrl('show_gallery'));
+        $callback = $request->query->get("callback");
+        if($callback){
+            return $this->redirect($callback);
+        } else {
+            return $this->redirect($this->generateUrl('show_gallery'));
+        }
     }
 
     /**

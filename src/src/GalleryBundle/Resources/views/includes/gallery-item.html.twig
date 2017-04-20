@@ -1,5 +1,8 @@
 <div class="grid effect" id="grid">
 
+    {% set currentPath = path(app.request.attributes.get('_route'),
+    app.request.attributes.get('_route_params')) %}
+
     {% if pictures %}
         {% for picture in pictures %}
 
@@ -17,7 +20,7 @@
                 </div>
                 <div class="item-image item-image-sidepart hidden">
                     <div class="item-likes">
-                        <a href="{{ path('like_image',{'id':picture.id}) }}" class="thumbs-up">
+                        <a href="{{ path('like_image',{'id':picture.id,'callback':currentPath}) }}" class="thumbs-up">
                             <p>{{ picture.usersLiked.count }}
                                 <i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></p>
                         </a>
@@ -32,7 +35,7 @@
                         <hr class="half-rule"/>
                          {% endfor %}
 
-                         {{ render(controller("GalleryBundle:PictureComment:commentForm", {'pictureID' : picture.id})) }}
+                         {{ render(controller("GalleryBundle:PictureComment:commentForm", {'pictureID' : picture.id,'callback':currentPath})) }}
 
                     </div>
                 </div>
