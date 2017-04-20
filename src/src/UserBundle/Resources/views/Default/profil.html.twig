@@ -45,7 +45,7 @@
         <h2 class="section-title">Has participated to</h2>
 
         {% for participation in eventPast %}
-        {% include "EventBundle:Includes:event.html.twig" with {"event":participation.event} %}
+        {% include "EventBundle:Includes:event.html.twig" with {"toolbar":true,"event":participation.event} %}
         {% endfor %}
 </section>
     {% endif %}
@@ -55,7 +55,7 @@
         <h2 class="section-title">Will participate to</h2>
 
         {% for participation in eventNext %}
-            {% include "EventBundle:Includes:event.html.twig" with {"event":participation.event} %}
+            {% include "EventBundle:Includes:event.html.twig" with {"toolbar":true,"event":participation.event} %}
         {% endfor %}
 
     </section>
