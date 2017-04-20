@@ -19,7 +19,7 @@
 
 }
 .grid .item.blur {
-    filter:blur(5px);
+    filter:grayscale(1);
 }
 
 .grid .item.blur:hover {
@@ -40,7 +40,6 @@
     left: 12px;
     height: 100%;
     width:100%;
-    pointer-events: none;
 }
 
 .icons-image .thumbs-up {
@@ -62,10 +61,50 @@
     display: flex;
     align-items: baseline;
 }
-.icons-image .share-alt {
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+.item-select-checkbox {
     position: absolute;
     right: 25px;
-    top:7px;
+    top: 5px;
+}
+
+.checked-div {
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.gallery-download {
+    display: none;
+}
+
+.gallery-download {
+
+    text-align: center;
+}
+.item .icons-image-checked {
+    text-shadow:  0px 0px 4px #fff;
+    position: absolute;
+    top: 42%;
+    left: 34%;
+}
+
+.item.active .icons-image-checked {
+    top: 20%;
+    left: 40%;
+}
+
+.icons-image .btn span.glyphicon {
+    opacity: 0;
+}
+.icons-image .btn.active span.glyphicon {
+    opacity: 1;
 }
 
 .grid .item a {
@@ -103,6 +142,8 @@
     -webkit-transition: opacity 0.7s ease-in-out;
     -moz-transition: opacity 0.7s ease-in-out;
     transition: opacity 0.7s ease-in-out;
+    display: flex;
+    justify-content: center;
 }
 
 .item-image-sidepart {

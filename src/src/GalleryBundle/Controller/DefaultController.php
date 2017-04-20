@@ -2,6 +2,7 @@
 
 namespace GalleryBundle\Controller;
 
+use Composer\Package\Archiver\ZipArchiver;
 use Doctrine\DBAL\Types\TextType;
 use GalleryBundle\Entity\PictureComment;
 use GalleryBundle\Form\PictureCommentType;
@@ -13,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\SubmitButton;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Request;
+use \ZipArchive;
 
 class DefaultController extends Controller
 {
@@ -93,5 +95,34 @@ class DefaultController extends Controller
         $comment = new PictureComment();
         $comment->setContent();
 
+    }
+
+    /**
+     * @Route("/download", name="download_pictures")
+     */
+    public function downloadPicturesAction(Request $request) {
+        $body = $request->get('p');
+        $ids = explode(';',$body);
+
+        $repoDoctrine = $this->getDoctrine()->getRepository('GalleryBundle:Picture');
+        $pictures = $repoDoctrine->findById($ids);
+        $baseDir = $this->get('kernel')->getRootDir();
+        $em = $this->getDoctrine()->getManager();
+        $zipname = 'images-'.join("-",$ids)."-".(new \DateTime())->format('Y-m-d-h-i-s').'.zip';
+        $zipPath = $baseDir.'/web/downloads/'.$zipname;
+
+        $t = extension_loaded('zip');
+        $v = function_exists('zip_open') ;
+        $p = class_exists('ZipArchive',false);
+      
+        $zip = new ZipArchive;
+        $zip->open($zipPath,ZipArchive::CREATE);
+        foreach ($pictures as $picture) {
+            $zip->addFile($baseDir.'/web/img/uploads/pictures/'.$picture->getPath());
+        }
+
+        $zip->close();
+
+        return $this->redirect('/downloads/'.$zipname);
     }
 }

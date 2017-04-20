@@ -1,9 +1,13 @@
+<div class="gallery-download">
+    <a href="#" class="button button-primary" data-baseurl="{{ path('download_pictures') }}"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> Download selected images</a>
+</div>
 <div class="grid effect" id="grid">
 
     {% if pictures %}
         {% for picture in pictures %}
 
             <div class="item">
+
                 <div class="item-image hidden-item">
                     <a href="#" class="image-link">
                         <img src="{{ asset('img/uploads/pictures/'~picture.path~'') }}" alt="">
@@ -12,7 +16,12 @@
                         <a href="#"><p class="posted-by">posted by <span class="posted-by-name">{{ picture.user }}</span></p></a>
                         <a href="#" class="thumbs-up"><p>{{ picture.usersLiked | length }}</p><i class="fa fa-lg fa-thumbs-up" aria-hidden="true"></i></a>
                         <a href="#" class="comments"><p>{{ picture.commentCount }} </p><i class="fa fa-lg fa-comments" aria-hidden="true"></i></a>
-                        <a href="#" class="share-alt"><i class="fa fa-lg fa-share-alt" aria-hidden="true"></i></a>
+                        <label class="item-select-checkbox">
+                            <input type="checkbox" data-id="{{ picture.id }}">
+                        </label>
+                    </div>
+                    <div class="checked-div">
+                        <i class="fa fa-check fa-5x icons-image-checked hidden" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="item-image item-image-sidepart hidden">
