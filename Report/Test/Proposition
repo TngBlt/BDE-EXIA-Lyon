@@ -3,22 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://localhost:8080/" />
-<title>ActivitiesEvents</title>
+<link rel="selenium.base" href="http://bdecesilyon.pe.hu/web/" />
+<title>Proposition</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">ActivitiesEvents</td></tr>
+<tr><td rowspan="1" colspan="3">Proposition</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/bde/app_dev.php/</td>
+	<td>/</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Sign in</td>
+	<td>link=Log in</td>
 	<td></td>
 </tr>
 <tr>
@@ -44,7 +44,7 @@
 <tr>
 	<td>type</td>
 	<td>id=eventbundle_eventproposition_title</td>
-	<td>Test !</td>
+	<td>Test 1</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -53,13 +53,13 @@
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=eventbundle_eventproposition_proposedDate_date_month</td>
-	<td>label=Jun</td>
+	<td>id=eventbundle_eventproposition_proposedDate_date_day</td>
+	<td>label=18</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=eventbundle_eventproposition_proposedDate_date_day</td>
-	<td>label=18</td>
+	<td>id=eventbundle_eventproposition_proposedDate_date_month</td>
+	<td>label=Jun</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -77,28 +77,73 @@
 	<td></td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>css=i.fa.fa-calendar-plus-o</td>
+	<td></td>
+</tr>
+<tr>
 	<td>select</td>
-	<td>xpath=(//select[@id='eventbundle_eventpropositionvote_date_time_hour'])[3]</td>
+	<td>xpath=(//select[@id='eventbundle_eventpropositionvote_date_time_hour'])[2]</td>
 	<td>label=19</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//button[@id='eventbundle_eventpropositionvote_submit'])[3]</td>
+	<td>xpath=(//button[@id='eventbundle_eventpropositionvote_submit'])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Events</td>
+	<td>link=Disconnect</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//article[3]/div[2]/nav/a[2]/div[2]</td>
+	<td>link=Log in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-email</td>
+	<td>vz@cesi.fr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-password</td>
+	<td>victorpass</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.button.button-primary</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=div.login-info-name</td>
+	<td>xpath=(//a[contains(text(),'Propositions')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@id='eventbundle_eventpropositionvote_submit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Propositions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'edit')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form[name=&quot;form&quot;] &gt; input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=i.fa.fa-power-off</td>
 	<td></td>
 </tr>
 

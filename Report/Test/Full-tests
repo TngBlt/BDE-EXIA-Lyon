@@ -8,9 +8,13 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="../ActivitiesEvents.html">ActivitiesEvents</a></td></tr>
-<tr><td><a href="../PicturesCommentLike.html">PicturesCommentLike</a></td></tr>
-<tr><td><a href="../shop.html">shop</a></td></tr>
+<tr><td><a href="Signin-and-login.html">Signin-and-login</a></td></tr>
+<tr><td><a href="Proposition">Proposition</a></td></tr>
+<tr><td><a href="Event-participation">Event-participation</a></td></tr>
+<tr><td><a href="Like-comment-photo">Like-comment-photo</a></td></tr>
+<tr><td><a href="Shop-purchase">Shop-purchase</a></td></tr>
+<tr><td><a href="Shop-gestion">Shop-gestion</a></td></tr>
+<tr><td><a href="upload-moderate-photo">upload-moderate-photo</a></td></tr>
 </tbody></table>
 </body>
 </html>

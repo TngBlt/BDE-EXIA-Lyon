@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://bdecesilyon.pe.hu/web" />
+<title>Shop-gestion</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Shop-gestion</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-email</td>
+	<td>tb@cesi.fr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-password</td>
+	<td>thierrypass</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.button.button-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Products</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Create a new product</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shopbundle_product_title</td>
+	<td>Strawberry macaron</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shopbundle_product_description</td>
+	<td>This is a test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shopbundle_product_picture</td>
+	<td>maka.png</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shopbundle_product_price</td>
+	<td>5.58</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=shopbundle_product_available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Shop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Products</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'edit')])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form[name=&quot;form&quot;] &gt; input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Disconnect</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

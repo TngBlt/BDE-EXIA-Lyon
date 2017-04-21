@@ -3,62 +3,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://localhost:8080/" />
-<title>PicturesCommentLike</title>
+<link rel="selenium.base" href="http://bdecesilyon.pe.hu/web/" />
+<title>Event-participation</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">PicturesCommentLike</td></tr>
+<tr><td rowspan="1" colspan="3">Event-participation</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/bde/app_dev.php/profil/6</td>
+	<td>/</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Events</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//article[2]/div/div[2]/div/h3/a/span/i</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.image-link &gt; img</td>
+	<td>link=Log in</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=picture_comment_content</td>
-	<td>Awesome !</td>
+	<td>id=login-email</td>
+	<td>us@cesi.fr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-password</td>
+	<td>userpass</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=picture_comment_add</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.image-link &gt; img</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='grid']/div/div[2]/div/a/p/i</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=a.image-link &gt; img</td>
+	<td>css=button.button.button-primary</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Home</td>
+	<td>link=Japan Touch Haru</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Members</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[7]/div/div/div[3]/a[3]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Disconnect</td>
 	<td></td>
 </tr>
 
